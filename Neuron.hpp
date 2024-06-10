@@ -1,18 +1,17 @@
 #ifndef __NEURON_HPP__
 #define __NEURON_HPP__
 
+#include "NeuronActivation.hpp"
 #include <memory>
 #include <vector>
-
 struct Connection;
 class Neuron {
 
     public:
-      using Activation = double (*)(double);
       using Connections = std::vector<std::shared_ptr<Connection>>;
       using Neurons = std::vector<Neuron>;
       enum class TYPE { INPUT, OUTPUT, WIDE, NA };
-      Neuron(double (*activation)(double), TYPE type);
+      Neuron(NeuronActivations::activation *act, TYPE type);
       inline void setValue(int _y) {
             if (type == TYPE::INPUT)
                   y = _y;
@@ -27,13 +26,13 @@ class Neuron {
       double y;
 
     private:
-      Activation activation;
+      NeuronActivations::activation *activation;
       TYPE type;
       Connections prevConnections;
       Connections nextConnections;
       double error;
       double bias = 1.0;
-      double alpha = 0.01;
+      double alpha = 0.000001;
       double prevY;
 
       double targetValue;

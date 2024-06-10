@@ -5,9 +5,11 @@
 #include <iterator>
 #include <vector>
 
-NeuralNetwork_impl::NeuralNetwork_impl(NetworkDimentions netDims,
-                                       Neuron::Activation act)
-    : activation(act), networkDimentions(netDims) {
+NeuralNetwork_impl::NeuralNetwork_impl(
+    NetworkDimentions netDims, NeuronActivations::activation *_wideActivation,
+    NeuronActivations::activation *_outActivation)
+    : wideActivation(_wideActivation), outActivation(_outActivation),
+      networkDimentions(netDims) {
       buildNetwork();
 }
 
@@ -18,13 +20,29 @@ void NeuralNetwork_impl::buildNetwork() {
 
 void NeuralNetwork_impl::createLayers() {
       inLayer = Layer{Neuron::TYPE::INPUT, networkDimentions.INPUT_NEURONS,
-                      activation};
+                      wideActivation};
       outLayer = Layer{Neuron::TYPE::OUTPUT, networkDimentions.OUTPUT_NETWORKS,
-                       activation};
+                       outActivation};
       for (auto &wideLayerSize : networkDimentions.WIDE_LAYERS_NEURONS) {
             wideLayers.emplace_back(Neuron::TYPE::WIDE, wideLayerSize,
-                                    [](double y) { return std::max(0.0, y); });
+                                    wideActivation);
       }
+}
+
+std::vector<double> NeuralNetwork_impl::_predict(NetworkData dataInput) {
+      for (long unsigned int i = 0; i < dataInput.size(); i++) {
+            inLayer.neurons[i].setValue(dataInput[i]);
+      }
+      for (auto &layer : wideLayers) {
+            for (auto &neuron : layer.neurons) {
+                  neuron.calculateValue();
+            }
+      }
+      std::vector<double> netOut;
+      for (auto &out : outLayer.neurons) {
+            netOut.push_back(out.calculateValue());
+      }
+      return netOut;
 }
 void NeuralNetwork_impl::connectNetwork() {
       // Invariantes: No wide layers, no inputLayer, no Output layer
