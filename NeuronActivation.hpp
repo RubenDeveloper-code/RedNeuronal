@@ -3,7 +3,9 @@
 
 #include <algorithm>
 #include <cmath>
+#include <memory>
 namespace NeuronActivations {
+enum class TYPE { SIGMOID, RELU, REGRESSION };
 struct activation {
       double (*function)(double) = nullptr;
       double (*derivative)(double, double) = nullptr;
@@ -31,6 +33,17 @@ struct regression : public activation {
       }
       double getDevStandart(double seed) { return std::sqrt(2.0 / seed); }
 };
+inline std::shared_ptr<activation> newInstance(TYPE type) {
+      switch (type) {
+      case TYPE::SIGMOID:
+            return std::make_shared<sigmoid>();
+      case TYPE::RELU:
+            return std::make_shared<relu>();
+      case TYPE::REGRESSION:
+            return std::make_shared<regression>();
+      }
+      return std::make_shared<regression>();
+}
 } // namespace NeuronActivations
 
 #endif

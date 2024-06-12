@@ -1,11 +1,6 @@
 #include "Neuron.hpp"
+#include "Algorithm.hpp"
 #include "NeuronActivation.hpp"
-#include <algorithm>
-#include <chrono>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-#include <iostream>
 #include <memory>
 #include <random>
 
@@ -16,10 +11,12 @@ double randomReal(double li, double ls) {
       return dis(gen);
 }
 
-Neuron::Neuron(NeuronActivations::activation *_activation, TYPE _type)
-    : activation{_activation}, type{_type} {}
+Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,
+               std::shared_ptr<Algorithms::OptimizationAlgorithm> opt,
+               TYPE _type)
+    : activation{_activation}, optimizationAlgorithm{opt}, type{_type} {}
 
-void Neuron::makeConnections(Neurons &target, int prevLayerSize, TYPE type) {
+void Neuron::makeConnections(Neurons &target, int prevLayerSize) {
       double std_dev = activation->getDevStandart(prevLayerSize);
       std::random_device rd;
       std::mt19937 gen(rd());
@@ -27,7 +24,6 @@ void Neuron::makeConnections(Neurons &target, int prevLayerSize, TYPE type) {
       std::normal_distribution<double> dist(0.0, std_dev);
       for (auto &targetNeuron : target) {
             double w = dist(gen);
-            // std::cout << "W: " << w << "\n";
             std::shared_ptr<double> shared_weight{std::make_shared<double>(w)};
             std::shared_ptr<Connection> next =
                 std::make_shared<Connection>(targetNeuron, shared_weight);
@@ -51,7 +47,7 @@ double Neuron::calculateValue() {
       }
       return -1;
 }
-// revisar operaciones
+
 void Neuron::checkError() {
       error = 0;
       if (type == TYPE::OUTPUT) {
@@ -66,6 +62,7 @@ void Neuron::checkError() {
       }
 }
 
+// debe ser usado el -=
 void Neuron::fixInputWeights() {
       checkError();
       bias -= alpha * error * 1.0;

@@ -1,28 +1,18 @@
 #include "NeuralNetwork.hpp"
-#include "NeuralNetwork_impl.hpp"
-#include <cstdlib>
-#include <iostream>
-#include <memory>
-#include <numeric>
-#include <ostream>
+#include "Data.hpp"
+#include "NeuralNetworkFit.hpp"
+#include "NeuralNetworkImpl.hpp"
 #include <vector>
 
-NeuralNetwork::NeuralNetwork(NetworkDimentions netDims,
-                             NeuronActivations::activation *wideActivation,
-                             NeuronActivations::activation *outActivation)
-    : net_impl(netDims, wideActivation, outActivation) {}
+NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription)
+    : net_impl(networkDescription) {}
 
-void NeuralNetwork::fit(NeuralNetwork_impl::NetworkData inputData,
-                        NeuralNetwork_impl::NetworkData outputData, int epochs,
-                        int lossStep) {
-      NeuralNetwork_fit net_fit(inputData, outputData, epochs, lossStep,
-                                &net_impl);
+void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {
+      NeuralNetworkFit net_fit(trainData, epochs, batchSize, &net_impl);
       net_fit.fit();
 }
 
-// el tipo de dato variara
-std::vector<double>
-NeuralNetwork::predict(NeuralNetwork_impl::NetworkData input) {
+std::vector<double> NeuralNetwork::predict(InputNetworkData input) {
       if (input.size() != net_impl.getInputSize())
             return std::vector<double>{-1};
       return net_impl._predict(input);
