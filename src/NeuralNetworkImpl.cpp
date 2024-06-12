@@ -1,8 +1,8 @@
-#include "NeuralNetworkImpl.hpp"
-#include "Data.hpp"
-#include "Layer.hpp"
-#include "NeuralNetworkSetterData.hpp"
-#include "Neuron.hpp"
+#include "../include/NeuralNetworkImpl.hpp"
+#include "../include/Data.hpp"
+#include "../include/Layer.hpp"
+#include "../include/NeuralNetworkSetterData.hpp"
+#include "../include/Neuron.hpp"
 #include <algorithm>
 #include <iterator>
 #include <vector>
@@ -10,7 +10,7 @@
 Layer *NeuralNetworkImpl::input = nullptr;
 Layer *NeuralNetworkImpl::output = nullptr;
 
-NeuralNetworkImpl::NeuralNetwork_impl(NetworkDescription networkDescription)
+NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription)
     : networkDescription(networkDescription) {
       buildNetwork();
 }

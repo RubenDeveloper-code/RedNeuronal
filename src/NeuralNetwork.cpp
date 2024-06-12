@@ -1,7 +1,7 @@
-#include "NeuralNetwork.hpp"
-#include "Data.hpp"
-#include "NeuralNetworkFit.hpp"
-#include "NeuralNetworkImpl.hpp"
+#include "../include/NeuralNetwork.hpp"
+#include "../include/Data.hpp"
+#include "../include/NeuralNetworkFit.hpp"
+#include "../include/NeuralNetworkImpl.hpp"
 #include <vector>
 
 NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription)

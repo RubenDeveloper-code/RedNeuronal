@@ -1,6 +1,6 @@
-#include "Neuron.hpp"
-#include "Algorithm.hpp"
-#include "NeuronActivation.hpp"
+#include "../include/Neuron.hpp"
+#include "../include/Algorithm.hpp"
+#include "../include/NeuronActivation.hpp"
 #include <memory>
 #include <random>
 

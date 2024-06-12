@@ -1,7 +1,7 @@
-#include "NeuralNetworkFit.hpp"
-#include "Data.hpp"
-#include "NeuralNetworkImpl.hpp"
-#include "NeuralNetworkSetterData.hpp"
+#include "../include/NeuralNetworkFit.hpp"
+#include "../include/Data.hpp"
+#include "../include/NeuralNetworkImpl.hpp"
+#include "../include/NeuralNetworkSetterData.hpp"
 #include <iostream>
 #include <numeric>
 

@@ -23,11 +23,18 @@
 !_TAG_KIND_DESCRIPTION!C++	t,typedef	/typedefs/
 !_TAG_KIND_DESCRIPTION!C++	u,union	/union names/
 !_TAG_KIND_DESCRIPTION!C++	v,variable	/variable definitions/
+!_TAG_KIND_DESCRIPTION!CMake	D,option	/options specified with -D/
+!_TAG_KIND_DESCRIPTION!CMake	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!CMake	m,macro	/macros/
+!_TAG_KIND_DESCRIPTION!CMake	p,project	/projects/
+!_TAG_KIND_DESCRIPTION!CMake	t,target	/targets/
+!_TAG_KIND_DESCRIPTION!CMake	v,variable	/variable definitions/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
 !_TAG_PARSER_VERSION!C++	1.1	/current.age/
+!_TAG_PARSER_VERSION!CMake	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
 !_TAG_PROC_CWD	/home/ruben/Programacion/estudio/c++/NeuralNetwork/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
@@ -38,30 +45,60 @@
 !_TAG_ROLE_DESCRIPTION!C++!header	system	/system header/
 !_TAG_ROLE_DESCRIPTION!C++!macro	undef	/undefined/
 ADAMS	Algorithm.hpp	/^enum class TYPE { DEFAULT, ADAMS };$/;"	e	enum:Algorithms::TYPE
+ADAMS	include/Algorithm.hpp	/^enum class TYPE { DEFAULT, ADAMS };$/;"	e	enum:Algorithms::TYPE
 Algorithms	Algorithm.hpp	/^namespace Algorithms {$/;"	n
+Algorithms	include/Algorithm.hpp	/^namespace Algorithms {$/;"	n
+CMAKE_CXX_STANDARD	CMakeLists.txt	/^set(CMAKE_CXX_STANDARD 17)$/;"	v
+CMAKE_CXX_STANDARD_REQUIRED	CMakeLists.txt	/^set(CMAKE_CXX_STANDARD_REQUIRED True)$/;"	v
 Connection	Neuron.hpp	/^      Connection(Neuron &_targetNeuron, std::shared_ptr<double> _weight)$/;"	f	struct:Connection
 Connection	Neuron.hpp	/^struct Connection {$/;"	s
+Connection	include/Neuron.hpp	/^      Connection(Neuron &_targetNeuron, std::shared_ptr<double> _weight)$/;"	f	struct:Connection
+Connection	include/Neuron.hpp	/^struct Connection {$/;"	s
 Connections	Neuron.hpp	/^      using Connections = std::vector<std::shared_ptr<Connection>>;$/;"	t	class:Neuron	typeref:typename:std::vector<std::shared_ptr<Connection>>
+Connections	include/Neuron.hpp	/^      using Connections = std::vector<std::shared_ptr<Connection>>;$/;"	t	class:Neuron	typeref:typename:std::vector<std::shared_ptr<Connection>>
 DEFAULT	Algorithm.hpp	/^enum class TYPE { DEFAULT, ADAMS };$/;"	e	enum:Algorithms::TYPE
+DEFAULT	include/Algorithm.hpp	/^enum class TYPE { DEFAULT, ADAMS };$/;"	e	enum:Algorithms::TYPE
 Data	Data.hpp	/^      Data(std::vector<double> in, std::vector<double> out)$/;"	f	struct:Data
 Data	Data.hpp	/^struct Data {$/;"	s
+Data	include/Data.hpp	/^      Data(std::vector<double> in, std::vector<double> out)$/;"	f	struct:Data
+Data	include/Data.hpp	/^struct Data {$/;"	s
 Default	Algorithm.hpp	/^struct Default : public OptimizationAlgorithm {$/;"	s	namespace:Algorithms
+Default	include/Algorithm.hpp	/^struct Default : public OptimizationAlgorithm {$/;"	s	namespace:Algorithms
 INPUT	Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
+INPUT	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
 InputNetworkData	Data.hpp	/^using InputNetworkData = std::vector<double>;$/;"	t	typeref:typename:std::vector<double>
+InputNetworkData	include/Data.hpp	/^using InputNetworkData = std::vector<double>;$/;"	t	typeref:typename:std::vector<double>
 Layer	Layer.hpp	/^      Layer(){};$/;"	f	struct:Layer
 Layer	Layer.hpp	/^      Layer(Neuron::TYPE _type, NeuronActivations::TYPE activation,$/;"	f	struct:Layer
 Layer	Layer.hpp	/^struct Layer {$/;"	s
+Layer	include/Layer.hpp	/^      Layer(){};$/;"	f	struct:Layer
+Layer	include/Layer.hpp	/^      Layer(Neuron::TYPE _type, NeuronActivations::TYPE activation,$/;"	f	struct:Layer
+Layer	include/Layer.hpp	/^struct Layer {$/;"	s
 LayerDescription	Layer.hpp	/^      LayerDescription(Neuron::TYPE _type, NeuronActivations::TYPE _activation,$/;"	f	struct:LayerDescription
 LayerDescription	Layer.hpp	/^struct LayerDescription {$/;"	s
+LayerDescription	include/Layer.hpp	/^      LayerDescription(Neuron::TYPE _type, NeuronActivations::TYPE _activation,$/;"	f	struct:LayerDescription
+LayerDescription	include/Layer.hpp	/^struct LayerDescription {$/;"	s
 Network	NeuralNetworkImpl.hpp	/^      using Network = std::vector<Layer>;$/;"	t	class:NeuralNetwork_impl	typeref:typename:std::vector<Layer>
 Network	NeuralNetwork_impl.hpp	/^      using Network = std::vector<Layer>;$/;"	t	class:NeuralNetwork_impl	typeref:typename:std::vector<Layer>
+Network	include/NeuralNetworkImpl.hpp	/^      using Network = std::vector<Layer>;$/;"	t	class:NeuralNetworkImpl	typeref:typename:std::vector<Layer>
 NetworkDescription	NeuralNetwork.hpp	/^      using NetworkDescription = NeuralNetwork_impl::NetworkDescription;$/;"	t	class:NeuralNetwork	typeref:typename:NeuralNetwork_impl::NetworkDescription
 NetworkDescription	NeuralNetworkImpl.hpp	/^      using NetworkDescription = std::vector<LayerDescription>;$/;"	t	class:NeuralNetwork_impl	typeref:typename:std::vector<LayerDescription>
 NetworkDescription	NeuralNetwork_impl.hpp	/^      using NetworkDescription = std::vector<LayerDescription>;$/;"	t	class:NeuralNetwork_impl	typeref:typename:std::vector<LayerDescription>
+NetworkDescription	include/NeuralNetwork.hpp	/^      using NetworkDescription = NeuralNetworkImpl::NetworkDescription;$/;"	t	class:NeuralNetwork	typeref:typename:NeuralNetworkImpl::NetworkDescription
+NetworkDescription	include/NeuralNetworkImpl.hpp	/^      using NetworkDescription = std::vector<LayerDescription>;$/;"	t	class:NeuralNetworkImpl	typeref:typename:std::vector<LayerDescription>
 NetworkTrainData	Data.hpp	/^using NetworkTrainData = std::vector<Data>;$/;"	t	typeref:typename:std::vector<Data>
+NetworkTrainData	include/Data.hpp	/^using NetworkTrainData = std::vector<Data>;$/;"	t	typeref:typename:std::vector<Data>
+NeuralNetwork	CMakeLists.txt	/^add_executable(NeuralNetwork src\/NeuralNetwork.cpp src\/NeuralNetworkFit.cpp src\/NeuralNetwork/;"	t
+NeuralNetwork	CMakeLists.txt	/^project(NeuralNetwork)$/;"	p
 NeuralNetwork	NeuralNetwork.cpp	/^NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription)$/;"	f	class:NeuralNetwork
 NeuralNetwork	NeuralNetwork.hpp	/^class NeuralNetwork {$/;"	c
+NeuralNetwork	include/NeuralNetwork.hpp	/^class NeuralNetwork {$/;"	c
+NeuralNetwork	src/NeuralNetwork.cpp	/^NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription)$/;"	f	class:NeuralNetwork
 NeuralNetworkFit	NeuralNetworkFit.cpp	/^NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _epochs,$/;"	f	class:NeuralNetworkFit
+NeuralNetworkFit	include/NeuralNetworkFit.hpp	/^class NeuralNetworkFit {$/;"	c
+NeuralNetworkFit	src/NeuralNetworkFit.cpp	/^NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _epochs,$/;"	f	class:NeuralNetworkFit
+NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^class NeuralNetworkImpl {$/;"	c
+NeuralNetworkImpl	src/NeuralNetworkImpl.cpp	/^NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription)$/;"	f	class:NeuralNetworkImpl
 NeuralNetwork_fit	NeuralNetworkFit.hpp	/^class NeuralNetwork_fit {$/;"	c
 NeuralNetwork_fit	NeuralNetwork_fit.cpp	/^NeuralNetwork_fit::NeuralNetwork_fit(NetworkTrainData trainData, int _epochs,$/;"	f	class:NeuralNetwork_fit
 NeuralNetwork_fit	NeuralNetwork_fit.hpp	/^class NeuralNetwork_fit {$/;"	c
@@ -71,34 +108,71 @@ NeuralNetwork_impl	NeuralNetwork_impl.cpp	/^NeuralNetwork_impl::NeuralNetwork_im
 NeuralNetwork_impl	NeuralNetwork_impl.hpp	/^class NeuralNetwork_impl {$/;"	c
 Neuron	Neuron.cpp	/^Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,$/;"	f	class:Neuron
 Neuron	Neuron.hpp	/^class Neuron {$/;"	c
+Neuron	include/Neuron.hpp	/^class Neuron {$/;"	c
+Neuron	src/Neuron.cpp	/^Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,$/;"	f	class:Neuron
 NeuronActivations	NeuronActivation.hpp	/^namespace NeuronActivations {$/;"	n
+NeuronActivations	include/NeuronActivation.hpp	/^namespace NeuronActivations {$/;"	n
 NeuronConectionInfo	Algorithm.hpp	/^      NeuronConectionInfo(double _alpha, double _delta, double _val,$/;"	f	struct:Algorithms::NeuronConectionInfo
 NeuronConectionInfo	Algorithm.hpp	/^struct NeuronConectionInfo {$/;"	s	namespace:Algorithms
+NeuronConectionInfo	include/Algorithm.hpp	/^      NeuronConectionInfo(double _alpha, double _delta, double _val,$/;"	f	struct:Algorithms::NeuronConectionInfo
+NeuronConectionInfo	include/Algorithm.hpp	/^struct NeuronConectionInfo {$/;"	s	namespace:Algorithms
 Neurons	Neuron.hpp	/^      using Neurons = std::vector<Neuron>;$/;"	t	class:Neuron	typeref:typename:std::vector<Neuron>
+Neurons	include/Neuron.hpp	/^      using Neurons = std::vector<Neuron>;$/;"	t	class:Neuron	typeref:typename:std::vector<Neuron>
 OUTPUT	Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
+OUTPUT	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
 OptimizationAlgorithm	Algorithm.hpp	/^struct OptimizationAlgorithm {$/;"	s	namespace:Algorithms
+OptimizationAlgorithm	include/Algorithm.hpp	/^struct OptimizationAlgorithm {$/;"	s	namespace:Algorithms
 OutputNetworkData	Data.hpp	/^using OutputNetworkData = std::vector<double>;$/;"	t	typeref:typename:std::vector<double>
+OutputNetworkData	include/Data.hpp	/^using OutputNetworkData = std::vector<double>;$/;"	t	typeref:typename:std::vector<double>
 REGRESSION	NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:NeuronActivations::TYPE
+REGRESSION	include/NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:NeuronActivations::TYPE
 RELU	NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:NeuronActivations::TYPE
+RELU	include/NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:NeuronActivations::TYPE
 SIGMOID	NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:NeuronActivations::TYPE
+SIGMOID	include/NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:NeuronActivations::TYPE
 SetterData	NeuralNetworkSetterData.hpp	/^      SetterData() {}$/;"	f	struct:SetterData
 SetterData	NeuralNetworkSetterData.hpp	/^      SetterData(NetworkTrainData dataTrain) : trainData(dataTrain) {$/;"	f	struct:SetterData
 SetterData	NeuralNetworkSetterData.hpp	/^struct SetterData {$/;"	s
+SetterData	include/NeuralNetworkSetterData.hpp	/^      SetterData() {}$/;"	f	struct:SetterData
+SetterData	include/NeuralNetworkSetterData.hpp	/^      SetterData(NetworkTrainData dataTrain) : trainData(dataTrain) {$/;"	f	struct:SetterData
+SetterData	include/NeuralNetworkSetterData.hpp	/^struct SetterData {$/;"	s
 TYPE	Algorithm.hpp	/^enum class TYPE { DEFAULT, ADAMS };$/;"	g	namespace:Algorithms
 TYPE	Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	g	class:Neuron
 TYPE	NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	g	namespace:NeuronActivations
+TYPE	include/Algorithm.hpp	/^enum class TYPE { DEFAULT, ADAMS };$/;"	g	namespace:Algorithms
+TYPE	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	g	class:Neuron
+TYPE	include/NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	g	namespace:NeuronActivations
 WIDE	Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
+WIDE	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
 __ALGORITMS_HPP__	Algorithm.hpp	/^#define __ALGORITMS_HPP__$/;"	d
+__ALGORITMS_HPP__	include/Algorithm.hpp	/^#define __ALGORITMS_HPP__$/;"	d
 __DATA_HPP__	Data.hpp	/^#define __DATA_HPP__$/;"	d
+__DATA_HPP__	include/Data.hpp	/^#define __DATA_HPP__$/;"	d
 __LAYER_HPP__	Layer.hpp	/^#define __LAYER_HPP__$/;"	d
+__LAYER_HPP__	include/Layer.hpp	/^#define __LAYER_HPP__$/;"	d
 __NEURALNETWORKSETTERDATA_HPP__	NeuralNetworkSetterData.hpp	/^#define __NEURALNETWORKSETTERDATA_HPP__$/;"	d
+__NEURALNETWORKSETTERDATA_HPP__	include/NeuralNetworkSetterData.hpp	/^#define __NEURALNETWORKSETTERDATA_HPP__$/;"	d
 __NEURALNETWORK_FIT_HPP__	NeuralNetworkFit.hpp	/^#define __NEURALNETWORK_FIT_HPP__$/;"	d
 __NEURALNETWORK_FIT_HPP__	NeuralNetwork_fit.hpp	/^#define __NEURALNETWORK_FIT_HPP__$/;"	d
+__NEURALNETWORK_FIT_HPP__	include/NeuralNetworkFit.hpp	/^#define __NEURALNETWORK_FIT_HPP__$/;"	d
 __NEURALNETWORK_H__	NeuralNetwork.hpp	/^#define __NEURALNETWORK_H__$/;"	d
+__NEURALNETWORK_H__	include/NeuralNetwork.hpp	/^#define __NEURALNETWORK_H__$/;"	d
 __NEURALNETWORK_IMPL_H__	NeuralNetworkImpl.hpp	/^#define __NEURALNETWORK_IMPL_H__$/;"	d
 __NEURALNETWORK_IMPL_H__	NeuralNetwork_impl.hpp	/^#define __NEURALNETWORK_IMPL_H__$/;"	d
+__NEURALNETWORK_IMPL_H__	include/NeuralNetworkImpl.hpp	/^#define __NEURALNETWORK_IMPL_H__$/;"	d
 __NEURON_ACTVATION_H__	NeuronActivation.hpp	/^#define __NEURON_ACTVATION_H__$/;"	d
+__NEURON_ACTVATION_H__	include/NeuronActivation.hpp	/^#define __NEURON_ACTVATION_H__$/;"	d
 __NEURON_HPP__	Neuron.hpp	/^#define __NEURON_HPP__$/;"	d
+__NEURON_HPP__	include/Neuron.hpp	/^#define __NEURON_HPP__$/;"	d
+__anon0f327f170102	include/NeuronActivation.hpp	/^            function = [](double x) { return (1.0 \/ (1.0 + std::exp(-x))); };$/;"	f	function:NeuronActivations::sigmoid::sigmoid	file:
+__anon0f327f170202	include/NeuronActivation.hpp	/^            derivative = [](double x, double y) { return (y * (1.0 - y)); };$/;"	f	function:NeuronActivations::sigmoid::sigmoid	file:
+__anon0f327f170302	include/NeuronActivation.hpp	/^            function = [](double x) { return (std::max(0.0, x)); };$/;"	f	function:NeuronActivations::relu::relu	file:
+__anon0f327f170402	include/NeuronActivation.hpp	/^            derivative = [](double x, double y) { return (x > 0) ? 1.0 : 0.0; };$/;"	f	function:NeuronActivations::relu::relu	file:
+__anon0f327f170502	include/NeuronActivation.hpp	/^            function = [](double x) { return x; };$/;"	f	function:NeuronActivations::regression::regression	file:
+__anon0f327f170602	include/NeuronActivation.hpp	/^            derivative = [](double x, double y) { return 1.0; };$/;"	f	function:NeuronActivations::regression::regression	file:
+__anon8425a7700102	include/NeuralNetworkSetterData.hpp	/^                          [&inputIt, &input](double value) {$/;"	f	function:SetterData::preparePrediction	file:
+__anon8425a7700202	include/NeuralNetworkSetterData.hpp	/^                          [&inputIt, &input](double value) {$/;"	f	function:SetterData::prepareNextEpoch	file:
+__anon8425a7700302	include/NeuralNetworkSetterData.hpp	/^                          [&outputIt, &output](double value) {$/;"	f	function:SetterData::prepareNextEpoch	file:
 __anon926ffbc40102	NeuronActivation.hpp	/^            function = [](double x) { return (1.0 \/ (1.0 + std::exp(-x))); };$/;"	f	function:NeuronActivations::sigmoid::sigmoid	file:
 __anon926ffbc40202	NeuronActivation.hpp	/^            derivative = [](double x, double y) { return (y * (1.0 - y)); };$/;"	f	function:NeuronActivations::sigmoid::sigmoid	file:
 __anon926ffbc40302	NeuronActivation.hpp	/^            function = [](double x) { return (std::max(0.0, x)); };$/;"	f	function:NeuronActivations::relu::relu	file:
@@ -110,121 +184,209 @@ __anon9c12c9390102	NeuralNetworkImpl.cpp	/^                [](const Layer &a, co
 __anonec5c7f7d0102	NeuralNetworkSetterData.hpp	/^                          [&inputIt, &input](double value) {$/;"	f	function:SetterData::preparePrediction	file:
 __anonec5c7f7d0202	NeuralNetworkSetterData.hpp	/^                          [&inputIt, &input](double value) {$/;"	f	function:SetterData::prepareNextEpoch	file:
 __anonec5c7f7d0302	NeuralNetworkSetterData.hpp	/^                          [&outputIt, &output](double value) {$/;"	f	function:SetterData::prepareNextEpoch	file:
+__anonee37a5900102	src/NeuralNetworkImpl.cpp	/^                [](const Layer &a, const Layer &b) { return a.type < b.type; });$/;"	f	function:NeuralNetworkImpl::createNetwork	file:
 _predict	NeuralNetworkImpl.cpp	/^std::vector<double> NeuralNetwork_impl::_predict(InputNetworkData inputData) {$/;"	f	class:NeuralNetwork_impl	typeref:typename:std::vector<double>
 _predict	NeuralNetwork_impl.cpp	/^std::vector<double> NeuralNetwork_impl::_predict(InputNetworkData inputData) {$/;"	f	class:NeuralNetwork_impl	typeref:typename:std::vector<double>
+_predict	src/NeuralNetworkImpl.cpp	/^std::vector<double> NeuralNetworkImpl::_predict(InputNetworkData inputData) {$/;"	f	class:NeuralNetworkImpl	typeref:typename:std::vector<double>
 activation	Layer.hpp	/^      NeuronActivations::TYPE activation;$/;"	m	struct:LayerDescription	typeref:typename:NeuronActivations::TYPE
 activation	Neuron.hpp	/^      std::shared_ptr<NeuronActivations::activation> activation;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<NeuronActivations::activation>
 activation	NeuronActivation.hpp	/^struct activation {$/;"	s	namespace:NeuronActivations
+activation	include/Layer.hpp	/^      NeuronActivations::TYPE activation;$/;"	m	struct:LayerDescription	typeref:typename:NeuronActivations::TYPE
+activation	include/Neuron.hpp	/^      std::shared_ptr<NeuronActivations::activation> activation;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<NeuronActivations::activation>
+activation	include/NeuronActivation.hpp	/^struct activation {$/;"	s	namespace:NeuronActivations
 actualEpoch	NeuralNetworkFit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
 actualEpoch	NeuralNetwork_fit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
+actualEpoch	include/NeuralNetworkFit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 algorithm	Layer.hpp	/^      Algorithms::TYPE algorithm;$/;"	m	struct:LayerDescription	typeref:typename:Algorithms::TYPE
+algorithm	include/Layer.hpp	/^      Algorithms::TYPE algorithm;$/;"	m	struct:LayerDescription	typeref:typename:Algorithms::TYPE
 alias_IO_layers	NeuralNetworkImpl.cpp	/^void NeuralNetwork_impl::alias_IO_layers() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
 alias_IO_layers	NeuralNetwork_impl.cpp	/^void NeuralNetwork_impl::alias_IO_layers() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
+alias_IO_layers	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::alias_IO_layers() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 alpha	Algorithm.hpp	/^      double alpha;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 alpha	Neuron.hpp	/^      double alpha = 0.000001;$/;"	m	class:Neuron	typeref:typename:double
+alpha	include/Algorithm.hpp	/^      double alpha;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
+alpha	include/Neuron.hpp	/^      double alpha = 0.000001;$/;"	m	class:Neuron	typeref:typename:double
 batchLoss	NeuralNetworkFit.hpp	/^      std::vector<double> batchLoss{};$/;"	m	class:NeuralNetwork_fit	typeref:typename:std::vector<double>
 batchLoss	NeuralNetwork_fit.hpp	/^      std::vector<double> batchLoss{};$/;"	m	class:NeuralNetwork_fit	typeref:typename:std::vector<double>
+batchLoss	include/NeuralNetworkFit.hpp	/^      std::vector<double> batchLoss{};$/;"	m	class:NeuralNetworkFit	typeref:typename:std::vector<double>
 batchSize	NeuralNetworkFit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
 batchSize	NeuralNetwork_fit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
+batchSize	include/NeuralNetworkFit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 batch_ind	NeuralNetworkFit.hpp	/^      int batch_ind = 0;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
 batch_ind	NeuralNetwork_fit.hpp	/^      int batch_ind = 0;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
+batch_ind	include/NeuralNetworkFit.hpp	/^      int batch_ind = 0;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 bias	Neuron.hpp	/^      double bias = 1.0;$/;"	m	class:Neuron	typeref:typename:double
+bias	include/Neuron.hpp	/^      double bias = 1.0;$/;"	m	class:Neuron	typeref:typename:double
 buildNetwork	NeuralNetworkImpl.cpp	/^void NeuralNetwork_impl::buildNetwork() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
 buildNetwork	NeuralNetwork_impl.cpp	/^void NeuralNetwork_impl::buildNetwork() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
+buildNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::buildNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 calculateValue	Neuron.cpp	/^double Neuron::calculateValue() {$/;"	f	class:Neuron	typeref:typename:double
+calculateValue	src/Neuron.cpp	/^double Neuron::calculateValue() {$/;"	f	class:Neuron	typeref:typename:double
 calculeLoss	NeuralNetworkFit.cpp	/^double NeuralNetworkFit::calculeLoss(OutputNetworkData target,$/;"	f	class:NeuralNetworkFit	typeref:typename:double
 calculeLoss	NeuralNetwork_fit.cpp	/^double NeuralNetwork_fit::calculeLoss(OutputNetworkData target,$/;"	f	class:NeuralNetwork_fit	typeref:typename:double
+calculeLoss	src/NeuralNetworkFit.cpp	/^double NeuralNetworkFit::calculeLoss(OutputNetworkData target,$/;"	f	class:NeuralNetworkFit	typeref:typename:double
 checkError	Neuron.cpp	/^void Neuron::checkError() {$/;"	f	class:Neuron	typeref:typename:void
+checkError	src/Neuron.cpp	/^void Neuron::checkError() {$/;"	f	class:Neuron	typeref:typename:void
 connect	NeuralNetworkImpl.cpp	/^void NeuralNetwork_impl::connect(Layer &layer, Neuron::Neurons &neurons) {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
 connect	NeuralNetwork_impl.cpp	/^void NeuralNetwork_impl::connect(Layer &layer, Neuron::Neurons &neurons) {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
+connect	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::connect(Layer &layer, Neuron::Neurons &neurons) {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 connectNetwork	NeuralNetworkImpl.cpp	/^void NeuralNetwork_impl::connectNetwork() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
 connectNetwork	NeuralNetwork_impl.cpp	/^void NeuralNetwork_impl::connectNetwork() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
+connectNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::connectNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 createNetwork	NeuralNetworkImpl.cpp	/^void NeuralNetwork_impl::createNetwork() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
 createNetwork	NeuralNetwork_impl.cpp	/^void NeuralNetwork_impl::createNetwork() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
+createNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::createNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 delta	Algorithm.hpp	/^      double delta;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
+delta	include/Algorithm.hpp	/^      double delta;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 derivative	NeuronActivation.hpp	/^      double (*derivative)(double, double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double,double)
+derivative	include/NeuronActivation.hpp	/^      double (*derivative)(double, double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double,double)
 epochs	NeuralNetworkFit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
 epochs	NeuralNetwork_fit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetwork_fit	typeref:typename:int
+epochs	include/NeuralNetworkFit.hpp	/^      int actualEpoch, epochs, batchSize;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 error	Neuron.hpp	/^      double error;$/;"	m	class:Neuron	typeref:typename:double
+error	include/Neuron.hpp	/^      double error;$/;"	m	class:Neuron	typeref:typename:double
 fit	NeuralNetwork.cpp	/^void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {$/;"	f	class:NeuralNetwork	typeref:typename:void
 fit	NeuralNetworkFit.cpp	/^void NeuralNetworkFit::fit() {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
 fit	NeuralNetwork_fit.cpp	/^void NeuralNetwork_fit::fit() {$/;"	f	class:NeuralNetwork_fit	typeref:typename:void
+fit	src/NeuralNetwork.cpp	/^void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {$/;"	f	class:NeuralNetwork	typeref:typename:void
+fit	src/NeuralNetworkFit.cpp	/^void NeuralNetworkFit::fit() {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
 fixInputWeights	Neuron.cpp	/^void Neuron::fixInputWeights() {$/;"	f	class:Neuron	typeref:typename:void
+fixInputWeights	src/Neuron.cpp	/^void Neuron::fixInputWeights() {$/;"	f	class:Neuron	typeref:typename:void
 function	NeuronActivation.hpp	/^      double (*function)(double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double)
+function	include/NeuronActivation.hpp	/^      double (*function)(double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double)
 generateOutput	NeuralNetworkImpl.cpp	/^OutputNetworkData NeuralNetwork_impl::generateOutput() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:OutputNetworkData
 generateOutput	NeuralNetwork_impl.cpp	/^OutputNetworkData NeuralNetwork_impl::generateOutput() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:OutputNetworkData
+generateOutput	src/NeuralNetworkImpl.cpp	/^OutputNetworkData NeuralNetworkImpl::generateOutput() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:OutputNetworkData
 getDevStandart	NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(1.0 \/ seed); }$/;"	f	struct:NeuronActivations::sigmoid	typeref:typename:double
 getDevStandart	NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::regression	typeref:typename:double
 getDevStandart	NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::relu	typeref:typename:double
+getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(1.0 \/ seed); }$/;"	f	struct:NeuronActivations::sigmoid	typeref:typename:double
+getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::regression	typeref:typename:double
+getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::relu	typeref:typename:double
 getInput	NeuralNetworkSetterData.hpp	/^      InputNetworkData getInput() { return itData->input; }$/;"	f	struct:SetterData	typeref:typename:InputNetworkData
+getInput	include/NeuralNetworkSetterData.hpp	/^      InputNetworkData getInput() { return itData->input; }$/;"	f	struct:SetterData	typeref:typename:InputNetworkData
 getInputSize	NeuralNetworkImpl.hpp	/^      inline int getInputSize() { return input->nNeurons; }$/;"	f	class:NeuralNetwork_impl	typeref:typename:int
 getInputSize	NeuralNetwork_impl.hpp	/^      inline int getInputSize() { return input->nNeurons; }$/;"	f	class:NeuralNetwork_impl	typeref:typename:int
+getInputSize	include/NeuralNetworkImpl.hpp	/^      inline int getInputSize() { return input->nNeurons; }$/;"	f	class:NeuralNetworkImpl	typeref:typename:int
 getOutputSize	NeuralNetworkImpl.hpp	/^      inline int getOutputSize() { return output->nNeurons; }$/;"	f	class:NeuralNetwork_impl	typeref:typename:int
 getOutputSize	NeuralNetwork_impl.hpp	/^      inline int getOutputSize() { return output->nNeurons; }$/;"	f	class:NeuralNetwork_impl	typeref:typename:int
+getOutputSize	include/NeuralNetworkImpl.hpp	/^      inline int getOutputSize() { return output->nNeurons; }$/;"	f	class:NeuralNetworkImpl	typeref:typename:int
 getTarget	NeuralNetworkSetterData.hpp	/^      OutputNetworkData getTarget() { return itData->output; }$/;"	f	struct:SetterData	typeref:typename:OutputNetworkData
+getTarget	include/NeuralNetworkSetterData.hpp	/^      OutputNetworkData getTarget() { return itData->output; }$/;"	f	struct:SetterData	typeref:typename:OutputNetworkData
 input	Data.hpp	/^      std::vector<double> input;$/;"	m	struct:Data	typeref:typename:std::vector<double>
 input	NeuralNetworkImpl.cpp	/^Layer *NeuralNetwork_impl::input = nullptr;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
 input	NeuralNetworkImpl.hpp	/^      static Layer *input, *output;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
 input	NeuralNetwork_impl.cpp	/^Layer *NeuralNetwork_impl::input = nullptr;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
 input	NeuralNetwork_impl.hpp	/^      static Layer *input, *output;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
+input	include/Data.hpp	/^      std::vector<double> input;$/;"	m	struct:Data	typeref:typename:std::vector<double>
+input	include/NeuralNetworkImpl.hpp	/^      static Layer *input, *output;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Layer *
+input	src/NeuralNetworkImpl.cpp	/^Layer *NeuralNetworkImpl::input = nullptr;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Layer *
 itData	NeuralNetworkSetterData.hpp	/^      NetworkTrainData::iterator itData;$/;"	m	struct:SetterData	typeref:typename:NetworkTrainData::iterator
+itData	include/NeuralNetworkSetterData.hpp	/^      NetworkTrainData::iterator itData;$/;"	m	struct:SetterData	typeref:typename:NetworkTrainData::iterator
 main	main.cpp	/^int main() {$/;"	f	typeref:typename:int
 makeConnections	Neuron.cpp	/^void Neuron::makeConnections(Neurons &target, int prevLayerSize) {$/;"	f	class:Neuron	typeref:typename:void
+makeConnections	src/Neuron.cpp	/^void Neuron::makeConnections(Neurons &target, int prevLayerSize) {$/;"	f	class:Neuron	typeref:typename:void
 nNeurons	Layer.hpp	/^      int nNeurons;$/;"	m	struct:Layer	typeref:typename:int
 nNeurons	Layer.hpp	/^      int nNeurons;$/;"	m	struct:LayerDescription	typeref:typename:int
+nNeurons	include/Layer.hpp	/^      int nNeurons;$/;"	m	struct:Layer	typeref:typename:int
+nNeurons	include/Layer.hpp	/^      int nNeurons;$/;"	m	struct:LayerDescription	typeref:typename:int
 net_impl	NeuralNetwork.hpp	/^      NeuralNetwork_impl net_impl;$/;"	m	class:NeuralNetwork	typeref:typename:NeuralNetwork_impl
 net_impl	NeuralNetworkFit.hpp	/^      NeuralNetwork_impl *net_impl;$/;"	m	class:NeuralNetwork_fit	typeref:typename:NeuralNetwork_impl *
 net_impl	NeuralNetwork_fit.hpp	/^      NeuralNetwork_impl *net_impl;$/;"	m	class:NeuralNetwork_fit	typeref:typename:NeuralNetwork_impl *
+net_impl	include/NeuralNetwork.hpp	/^      NeuralNetworkImpl net_impl;$/;"	m	class:NeuralNetwork	typeref:typename:NeuralNetworkImpl
+net_impl	include/NeuralNetworkFit.hpp	/^      NeuralNetworkImpl *net_impl;$/;"	m	class:NeuralNetworkFit	typeref:typename:NeuralNetworkImpl *
 network	NeuralNetworkImpl.hpp	/^      Network network;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Network
 network	NeuralNetwork_impl.hpp	/^      Network network;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Network
+network	include/NeuralNetworkImpl.hpp	/^      Network network;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Network
 networkDescription	NeuralNetworkImpl.hpp	/^      NetworkDescription networkDescription;$/;"	m	class:NeuralNetwork_impl	typeref:typename:NetworkDescription
 networkDescription	NeuralNetwork_impl.hpp	/^      NetworkDescription networkDescription;$/;"	m	class:NeuralNetwork_impl	typeref:typename:NetworkDescription
+networkDescription	include/NeuralNetworkImpl.hpp	/^      NetworkDescription networkDescription;$/;"	m	class:NeuralNetworkImpl	typeref:typename:NetworkDescription
 networkIsValid	NeuralNetworkImpl.cpp	/^bool NeuralNetwork_impl::networkIsValid() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:bool
 networkIsValid	NeuralNetwork_impl.cpp	/^bool NeuralNetwork_impl::networkIsValid() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:bool
+networkIsValid	src/NeuralNetworkImpl.cpp	/^bool NeuralNetworkImpl::networkIsValid() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:bool
 neuronValue_p	Algorithm.hpp	/^      double neuronValue_p;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
+neuronValue_p	include/Algorithm.hpp	/^      double neuronValue_p;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 neurons	Layer.hpp	/^      Neuron::Neurons neurons;$/;"	m	struct:Layer	typeref:typename:Neuron::Neurons
+neurons	include/Layer.hpp	/^      Neuron::Neurons neurons;$/;"	m	struct:Layer	typeref:typename:Neuron::Neurons
 newInstance	Algorithm.hpp	/^inline std::shared_ptr<OptimizationAlgorithm> newInstance(TYPE type) {$/;"	f	namespace:Algorithms	typeref:typename:std::shared_ptr<OptimizationAlgorithm>
 newInstance	NeuronActivation.hpp	/^inline std::shared_ptr<activation> newInstance(TYPE type) {$/;"	f	namespace:NeuronActivations	typeref:typename:std::shared_ptr<activation>
+newInstance	include/Algorithm.hpp	/^inline std::shared_ptr<OptimizationAlgorithm> newInstance(TYPE type) {$/;"	f	namespace:Algorithms	typeref:typename:std::shared_ptr<OptimizationAlgorithm>
+newInstance	include/NeuronActivation.hpp	/^inline std::shared_ptr<activation> newInstance(TYPE type) {$/;"	f	namespace:NeuronActivations	typeref:typename:std::shared_ptr<activation>
 nextConnections	Neuron.hpp	/^      Connections nextConnections;$/;"	m	class:Neuron	typeref:typename:Connections
+nextConnections	include/Neuron.hpp	/^      Connections nextConnections;$/;"	m	class:Neuron	typeref:typename:Connections
 optimizationAlgorithm	Neuron.hpp	/^      std::shared_ptr<Algorithms::OptimizationAlgorithm> optimizationAlgorithm;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<Algorithms::OptimizationAlgorithm>
+optimizationAlgorithm	include/Neuron.hpp	/^      std::shared_ptr<Algorithms::OptimizationAlgorithm> optimizationAlgorithm;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<Algorithms::OptimizationAlgorithm>
 optimizeBias	Algorithm.hpp	/^      virtual double optimizeBias(NeuronConectionInfo context) override {$/;"	f	struct:Algorithms::Default	typeref:typename:double
+optimizeBias	include/Algorithm.hpp	/^      virtual double optimizeBias(NeuronConectionInfo context) override {$/;"	f	struct:Algorithms::Default	typeref:typename:double
 optimizeWeigth	Algorithm.hpp	/^      double optimizeWeigth(NeuronConectionInfo context) override {$/;"	f	struct:Algorithms::Default	typeref:typename:double
+optimizeWeigth	include/Algorithm.hpp	/^      double optimizeWeigth(NeuronConectionInfo context) override {$/;"	f	struct:Algorithms::Default	typeref:typename:double
 output	Data.hpp	/^      std::vector<double> output;$/;"	m	struct:Data	typeref:typename:std::vector<double>
 output	NeuralNetworkImpl.cpp	/^Layer *NeuralNetwork_impl::output = nullptr;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
 output	NeuralNetworkImpl.hpp	/^      static Layer *input, *output;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
 output	NeuralNetwork_impl.cpp	/^Layer *NeuralNetwork_impl::output = nullptr;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
 output	NeuralNetwork_impl.hpp	/^      static Layer *input, *output;$/;"	m	class:NeuralNetwork_impl	typeref:typename:Layer *
+output	include/Data.hpp	/^      std::vector<double> output;$/;"	m	struct:Data	typeref:typename:std::vector<double>
+output	include/NeuralNetworkImpl.hpp	/^      static Layer *input, *output;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Layer *
+output	src/NeuralNetworkImpl.cpp	/^Layer *NeuralNetworkImpl::output = nullptr;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Layer *
 predict	NeuralNetwork.cpp	/^std::vector<double> NeuralNetwork::predict(InputNetworkData input) {$/;"	f	class:NeuralNetwork	typeref:typename:std::vector<double>
+predict	src/NeuralNetwork.cpp	/^std::vector<double> NeuralNetwork::predict(InputNetworkData input) {$/;"	f	class:NeuralNetwork	typeref:typename:std::vector<double>
 prepareEpoch	NeuralNetworkFit.cpp	/^Data NeuralNetworkFit::prepareEpoch() {$/;"	f	class:NeuralNetworkFit	typeref:typename:Data
 prepareEpoch	NeuralNetwork_fit.cpp	/^Data NeuralNetwork_fit::prepareEpoch() {$/;"	f	class:NeuralNetwork_fit	typeref:typename:Data
+prepareEpoch	src/NeuralNetworkFit.cpp	/^Data NeuralNetworkFit::prepareEpoch() {$/;"	f	class:NeuralNetworkFit	typeref:typename:Data
 prepareNextEpoch	NeuralNetworkSetterData.hpp	/^      Data prepareNextEpoch(Layer *input, Layer *output) {$/;"	f	struct:SetterData	typeref:typename:Data
+prepareNextEpoch	include/NeuralNetworkSetterData.hpp	/^      Data prepareNextEpoch(Layer *input, Layer *output) {$/;"	f	struct:SetterData	typeref:typename:Data
 preparePrediction	NeuralNetworkSetterData.hpp	/^      void preparePrediction(Layer *input, InputNetworkData dataInput) {$/;"	f	struct:SetterData	typeref:typename:void
+preparePrediction	include/NeuralNetworkSetterData.hpp	/^      void preparePrediction(Layer *input, InputNetworkData dataInput) {$/;"	f	struct:SetterData	typeref:typename:void
 prevConnections	Neuron.hpp	/^      Connections prevConnections;$/;"	m	class:Neuron	typeref:typename:Connections
+prevConnections	include/Neuron.hpp	/^      Connections prevConnections;$/;"	m	class:Neuron	typeref:typename:Connections
 prevY	Neuron.hpp	/^      double prevY;$/;"	m	class:Neuron	typeref:typename:double
+prevY	include/Neuron.hpp	/^      double prevY;$/;"	m	class:Neuron	typeref:typename:double
 randomReal	Neuron.cpp	/^double randomReal(double li, double ls) {$/;"	f	typeref:typename:double
+randomReal	src/Neuron.cpp	/^double randomReal(double li, double ls) {$/;"	f	typeref:typename:double
 recalculateWeights	NeuralNetworkImpl.cpp	/^void NeuralNetwork_impl::recalculateWeights() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
 recalculateWeights	NeuralNetwork_impl.cpp	/^void NeuralNetwork_impl::recalculateWeights() {$/;"	f	class:NeuralNetwork_impl	typeref:typename:void
+recalculateWeights	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::recalculateWeights() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 regression	NeuronActivation.hpp	/^      regression() {$/;"	f	struct:NeuronActivations::regression
 regression	NeuronActivation.hpp	/^struct regression : public activation {$/;"	s	namespace:NeuronActivations
+regression	include/NeuronActivation.hpp	/^      regression() {$/;"	f	struct:NeuronActivations::regression
+regression	include/NeuronActivation.hpp	/^struct regression : public activation {$/;"	s	namespace:NeuronActivations
 relu	NeuronActivation.hpp	/^      relu() {$/;"	f	struct:NeuronActivations::relu
 relu	NeuronActivation.hpp	/^struct relu : public activation {$/;"	s	namespace:NeuronActivations
+relu	include/NeuronActivation.hpp	/^      relu() {$/;"	f	struct:NeuronActivations::relu
+relu	include/NeuronActivation.hpp	/^struct relu : public activation {$/;"	s	namespace:NeuronActivations
 setValue	Neuron.hpp	/^      inline void setValue(int _y) {$/;"	f	class:Neuron	typeref:typename:void
+setValue	include/Neuron.hpp	/^      inline void setValue(int _y) {$/;"	f	class:Neuron	typeref:typename:void
 setterData	NeuralNetworkFit.hpp	/^      SetterData setterData;$/;"	m	class:NeuralNetwork_fit	typeref:typename:SetterData
 setterData	NeuralNetwork_fit.hpp	/^      SetterData setterData;$/;"	m	class:NeuralNetwork_fit	typeref:typename:SetterData
+setterData	include/NeuralNetworkFit.hpp	/^      SetterData setterData;$/;"	m	class:NeuralNetworkFit	typeref:typename:SetterData
 showLoss	NeuralNetworkFit.cpp	/^void NeuralNetworkFit::showLoss(std::vector<double> batchLoss, int epochs) {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
 showLoss	NeuralNetwork_fit.cpp	/^void NeuralNetwork_fit::showLoss(std::vector<double> batchLoss, int epochs) {$/;"	f	class:NeuralNetwork_fit	typeref:typename:void
+showLoss	src/NeuralNetworkFit.cpp	/^void NeuralNetworkFit::showLoss(std::vector<double> batchLoss, int epochs) {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
 sigmoid	NeuronActivation.hpp	/^      sigmoid() {$/;"	f	struct:NeuronActivations::sigmoid
 sigmoid	NeuronActivation.hpp	/^struct sigmoid : public activation {$/;"	s	namespace:NeuronActivations
+sigmoid	include/NeuronActivation.hpp	/^      sigmoid() {$/;"	f	struct:NeuronActivations::sigmoid
+sigmoid	include/NeuronActivation.hpp	/^struct sigmoid : public activation {$/;"	s	namespace:NeuronActivations
 stepTrain	NeuralNetworkFit.cpp	/^OutputNetworkData NeuralNetworkFit::stepTrain() {$/;"	f	class:NeuralNetworkFit	typeref:typename:OutputNetworkData
 stepTrain	NeuralNetwork_fit.cpp	/^OutputNetworkData NeuralNetwork_fit::stepTrain() {$/;"	f	class:NeuralNetwork_fit	typeref:typename:OutputNetworkData
+stepTrain	src/NeuralNetworkFit.cpp	/^OutputNetworkData NeuralNetworkFit::stepTrain() {$/;"	f	class:NeuralNetworkFit	typeref:typename:OutputNetworkData
 targetNeuron	Neuron.hpp	/^      Neuron &targetNeuron;$/;"	m	struct:Connection	typeref:typename:Neuron &
+targetNeuron	include/Neuron.hpp	/^      Neuron &targetNeuron;$/;"	m	struct:Connection	typeref:typename:Neuron &
 targetValue	Neuron.hpp	/^      double targetValue;$/;"	m	class:Neuron	typeref:typename:double
+targetValue	include/Neuron.hpp	/^      double targetValue;$/;"	m	class:Neuron	typeref:typename:double
 trainData	NeuralNetworkSetterData.hpp	/^      NetworkTrainData trainData;$/;"	m	struct:SetterData	typeref:typename:NetworkTrainData
+trainData	include/NeuralNetworkSetterData.hpp	/^      NetworkTrainData trainData;$/;"	m	struct:SetterData	typeref:typename:NetworkTrainData
 type	Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:Layer	typeref:typename:Neuron::TYPE
 type	Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:LayerDescription	typeref:typename:Neuron::TYPE
 type	Neuron.hpp	/^      TYPE type;$/;"	m	class:Neuron	typeref:typename:TYPE
+type	include/Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:Layer	typeref:typename:Neuron::TYPE
+type	include/Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:LayerDescription	typeref:typename:Neuron::TYPE
+type	include/Neuron.hpp	/^      TYPE type;$/;"	m	class:Neuron	typeref:typename:TYPE
 val	Algorithm.hpp	/^      double val;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
+val	include/Algorithm.hpp	/^      double val;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 weight	Neuron.hpp	/^      std::shared_ptr<double> weight;$/;"	m	struct:Connection	typeref:typename:std::shared_ptr<double>
+weight	include/Neuron.hpp	/^      std::shared_ptr<double> weight;$/;"	m	struct:Connection	typeref:typename:std::shared_ptr<double>
 y	Neuron.hpp	/^      double y;$/;"	m	class:Neuron	typeref:typename:double
+y	include/Neuron.hpp	/^      double y;$/;"	m	class:Neuron	typeref:typename:double
+~NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^      ~NeuralNetworkImpl() {}$/;"	f	class:NeuralNetworkImpl
 ~NeuralNetwork_impl	NeuralNetworkImpl.hpp	/^      ~NeuralNetwork_impl() {}$/;"	f	class:NeuralNetwork_impl
 ~NeuralNetwork_impl	NeuralNetwork_impl.hpp	/^      ~NeuralNetwork_impl() {}$/;"	f	class:NeuralNetwork_impl

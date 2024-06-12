@@ -1,0 +1,3 @@
+/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles/NeuralNetwork.dir
+/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles/edit_cache.dir
+/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles/rebuild_cache.dir

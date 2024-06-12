@@ -1,8 +1,8 @@
-#include "Algorithm.hpp"
-#include "Data.hpp"
-#include "NeuralNetwork.hpp"
-#include "Neuron.hpp"
-#include "NeuronActivation.hpp"
+#include "include/Algorithm.hpp"
+#include "include/Data.hpp"
+#include "include/NeuralNetwork.hpp"
+#include "include/Neuron.hpp"
+#include "include/NeuronActivation.hpp"
 #include <iostream>
 
 // Correjir el sistema de perdida, mas elegante,
