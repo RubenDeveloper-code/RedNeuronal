@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/ruben/Programacion/estudio/c++/NeuralNetwork/CMakeLists.txt"
-  "CMakeFiles/3.29.5/CMakeCCompiler.cmake"
-  "CMakeFiles/3.29.5/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.29.5/CMakeSystem.cmake"
+  "CMakeFiles/3.29.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.29.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.29.6/CMakeSystem.cmake"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"

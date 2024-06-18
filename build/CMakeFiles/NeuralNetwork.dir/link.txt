@@ -1,1 +1,1 @@
-/sbin/c++ CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkImpl.cpp.o CMakeFiles/NeuralNetwork.dir/src/Neuron.cpp.o CMakeFiles/NeuralNetwork.dir/main.cpp.o -o NeuralNetwork
+/sbin/c++ -g CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkImpl.cpp.o CMakeFiles/NeuralNetwork.dir/src/Neuron.cpp.o CMakeFiles/NeuralNetwork.dir/main.cpp.o -o NeuralNetwork
