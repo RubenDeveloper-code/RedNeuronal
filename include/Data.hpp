@@ -3,7 +3,6 @@
 
 #include <vector>
 struct Data {
-      // Data(int inSize, int outSize) : input(inSize), output(outSize) {}
       Data(std::vector<double> in, std::vector<double> out)
           : input{in}, output{out} {};
       std::vector<double> input;

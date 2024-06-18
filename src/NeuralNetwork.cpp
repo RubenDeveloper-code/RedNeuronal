@@ -4,8 +4,10 @@
 #include "../include/NeuralNetworkImpl.hpp"
 #include <vector>
 
-NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription)
-    : net_impl(networkDescription) {}
+NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription,
+                             LossFuctions::TYPE lossFunctionType) {
+      net_impl = NeuralNetworkImpl(networkDescription, lossFunctionType);
+}
 
 void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {
       NeuralNetworkFit net_fit(trainData, epochs, batchSize, &net_impl);

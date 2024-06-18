@@ -2,10 +2,11 @@
 #define __LAYER_HPP__
 
 #include "Algorithm.hpp"
+#include "LossFuctions.hpp"
 #include "Neuron.hpp"
 #include "NeuronActivation.hpp"
+#include <memory>
 
-// una funcion retornara una instacia acorde a el tipo seleccionado por el enum
 struct LayerDescription {
       LayerDescription(Neuron::TYPE _type, NeuronActivations::TYPE _activation,
                        Algorithms::TYPE _algorithm, int _nNeurons)
@@ -19,12 +20,14 @@ struct LayerDescription {
 struct Layer {
       Layer(){};
       Layer(Neuron::TYPE _type, NeuronActivations::TYPE activation,
-            Algorithms::TYPE algorithm, int _nNeurons)
+            Algorithms::TYPE algorithm,
+            std::shared_ptr<LossFuctions::LossFunction> lossFunction,
+            int _nNeurons)
           : type{_type}, nNeurons(_nNeurons) {
             while (_nNeurons-- > 0) {
-                  neurons.emplace_back(
-                      Neuron{NeuronActivations::newInstance(activation),
-                             Algorithms::newInstance(algorithm), _type});
+                  neurons.emplace_back(Neuron{
+                      NeuronActivations::newInstance(activation),
+                      Algorithms::newInstance(algorithm), lossFunction, type});
             }
       }
       Neuron::TYPE type;

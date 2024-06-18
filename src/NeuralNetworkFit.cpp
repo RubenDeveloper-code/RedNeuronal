@@ -3,16 +3,17 @@
 #include "../include/NeuralNetworkImpl.hpp"
 #include "../include/NeuralNetworkSetterData.hpp"
 #include <iostream>
+#include <memory>
 #include <numeric>
 
 NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _epochs,
                                    int _batchSize, NeuralNetworkImpl *impl)
-    : batchSize(_batchSize), actualEpoch(), epochs(_epochs), net_impl(impl) {
+    : batchSize(_batchSize), epochs(_epochs), net_impl(impl) {
       setterData = SetterData(trainData);
 }
 
 void NeuralNetworkFit::fit() {
-      while (actualEpoch++ < epochs) {
+      while ((actualEpoch)++ < epochs) {
             auto newData = prepareEpoch();
             OutputNetworkData out = stepTrain();
             net_impl->recalculateWeights();
@@ -21,8 +22,8 @@ void NeuralNetworkFit::fit() {
 }
 
 Data NeuralNetworkFit::prepareEpoch() {
-      return setterData.prepareNextEpoch(NeuralNetworkImpl::input,
-                                         NeuralNetworkImpl::output);
+      return setterData.prepareNextEpoch(net_impl->getInputLayer(),
+                                         net_impl->getOutputLayer());
 }
 
 OutputNetworkData NeuralNetworkFit::stepTrain() {
@@ -31,14 +32,9 @@ OutputNetworkData NeuralNetworkFit::stepTrain() {
 
 double NeuralNetworkFit::calculeLoss(OutputNetworkData target,
                                      OutputNetworkData out, int epochs) {
-      int n = out.size();
-      double loss = 0;
-      for (int i = 0; i < n; i++) {
-            loss += std::abs(out[i] - target[i]);
-      }
-      loss /= n;
+      double loss = net_impl->lossFunction->function(out, target);
       if (batch_ind++ == batchSize) {
-            batch_ind = 0;
+            batch_ind = {};
             showLoss(batchLoss, epochs);
             batchLoss.clear();
       } else
@@ -47,15 +43,18 @@ double NeuralNetworkFit::calculeLoss(OutputNetworkData target,
 }
 
 void NeuralNetworkFit::showLoss(std::vector<double> batchLoss, int epochs) {
-      int div = epochs / 10;
-      double _loss =
+      static int cont = 0;
+      int call = (epochs / batchSize) / 10;
+      double loss =
           std::accumulate(batchLoss.begin(), batchLoss.end(), 0.0f) / batchSize;
-      if ((actualEpoch % div) == 0) {
-            if (_loss < 10) {
-                  for (int i = 0; i < _loss * 10; i++) {
+      if (cont++ == call) {
+            if (loss < 10) {
+                  for (int i = 0; i < loss * 10; i++) {
                         std::cout << "█";
                   }
             }
-            std::cout << " " << _loss << " in epoch: " << actualEpoch << " \n";
+            cont = 0;
+            std::cout << "::: " << loss << " in epoch: " << actualEpoch
+                      << " \n";
       }
 }

@@ -1,28 +1,34 @@
 #ifndef __NEURALNETWORK_IMPL_H__
 #define __NEURALNETWORK_IMPL_H__
 
-#include "Data.hpp"
 #include "Layer.hpp"
+#include "LossFuctions.hpp"
 #include "Neuron.hpp"
+#include <memory>
 #include <vector>
 
 class NeuralNetworkImpl {
     public:
       using NetworkDescription = std::vector<LayerDescription>;
       using Network = std::vector<Layer>;
-      NeuralNetworkImpl(NetworkDescription);
+      NeuralNetworkImpl(){};
+      NeuralNetworkImpl(NetworkDescription, LossFuctions::TYPE);
       std::vector<double> _predict(InputNetworkData input);
       OutputNetworkData generateOutput();
       void recalculateWeights();
 
-      static Layer *input, *output;
+      Network network;
+      Layer *getInputLayer() { return input; }
+      Layer *getOutputLayer() { return output; }
       inline int getInputSize() { return input->nNeurons; }
       inline int getOutputSize() { return output->nNeurons; }
+      std::shared_ptr<LossFuctions::LossFunction> lossFunction;
       ~NeuralNetworkImpl() {}
 
     private:
+      Layer *input, *output;
       NetworkDescription networkDescription;
-      Network network;
+      LossFuctions::TYPE lossFunctionType;
       bool networkIsValid();
       void buildNetwork();
       void alias_IO_layers();

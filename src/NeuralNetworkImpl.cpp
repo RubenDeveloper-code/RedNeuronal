@@ -5,13 +5,13 @@
 #include "../include/Neuron.hpp"
 #include <algorithm>
 #include <iterator>
+#include <memory>
 #include <vector>
 
-Layer *NeuralNetworkImpl::input = nullptr;
-Layer *NeuralNetworkImpl::output = nullptr;
-
-NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription)
-    : networkDescription(networkDescription) {
+NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription,
+                                     LossFuctions::TYPE _lossFunctionType)
+    : networkDescription(networkDescription),
+      lossFunctionType(_lossFunctionType) {
       buildNetwork();
 }
 
@@ -44,10 +44,11 @@ bool NeuralNetworkImpl::networkIsValid() {
 
 void NeuralNetworkImpl::createNetwork() {
       Network buildingNetwork;
+      lossFunction = LossFuctions::newInstance(lossFunctionType);
       for (auto layerInfo : networkDescription) {
             buildingNetwork.emplace_back(
                 Layer(layerInfo.type, layerInfo.activation, layerInfo.algorithm,
-                      layerInfo.nNeurons));
+                      lossFunction, layerInfo.nNeurons));
       }
       std::sort(buildingNetwork.begin(), buildingNetwork.end(),
                 [](const Layer &a, const Layer &b) { return a.type < b.type; });
@@ -58,9 +59,9 @@ void NeuralNetworkImpl::createNetwork() {
 void NeuralNetworkImpl::alias_IO_layers() {
       for (auto &layer : network) {
             if (layer.type == Neuron::TYPE::INPUT)
-                  NeuralNetworkImpl::input = &layer;
+                  input = &layer;
             if (layer.type == Neuron::TYPE::OUTPUT)
-                  NeuralNetworkImpl::output = &layer;
+                  output = &layer;
       }
 }
 void NeuralNetworkImpl::connectNetwork() {

@@ -4,6 +4,7 @@
 #include "Data.hpp"
 #include "NeuralNetworkImpl.hpp"
 #include "NeuralNetworkSetterData.hpp"
+#include <memory>
 #include <vector>
 
 class NeuralNetworkFit {
@@ -15,7 +16,8 @@ class NeuralNetworkFit {
     private:
       SetterData setterData;
       NeuralNetworkImpl *net_impl;
-      int actualEpoch, epochs, batchSize;
+      double actualEpoch;
+      int epochs, batchSize;
       std::vector<double> batchLoss{};
       int batch_ind = 0;
 

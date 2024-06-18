@@ -4,27 +4,21 @@
 #include <memory>
 #include <random>
 
-double randomReal(double li, double ls) {
-      std::random_device rd;
-      std::mt19937 gen(rd());
-      std::uniform_real_distribution<> dis(li, ls);
-      return dis(gen);
-}
-
 Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,
                std::shared_ptr<Algorithms::OptimizationAlgorithm> opt,
-               TYPE _type)
-    : activation{_activation}, optimizationAlgorithm{opt}, type{_type} {}
+               std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE _type)
+    : activation{_activation}, optimizationAlgorithm{opt},
+      lossFunction(lossFoo), type{_type} {}
 
 void Neuron::makeConnections(Neurons &target, int prevLayerSize) {
       double std_dev = activation->getDevStandart(prevLayerSize);
       std::random_device rd;
       std::mt19937 gen(rd());
-
       std::normal_distribution<double> dist(0.0, std_dev);
+
       for (auto &targetNeuron : target) {
-            double w = dist(gen);
-            std::shared_ptr<double> shared_weight{std::make_shared<double>(w)};
+            std::shared_ptr<double> shared_weight{
+                std::make_shared<double>(dist(gen))};
             std::shared_ptr<Connection> next =
                 std::make_shared<Connection>(targetNeuron, shared_weight);
             nextConnections.push_back(next);
@@ -48,27 +42,31 @@ double Neuron::calculateValue() {
       return -1;
 }
 
-void Neuron::checkError() {
-      error = 0;
+void Neuron::fixInputWeights() {
+      if (type == TYPE::INPUT)
+            return;
+      for (auto &prevConn : prevConnections) {
+            delta = checkError(prevConn->targetNeuron.y);
+            *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
+                {*prevConn->weight, alpha, delta, prevConn->targetNeuron.y});
+            //*prevConn->weight -= alpha * delta * -prevConn->targetNeuron.y;
+      }
+      bias = optimizationAlgorithm->optimizeBias({bias, alpha, checkError(1)});
+      // bias -= alpha * checkError(1) * -1;
+}
+
+double Neuron::checkError(double prevActivation) {
+      double error{};
       if (type == TYPE::OUTPUT) {
-            error = activation->derivative(prevY, y) * (y - targetValue);
+            error = activation->derivative(prevY, y) *
+                    lossFunction->derivative(y, targetValue);
       } else if (type == TYPE::WIDE) {
             double summNextErrors = 0.0;
             for (const auto &nextConn : nextConnections) {
                   summNextErrors +=
-                      *nextConn->weight * nextConn->targetNeuron.error;
+                      *nextConn->weight * nextConn->targetNeuron.delta;
             }
             error = activation->derivative(prevY, y) * summNextErrors;
       }
-}
-
-// debe ser usado el -=
-void Neuron::fixInputWeights() {
-      checkError();
-      bias -= alpha * error * 1.0;
-      if (type == TYPE::INPUT)
-            return;
-      for (auto &prevConn : prevConnections) {
-            *prevConn->weight -= alpha * error * prevConn->targetNeuron.y;
-      }
+      return error;
 }
