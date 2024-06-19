@@ -49,10 +49,8 @@ void Neuron::fixInputWeights() {
             delta = checkError(prevConn->targetNeuron.y);
             *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
                 {*prevConn->weight, alpha, delta, prevConn->targetNeuron.y});
-            //*prevConn->weight -= alpha * delta * -prevConn->targetNeuron.y;
       }
       bias = optimizationAlgorithm->optimizeBias({bias, alpha, checkError(1)});
-      // bias -= alpha * checkError(1) * -1;
 }
 
 double Neuron::checkError(double prevActivation) {

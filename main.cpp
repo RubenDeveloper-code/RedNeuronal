@@ -14,7 +14,7 @@ int main() {
           {{Neuron::TYPE::INPUT, NeuronActivations::TYPE::SIGMOID,
             Algorithms::TYPE::SGD, 1},
            {Neuron::TYPE::WIDE, NeuronActivations::TYPE::REGRESSION,
-            Algorithms::TYPE::SGD, 2},
+            Algorithms::TYPE::SGD, 1},
            {Neuron::TYPE::OUTPUT, NeuronActivations::TYPE::REGRESSION,
             Algorithms::TYPE::SGD, 1}},
           LossFuctions::TYPE::MSE};
