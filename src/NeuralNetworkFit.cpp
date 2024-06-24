@@ -20,8 +20,8 @@ void NeuralNetworkFit::fit() {
       std::vector<OutputNetworkData> computedOutputs;
       std::vector<OutputNetworkData> desiredOutputs;
       while ((*actualEpoch)++ < epochs) {
-            //  invariante, podria considerar los que queden fuera del multiplo
-            for (int multi = 1; multi * mini_batch <= setterData.getDataSize();
+            for (int multi = 1;
+                 multi * mini_batch < setterData.getDataSize() + mini_batch;
                  multi++) {
                   for (auto i = 0; i < mini_batch; i++) {
                         auto newData = prepareEpoch();
@@ -29,7 +29,8 @@ void NeuralNetworkFit::fit() {
                         computedOutputs.push_back(computeOutput());
                   }
                   net_impl->recalculateWeights(computedOutputs, desiredOutputs);
-                  calculeLoss(computedOutputs, desiredOutputs, epochs);
+                  double loss =
+                      calculeLoss(computedOutputs, desiredOutputs, epochs);
                   computedOutputs.clear();
                   desiredOutputs.clear();
             }

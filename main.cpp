@@ -31,7 +31,7 @@ int main() {
               {{35}, {95}},
               {{38}, {100}},
           },
-          20000, 2);
+          500000, 5);
 
       int nInputNeurons = 1;
       InputNetworkData input(nInputNeurons);

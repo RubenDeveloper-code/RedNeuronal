@@ -4,6 +4,8 @@
 #include "Layer.hpp"
 #include "Neuron.hpp"
 #include <algorithm>
+#include <chrono>
+#include <random>
 #include <vector>
 
 struct SetterData {
@@ -33,6 +35,10 @@ struct SetterData {
 
             if ((++itData) == trainData.end())
                   itData = trainData.begin();
+            unsigned seed =
+                std::chrono::system_clock::now().time_since_epoch().count();
+            std::default_random_engine engine(seed);
+            std::shuffle(trainData.begin(), trainData.end(), engine);
             return data;
       }
       double getDataSize() { return trainData.size(); }

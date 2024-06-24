@@ -87,13 +87,9 @@ void Neuron::recomputeParameters(
                 {*prevConn->weight, alpha,
                  computeGradient(prevConn->targetNeuron.y, WEIGHT,
                                  minibatch_activations, minibatch_targets)});
-            /* prevConn->weight =
-             *prevConn->weight - alpha * delta * -prevConn->targetNeuron.y;*/
       }
       bias = optimizationAlgorithm->optimizeBias(
           {bias, alpha,
            computeGradient(1.0, BIAS, minibatch_activations,
                            minibatch_targets)});
-      // bias = optimizationAlgorithm->optimizeBias({bias, alpha,
-      // bias_gradient});
 }

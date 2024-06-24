@@ -159,4 +159,36 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuralNetworkFit.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuralNetworkSetterData.hpp \
+ /usr/include/c++/14.1.1/chrono /usr/include/c++/14.1.1/bits/chrono.h \
+ /usr/include/c++/14.1.1/ratio /usr/include/c++/14.1.1/cstdint \
+ /usr/include/c++/14.1.1/ctime \
+ /usr/include/c++/14.1.1/bits/parse_numbers.h \
+ /usr/include/c++/14.1.1/random /usr/include/c++/14.1.1/string \
+ /usr/include/c++/14.1.1/bits/char_traits.h \
+ /usr/include/c++/14.1.1/bits/localefwd.h \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/14.1.1/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/14.1.1/cctype \
+ /usr/include/ctype.h /usr/include/c++/14.1.1/bits/ostream_insert.h \
+ /usr/include/c++/14.1.1/bits/cxxabi_forced.h \
+ /usr/include/c++/14.1.1/bits/basic_string.h \
+ /usr/include/c++/14.1.1/string_view \
+ /usr/include/c++/14.1.1/bits/string_view.tcc \
+ /usr/include/c++/14.1.1/ext/string_conversions.h \
+ /usr/include/c++/14.1.1/cstdio /usr/include/stdio.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/bits/types/struct_FILE.h \
+ /usr/include/bits/types/cookie_io_functions_t.h \
+ /usr/include/bits/stdio_lim.h /usr/include/c++/14.1.1/cerrno \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/bits/types/error_t.h \
+ /usr/include/c++/14.1.1/bits/charconv.h \
+ /usr/include/c++/14.1.1/bits/basic_string.tcc \
+ /usr/include/c++/14.1.1/bits/random.h \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/opt_random.h \
+ /usr/include/c++/14.1.1/bits/random.tcc /usr/include/c++/14.1.1/numeric \
+ /usr/include/c++/14.1.1/bits/stl_numeric.h \
+ /usr/include/c++/14.1.1/pstl/glue_numeric_defs.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuralNetworkImpl.hpp

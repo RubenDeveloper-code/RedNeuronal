@@ -29,10 +29,10 @@ struct MeanSquaredError : public LossFunction {
                                          activations[itBatch][itSingle],
                                      2);
                   }
-                  individualLoss = summation / 2.0;
+                  individualLoss = summation / ((double)OUTPUT_SIZE);
                   loss += individualLoss;
             }
-            loss /= SIZE_BATCH;
+            loss /= (SIZE_BATCH);
             return loss;
       }
       double derivative(OutputNetworkData activation,
@@ -42,7 +42,7 @@ struct MeanSquaredError : public LossFunction {
             for (int it = 0; it < N; it++) {
                   summ += 2 * (target[it] - activation[it]);
             }
-            return (summ) / N;
+            return (summ) / (N);
       }
 };
 inline std::shared_ptr<LossFunction> newInstance(TYPE type) {
