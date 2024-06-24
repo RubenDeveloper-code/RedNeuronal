@@ -12,14 +12,16 @@
 int main() {
       NeuralNetwork network{
           {{Neuron::TYPE::INPUT, NeuronActivations::TYPE::SIGMOID,
-            Algorithms::TYPE::SGD, 1},
+            Algorithms::TYPE::ADAMS, 1},
            {Neuron::TYPE::WIDE, NeuronActivations::TYPE::REGRESSION,
             Algorithms::TYPE::SGD, 1},
            {Neuron::TYPE::OUTPUT, NeuronActivations::TYPE::REGRESSION,
             Algorithms::TYPE::SGD, 1}},
           LossFuctions::TYPE::MSE};
-      /*network.fit({{{0, 0}, {1}}, {{0, 1}, {0}}, {{1, 0}, {0}}, {{1, 1},
-         {1}}}, 50000, 4);*/
+      /* network.fit({{{0, 0}, {0}}, {{0, 1}, {1}}, {{1, 0}, {1}}, {{1, 1},
+         {1}}}, 500, 4);*/
+      // revisar la function de perdida
+      // SOLO NO FUNCIONA CUANDO SE USAN TODOS LOS DATOS DEL CONJUNTO
       network.fit(
           {
               {{0}, {32}},
@@ -29,7 +31,7 @@ int main() {
               {{35}, {95}},
               {{38}, {100}},
           },
-          50000, 6);
+          20000, 2);
 
       int nInputNeurons = 1;
       InputNetworkData input(nInputNeurons);

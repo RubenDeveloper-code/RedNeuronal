@@ -35,6 +35,7 @@ struct SetterData {
                   itData = trainData.begin();
             return data;
       }
+      double getDataSize() { return trainData.size(); }
       OutputNetworkData getTarget() { return itData->output; }
       InputNetworkData getInput() { return itData->input; }
 

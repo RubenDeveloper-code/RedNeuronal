@@ -9,9 +9,10 @@
 #include <vector>
 
 NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription,
-                                     LossFuctions::TYPE _lossFunctionType)
+                                     LossFuctions::TYPE _lossFunctionType,
+                                     std::shared_ptr<int> _epoch_ptr)
     : networkDescription(networkDescription),
-      lossFunctionType(_lossFunctionType) {
+      lossFunctionType(_lossFunctionType), epoch_ptr(_epoch_ptr) {
       buildNetwork();
 }
 
@@ -48,7 +49,7 @@ void NeuralNetworkImpl::createNetwork() {
       for (auto layerInfo : networkDescription) {
             buildingNetwork.emplace_back(
                 Layer(layerInfo.type, layerInfo.activation, layerInfo.algorithm,
-                      lossFunction, layerInfo.nNeurons));
+                      lossFunction, epoch_ptr, layerInfo.nNeurons));
       }
       std::sort(buildingNetwork.begin(), buildingNetwork.end(),
                 [](const Layer &a, const Layer &b) { return a.type < b.type; });
@@ -97,11 +98,13 @@ OutputNetworkData NeuralNetworkImpl::generateOutput() {
       }
       return netOut;
 }
-void NeuralNetworkImpl::recalculateWeights() {
+void NeuralNetworkImpl::recalculateWeights(
+    std::vector<OutputNetworkData> acts,
+    std::vector<OutputNetworkData> targets) {
       for (auto layer = network.rbegin(); std::prev(network.rend()) != layer;
            layer++) {
             for (auto &neuron : layer->neurons) {
-                  neuron.fixInputWeights();
+                  neuron.recomputeParameters(acts, targets);
             }
       }
 }

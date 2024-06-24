@@ -1,6 +1,7 @@
 #ifndef __NEURALNETWORK_IMPL_H__
 #define __NEURALNETWORK_IMPL_H__
 
+#include "Data.hpp"
 #include "Layer.hpp"
 #include "LossFuctions.hpp"
 #include "Neuron.hpp"
@@ -12,10 +13,12 @@ class NeuralNetworkImpl {
       using NetworkDescription = std::vector<LayerDescription>;
       using Network = std::vector<Layer>;
       NeuralNetworkImpl(){};
-      NeuralNetworkImpl(NetworkDescription, LossFuctions::TYPE);
+      NeuralNetworkImpl(NetworkDescription, LossFuctions::TYPE,
+                        std::shared_ptr<int> epochs);
       std::vector<double> _predict(InputNetworkData input);
       OutputNetworkData generateOutput();
-      void recalculateWeights();
+      void recalculateWeights(std::vector<OutputNetworkData> acts,
+                              std::vector<OutputNetworkData> targets);
 
       Network network;
       Layer *getInputLayer() { return input; }
@@ -29,6 +32,7 @@ class NeuralNetworkImpl {
       Layer *input, *output;
       NetworkDescription networkDescription;
       LossFuctions::TYPE lossFunctionType;
+      std::shared_ptr<int> epoch_ptr;
       bool networkIsValid();
       void buildNetwork();
       void alias_IO_layers();

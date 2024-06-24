@@ -22,12 +22,13 @@ struct Layer {
       Layer(Neuron::TYPE _type, NeuronActivations::TYPE activation,
             Algorithms::TYPE algorithm,
             std::shared_ptr<LossFuctions::LossFunction> lossFunction,
-            int _nNeurons)
+            std::shared_ptr<int> epoch_ptr, int _nNeurons)
           : type{_type}, nNeurons(_nNeurons) {
             while (_nNeurons-- > 0) {
-                  neurons.emplace_back(Neuron{
-                      NeuronActivations::newInstance(activation),
-                      Algorithms::newInstance(algorithm), lossFunction, type});
+                  neurons.emplace_back(
+                      Neuron{NeuronActivations::newInstance(activation),
+                             Algorithms::newInstance(algorithm, epoch_ptr),
+                             lossFunction, type});
             }
       }
       Neuron::TYPE type;

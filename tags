@@ -121,6 +121,7 @@ ARCHITECTURE_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#
 Adams	include/Algorithm.hpp	/^      Adams(std::shared_ptr<int> _t) : t{_t} {};$/;"	f	struct:Algorithms::Adams
 Adams	include/Algorithm.hpp	/^struct Adams : public OptimizationAlgorithm {$/;"	s	namespace:Algorithms
 Algorithms	include/Algorithm.hpp	/^namespace Algorithms {$/;"	n
+BIAS	src/Neuron.cpp	/^#define BIAS /;"	d	file:
 CMAKE_AR	build/CMakeFiles/3.29.5/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
 CMAKE_AR	build/CMakeFiles/3.29.5/CMakeCXXCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
 CMAKE_AR	build/CMakeFiles/3.29.6/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
@@ -524,14 +525,14 @@ NeuralNetwork	include/NeuralNetwork.hpp	/^class NeuralNetwork {$/;"	c
 NeuralNetwork	src/NeuralNetwork.cpp	/^NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription,$/;"	f	class:NeuralNetwork
 NeuralNetwork/fast	build/Makefile	/^NeuralNetwork\/fast:$/;"	t
 NeuralNetworkFit	include/NeuralNetworkFit.hpp	/^class NeuralNetworkFit {$/;"	c
-NeuralNetworkFit	src/NeuralNetworkFit.cpp	/^NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _epochs,$/;"	f	class:NeuralNetworkFit
+NeuralNetworkFit	src/NeuralNetworkFit.cpp	/^NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _batchSize,$/;"	f	class:NeuralNetworkFit
 NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^      NeuralNetworkImpl(){};$/;"	f	class:NeuralNetworkImpl
 NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^class NeuralNetworkImpl {$/;"	c
 NeuralNetworkImpl	src/NeuralNetworkImpl.cpp	/^NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription,$/;"	f	class:NeuralNetworkImpl
 Neuron	include/Neuron.hpp	/^class Neuron {$/;"	c
 Neuron	src/Neuron.cpp	/^Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,$/;"	f	class:Neuron
 NeuronActivations	include/NeuronActivation.hpp	/^namespace NeuronActivations {$/;"	n
-NeuronConectionInfo	include/Algorithm.hpp	/^      NeuronConectionInfo(double _val, double _alpha, double _delta,$/;"	f	struct:Algorithms::NeuronConectionInfo
+NeuronConectionInfo	include/Algorithm.hpp	/^      NeuronConectionInfo(double _val, double _alpha, long double _gradient)$/;"	f	struct:Algorithms::NeuronConectionInfo
 NeuronConectionInfo	include/Algorithm.hpp	/^struct NeuronConectionInfo {$/;"	s	namespace:Algorithms
 Neurons	include/Neuron.hpp	/^      using Neurons = std::vector<Neuron>;$/;"	t	class:Neuron	typeref:typename:std::vector<Neuron>
 OUTPUT	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
@@ -611,6 +612,7 @@ TYPE	include/Algorithm.hpp	/^enum class TYPE { SGD, ADAMS };$/;"	g	namespace:Alg
 TYPE	include/LossFuctions.hpp	/^enum class TYPE { MSE };$/;"	g	namespace:LossFuctions
 TYPE	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	g	class:Neuron
 TYPE	include/NeuronActivation.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	g	namespace:NeuronActivations
+WEIGHT	src/Neuron.cpp	/^#define WEIGHT /;"	d	file:
 WIDE	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
 __ALGORITMS_HPP__	include/Algorithm.hpp	/^#define __ALGORITMS_HPP__$/;"	d
 __DATA_HPP__	include/Data.hpp	/^#define __DATA_HPP__$/;"	d
@@ -640,50 +642,54 @@ _predict	src/NeuralNetworkImpl.cpp	/^std::vector<double> NeuralNetworkImpl::_pre
 activation	include/Layer.hpp	/^      NeuronActivations::TYPE activation;$/;"	m	struct:LayerDescription	typeref:typename:NeuronActivations::TYPE
 activation	include/Neuron.hpp	/^      std::shared_ptr<NeuronActivations::activation> activation;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<NeuronActivations::activation>
 activation	include/NeuronActivation.hpp	/^struct activation {$/;"	s	namespace:NeuronActivations
-actualEpoch	include/NeuralNetworkFit.hpp	/^      double actualEpoch;$/;"	m	class:NeuralNetworkFit	typeref:typename:double
+actualEpoch	include/NeuralNetworkFit.hpp	/^      std::shared_ptr<int> actualEpoch;$/;"	m	class:NeuralNetworkFit	typeref:typename:std::shared_ptr<int>
 algorithm	include/Layer.hpp	/^      Algorithms::TYPE algorithm;$/;"	m	struct:LayerDescription	typeref:typename:Algorithms::TYPE
 alias_IO_layers	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::alias_IO_layers() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 all	build/Makefile	/^all: cmake_check_build_system$/;"	t
+alpha	include/Algorithm.hpp	/^            double alpha = 0.01;$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
 alpha	include/Algorithm.hpp	/^      double alpha;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
-alpha	include/Neuron.hpp	/^      double alpha = 0.0001;$/;"	m	class:Neuron	typeref:typename:double
+alpha	include/Neuron.hpp	/^      double alpha = 0.00001;$/;"	m	class:Neuron	typeref:typename:double
 batchLoss	include/NeuralNetworkFit.hpp	/^      std::vector<double> batchLoss{};$/;"	m	class:NeuralNetworkFit	typeref:typename:std::vector<double>
-batchSize	include/NeuralNetworkFit.hpp	/^      int epochs, batchSize;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 batch_ind	include/NeuralNetworkFit.hpp	/^      int batch_ind = 0;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
-beta1	include/Algorithm.hpp	/^      double beta1 = 0.9, beta2 = 0.999;$/;"	m	struct:Algorithms::Adams	typeref:typename:double
-beta2	include/Algorithm.hpp	/^      double beta1 = 0.9, beta2 = 0.999;$/;"	m	struct:Algorithms::Adams	typeref:typename:double
+beta1	include/Algorithm.hpp	/^            double beta1 = 0.9, beta2 = 0.999;$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
+beta2	include/Algorithm.hpp	/^            double beta1 = 0.9, beta2 = 0.999;$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
 bias	include/Neuron.hpp	/^      double bias = 1.0;$/;"	m	class:Neuron	typeref:typename:double
+bias_gradient	include/Neuron.hpp	/^      long double bias_gradient;$/;"	m	class:Neuron	typeref:typename:long double
+biashp	include/Algorithm.hpp	/^      hiperparameters biashp;$/;"	m	struct:Algorithms::Adams	typeref:typename:hiperparameters
 buildNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::buildNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 calculateValue	src/Neuron.cpp	/^double Neuron::calculateValue() {$/;"	f	class:Neuron	typeref:typename:double
-calculeLoss	src/NeuralNetworkFit.cpp	/^double NeuralNetworkFit::calculeLoss(OutputNetworkData target,$/;"	f	class:NeuralNetworkFit	typeref:typename:double
-checkError	src/Neuron.cpp	/^double Neuron::checkError(double prevActivation) {$/;"	f	class:Neuron	typeref:typename:double
+calculeLoss	src/NeuralNetworkFit.cpp	/^NeuralNetworkFit::calculeLoss(std::vector<OutputNetworkData> desiredOutputs,$/;"	f	class:NeuralNetworkFit	typeref:typename:double
 clean	build/Makefile	/^clean:$/;"	t
 clean/fast	build/Makefile	/^clean\/fast: clean$/;"	t
 cmake_check_build_system	build/Makefile	/^cmake_check_build_system:$/;"	t
 cmake_force	build/Makefile	/^cmake_force:$/;"	t
-computeFirstFixedMomentum	include/Algorithm.hpp	/^      void computeFirstFixedMomentum() {$/;"	f	struct:Algorithms::Adams	typeref:typename:void
-computeParameter	include/Algorithm.hpp	/^      double computeParameter(NeuronConectionInfo context) {$/;"	f	struct:Algorithms::Adams	typeref:typename:double
-computeSecondFixedMomentum	include/Algorithm.hpp	/^      void computeSecondFixedMomentum() {$/;"	f	struct:Algorithms::Adams	typeref:typename:void
+computeFirstFixedMomentum	include/Algorithm.hpp	/^      void computeFirstFixedMomentum(hiperparameters &data) {$/;"	f	struct:Algorithms::Adams	typeref:typename:void
+computeGradient	src/Neuron.cpp	/^Neuron::computeGradient(double prevActivation, int theta,$/;"	f	class:Neuron	typeref:typename:long double
+computeOutput	src/NeuralNetworkFit.cpp	/^OutputNetworkData NeuralNetworkFit::computeOutput() {$/;"	f	class:NeuralNetworkFit	typeref:typename:OutputNetworkData
+computeParameter	include/Algorithm.hpp	/^      double computeParameter(NeuronConectionInfo context,$/;"	f	struct:Algorithms::Adams	typeref:typename:double
+computeSecondFixedMomentum	include/Algorithm.hpp	/^      void computeSecondFixedMomentum(hiperparameters &data) {$/;"	f	struct:Algorithms::Adams	typeref:typename:void
 connect	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::connect(Layer &layer, Neuron::Neurons &neurons) {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 connectNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::connectNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 const	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 const	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 createNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::createNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 default_target	build/Makefile	/^default_target: all$/;"	t
-delta	include/Algorithm.hpp	/^      double delta;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 delta	include/Neuron.hpp	/^      double delta;$/;"	m	class:Neuron	typeref:typename:double
 depend	build/Makefile	/^depend:$/;"	t
-derivative	include/LossFuctions.hpp	/^      double derivative(double activation, double target) override {$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
+derivative	include/LossFuctions.hpp	/^      double derivative(OutputNetworkData activation,$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
 derivative	include/NeuronActivation.hpp	/^      double (*derivative)(double, double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double,double)
 edit_cache	build/Makefile	/^edit_cache:$/;"	t
 edit_cache/fast	build/Makefile	/^edit_cache\/fast: edit_cache$/;"	t
-epochs	include/NeuralNetworkFit.hpp	/^      int epochs, batchSize;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
-epsilon	include/Algorithm.hpp	/^      double epsilon = 10e-9;$/;"	m	struct:Algorithms::Adams	typeref:typename:double
+epoch_ptr	include/NeuralNetworkImpl.hpp	/^      std::shared_ptr<int> epoch_ptr;$/;"	m	class:NeuralNetworkImpl	typeref:typename:std::shared_ptr<int>
+epochs	include/NeuralNetworkFit.hpp	/^      int epochs, mini_batch;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
+epochs_ptr	include/NeuralNetwork.hpp	/^      std::shared_ptr<int> epochs_ptr;$/;"	m	class:NeuralNetwork	typeref:typename:std::shared_ptr<int>
+epsilon	include/Algorithm.hpp	/^            double epsilon = 10e-9;$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
 fit	src/NeuralNetwork.cpp	/^void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {$/;"	f	class:NeuralNetwork	typeref:typename:void
 fit	src/NeuralNetworkFit.cpp	/^void NeuralNetworkFit::fit() {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
-fixInputWeights	src/Neuron.cpp	/^void Neuron::fixInputWeights() {$/;"	f	class:Neuron	typeref:typename:void
-function	include/LossFuctions.hpp	/^      double function(OutputNetworkData activations,$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
+function	include/LossFuctions.hpp	/^      double function(std::vector<OutputNetworkData> activations,$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
 function	include/NeuronActivation.hpp	/^      double (*function)(double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double)
 generateOutput	src/NeuralNetworkImpl.cpp	/^OutputNetworkData NeuralNetworkImpl::generateOutput() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:OutputNetworkData
+getDataSize	include/NeuralNetworkSetterData.hpp	/^      double getDataSize() { return trainData.size(); }$/;"	f	struct:SetterData	typeref:typename:double
 getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(1.0 \/ seed); }$/;"	f	struct:NeuronActivations::sigmoid	typeref:typename:double
 getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::regression	typeref:typename:double
 getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::relu	typeref:typename:double
@@ -693,8 +699,10 @@ getInputSize	include/NeuralNetworkImpl.hpp	/^      inline int getInputSize() { r
 getOutputLayer	include/NeuralNetworkImpl.hpp	/^      Layer *getOutputLayer() { return output; }$/;"	f	class:NeuralNetworkImpl	typeref:typename:Layer *
 getOutputSize	include/NeuralNetworkImpl.hpp	/^      inline int getOutputSize() { return output->nNeurons; }$/;"	f	class:NeuralNetworkImpl	typeref:typename:int
 getTarget	include/NeuralNetworkSetterData.hpp	/^      OutputNetworkData getTarget() { return itData->output; }$/;"	f	struct:SetterData	typeref:typename:OutputNetworkData
-gradient	include/Algorithm.hpp	/^      double gradient{};$/;"	m	struct:Algorithms::Adams	typeref:typename:double
+gradient	include/Algorithm.hpp	/^            double gradient{};$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
+gradient	include/Algorithm.hpp	/^      double gradient;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 help	build/Makefile	/^help:$/;"	t
+hiperparameters	include/Algorithm.hpp	/^      struct hiperparameters {$/;"	s	struct:Algorithms::Adams
 info_arch	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
 info_arch	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
 info_arch	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
@@ -749,8 +757,8 @@ itData	include/NeuralNetworkSetterData.hpp	/^      NetworkTrainData::iterator it
 lossFunction	include/NeuralNetworkImpl.hpp	/^      std::shared_ptr<LossFuctions::LossFunction> lossFunction;$/;"	m	class:NeuralNetworkImpl	typeref:typename:std::shared_ptr<LossFuctions::LossFunction>
 lossFunction	include/Neuron.hpp	/^      std::shared_ptr<LossFuctions::LossFunction> lossFunction;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<LossFuctions::LossFunction>
 lossFunctionType	include/NeuralNetworkImpl.hpp	/^      LossFuctions::TYPE lossFunctionType;$/;"	m	class:NeuralNetworkImpl	typeref:typename:LossFuctions::TYPE
-m	include/Algorithm.hpp	/^      double m = 0, v = 0;$/;"	m	struct:Algorithms::Adams	typeref:typename:double
-mC	include/Algorithm.hpp	/^      double mC{}, vC{};$/;"	m	struct:Algorithms::Adams	typeref:typename:double
+m	include/Algorithm.hpp	/^            double m = 0, v = 0;$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
+mC	include/Algorithm.hpp	/^            double mC{}, vC{};$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
 main	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
 main	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
@@ -765,6 +773,7 @@ main.i	build/Makefile	/^main.i: main.cpp.i$/;"	t
 main.o	build/Makefile	/^main.o: main.cpp.o$/;"	t
 main.s	build/Makefile	/^main.s: main.cpp.s$/;"	t
 makeConnections	src/Neuron.cpp	/^void Neuron::makeConnections(Neurons &target, int prevLayerSize) {$/;"	f	class:Neuron	typeref:typename:void
+mini_batch	include/NeuralNetworkFit.hpp	/^      int epochs, mini_batch;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 nNeurons	include/Layer.hpp	/^      int nNeurons;$/;"	m	struct:Layer	typeref:typename:int
 nNeurons	include/Layer.hpp	/^      int nNeurons;$/;"	m	struct:LayerDescription	typeref:typename:int
 net_impl	include/NeuralNetwork.hpp	/^      NeuralNetworkImpl net_impl;$/;"	m	class:NeuralNetwork	typeref:typename:NeuralNetworkImpl
@@ -772,7 +781,6 @@ net_impl	include/NeuralNetworkFit.hpp	/^      NeuralNetworkImpl *net_impl;$/;"	m
 network	include/NeuralNetworkImpl.hpp	/^      Network network;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Network
 networkDescription	include/NeuralNetworkImpl.hpp	/^      NetworkDescription networkDescription;$/;"	m	class:NeuralNetworkImpl	typeref:typename:NetworkDescription
 networkIsValid	src/NeuralNetworkImpl.cpp	/^bool NeuralNetworkImpl::networkIsValid() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:bool
-neuronValue_p	include/Algorithm.hpp	/^      double neuronValue_p;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 neurons	include/Layer.hpp	/^      Neuron::Neurons neurons;$/;"	m	struct:Layer	typeref:typename:Neuron::Neurons
 newInstance	include/Algorithm.hpp	/^newInstance(TYPE type, std::shared_ptr<int> t = nullptr) {$/;"	f	namespace:Algorithms	typeref:typename:std::shared_ptr<OptimizationAlgorithm>
 newInstance	include/LossFuctions.hpp	/^inline std::shared_ptr<LossFunction> newInstance(TYPE type) {$/;"	f	namespace:LossFuctions	typeref:typename:std::shared_ptr<LossFunction>
@@ -799,14 +807,15 @@ qnxnto	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxn
 qnxnto	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 rebuild_cache	build/Makefile	/^rebuild_cache:$/;"	t
 rebuild_cache/fast	build/Makefile	/^rebuild_cache\/fast: rebuild_cache$/;"	t
-recalculateWeights	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::recalculateWeights() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
+recalculateWeights	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::recalculateWeights($/;"	f	class:NeuralNetworkImpl	typeref:typename:void
+recomputeParameters	src/Neuron.cpp	/^void Neuron::recomputeParameters($/;"	f	class:Neuron	typeref:typename:void
 regression	include/NeuronActivation.hpp	/^      regression() {$/;"	f	struct:NeuronActivations::regression
 regression	include/NeuronActivation.hpp	/^struct regression : public activation {$/;"	s	namespace:NeuronActivations
 relu	include/NeuronActivation.hpp	/^      relu() {$/;"	f	struct:NeuronActivations::relu
 relu	include/NeuronActivation.hpp	/^struct relu : public activation {$/;"	s	namespace:NeuronActivations
 setValue	include/Neuron.hpp	/^      inline void setValue(int _y) {$/;"	f	class:Neuron	typeref:typename:void
 setterData	include/NeuralNetworkFit.hpp	/^      SetterData setterData;$/;"	m	class:NeuralNetworkFit	typeref:typename:SetterData
-showLoss	src/NeuralNetworkFit.cpp	/^void NeuralNetworkFit::showLoss(std::vector<double> batchLoss, int epochs) {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
+showLoss	src/NeuralNetworkFit.cpp	/^void NeuralNetworkFit::showLoss(long loss, int epochs) {$/;"	f	class:NeuralNetworkFit	typeref:typename:void
 sigmoid	include/NeuronActivation.hpp	/^      sigmoid() {$/;"	f	struct:NeuronActivations::sigmoid
 sigmoid	include/NeuronActivation.hpp	/^struct sigmoid : public activation {$/;"	s	namespace:NeuronActivations
 src/NeuralNetwork.cpp.i	build/Makefile	/^src\/NeuralNetwork.cpp.i:$/;"	t
@@ -833,7 +842,6 @@ src/Neuron.cpp.s	build/Makefile	/^src\/Neuron.cpp.s:$/;"	t
 src/Neuron.i	build/Makefile	/^src\/Neuron.i: src\/Neuron.cpp.i$/;"	t
 src/Neuron.o	build/Makefile	/^src\/Neuron.o: src\/Neuron.cpp.o$/;"	t
 src/Neuron.s	build/Makefile	/^src\/Neuron.s: src\/Neuron.cpp.s$/;"	t
-stepTrain	src/NeuralNetworkFit.cpp	/^OutputNetworkData NeuralNetworkFit::stepTrain() {$/;"	f	class:NeuralNetworkFit	typeref:typename:OutputNetworkData
 t	include/Algorithm.hpp	/^      std::shared_ptr<int> t{};$/;"	m	struct:Algorithms::Adams	typeref:typename:std::shared_ptr<int>
 targetNeuron	include/Neuron.hpp	/^      Neuron &targetNeuron;$/;"	m	struct:Connection	typeref:typename:Neuron &
 targetValue	include/Neuron.hpp	/^      double targetValue;$/;"	m	class:Neuron	typeref:typename:double
@@ -841,11 +849,13 @@ trainData	include/NeuralNetworkSetterData.hpp	/^      NetworkTrainData trainData
 type	include/Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:Layer	typeref:typename:Neuron::TYPE
 type	include/Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:LayerDescription	typeref:typename:Neuron::TYPE
 type	include/Neuron.hpp	/^      TYPE type;$/;"	m	class:Neuron	typeref:typename:TYPE
-v	include/Algorithm.hpp	/^      double m = 0, v = 0;$/;"	m	struct:Algorithms::Adams	typeref:typename:double
-vC	include/Algorithm.hpp	/^      double mC{}, vC{};$/;"	m	struct:Algorithms::Adams	typeref:typename:double
+v	include/Algorithm.hpp	/^            double m = 0, v = 0;$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
+vC	include/Algorithm.hpp	/^            double mC{}, vC{};$/;"	m	struct:Algorithms::Adams::hiperparameters	typeref:typename:double
 val	include/Algorithm.hpp	/^      double val;$/;"	m	struct:Algorithms::NeuronConectionInfo	typeref:typename:double
 volatile	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
 volatile	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
 weight	include/Neuron.hpp	/^      std::shared_ptr<double> weight;$/;"	m	struct:Connection	typeref:typename:std::shared_ptr<double>
+weight_gradient	include/Neuron.hpp	/^      long double weight_gradient;$/;"	m	class:Neuron	typeref:typename:long double
+weighthp	include/Algorithm.hpp	/^      hiperparameters weighthp;$/;"	m	struct:Algorithms::Adams	typeref:typename:hiperparameters
 y	include/Neuron.hpp	/^      double y;$/;"	m	class:Neuron	typeref:typename:double
 ~NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^      ~NeuralNetworkImpl() {}$/;"	f	class:NeuralNetworkImpl

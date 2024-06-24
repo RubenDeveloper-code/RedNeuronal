@@ -2,6 +2,7 @@
 #define __NEURON_HPP__
 
 #include "Algorithm.hpp"
+#include "Data.hpp"
 #include "LossFuctions.hpp"
 #include "NeuronActivation.hpp"
 #include <algorithm>
@@ -22,8 +23,10 @@ class Neuron {
 
       void makeConnections(Neurons &target, int prevLayerSize);
       double calculateValue();
-      void fixInputWeights();
-      double checkError(double prevActivation);
+      void recomputeParameters(std::vector<OutputNetworkData>,
+                               std::vector<OutputNetworkData>);
+      long double computeGradient(double, int, std::vector<OutputNetworkData>,
+                                  std::vector<OutputNetworkData>);
       inline void setValue(int _y) {
             if (type == TYPE::INPUT)
                   y = _y;
@@ -43,10 +46,12 @@ class Neuron {
       Connections nextConnections;
       double delta;
       double bias = 1.0;
-      double alpha = 0.0001;
+      double alpha = 0.00001;
       double prevY;
 
       double targetValue;
+      long double weight_gradient;
+      long double bias_gradient;
 };
 
 struct Connection {

@@ -14,6 +14,7 @@ class NeuralNetwork {
       OutputNetworkData predict(InputNetworkData input);
 
     private:
+      std::shared_ptr<int> epochs_ptr;
       NeuralNetworkImpl net_impl;
 };
 

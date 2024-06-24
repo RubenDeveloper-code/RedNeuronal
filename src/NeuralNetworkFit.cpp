@@ -5,19 +5,34 @@
 #include <iostream>
 #include <memory>
 #include <numeric>
+#include <vector>
 
-NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _epochs,
-                                   int _batchSize, NeuralNetworkImpl *impl)
-    : batchSize(_batchSize), epochs(_epochs), net_impl(impl) {
+NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _batchSize,
+                                   int _epochs, std::shared_ptr<int> epochs_ptr,
+                                   NeuralNetworkImpl *impl)
+    : mini_batch(_batchSize), epochs(_epochs), net_impl(impl),
+      actualEpoch(epochs_ptr) {
       setterData = SetterData(trainData);
 }
 
+// minibatch default 1
 void NeuralNetworkFit::fit() {
-      while ((actualEpoch)++ < epochs) {
-            auto newData = prepareEpoch();
-            OutputNetworkData out = stepTrain();
-            net_impl->recalculateWeights();
-            calculeLoss(out, newData.output, epochs);
+      std::vector<OutputNetworkData> computedOutputs;
+      std::vector<OutputNetworkData> desiredOutputs;
+      while ((*actualEpoch)++ < epochs) {
+            //  invariante, podria considerar los que queden fuera del multiplo
+            for (int multi = 1; multi * mini_batch <= setterData.getDataSize();
+                 multi++) {
+                  for (auto i = 0; i < mini_batch; i++) {
+                        auto newData = prepareEpoch();
+                        desiredOutputs.push_back(newData.output);
+                        computedOutputs.push_back(computeOutput());
+                  }
+                  net_impl->recalculateWeights(computedOutputs, desiredOutputs);
+                  calculeLoss(computedOutputs, desiredOutputs, epochs);
+                  computedOutputs.clear();
+                  desiredOutputs.clear();
+            }
       }
 }
 
@@ -26,35 +41,31 @@ Data NeuralNetworkFit::prepareEpoch() {
                                          net_impl->getOutputLayer());
 }
 
-OutputNetworkData NeuralNetworkFit::stepTrain() {
+OutputNetworkData NeuralNetworkFit::computeOutput() {
       return net_impl->generateOutput();
 }
 
-double NeuralNetworkFit::calculeLoss(OutputNetworkData target,
-                                     OutputNetworkData out, int epochs) {
-      double loss = net_impl->lossFunction->function(out, target);
-      if (batch_ind++ == batchSize) {
-            batch_ind = {};
-            showLoss(batchLoss, epochs);
-            batchLoss.clear();
-      } else
-            batchLoss.push_back(loss);
+double
+NeuralNetworkFit::calculeLoss(std::vector<OutputNetworkData> desiredOutputs,
+                              std::vector<OutputNetworkData> computedOutputs,
+                              int epochs) {
+      double loss =
+          net_impl->lossFunction->function(desiredOutputs, computedOutputs);
+      showLoss(loss, epochs);
       return loss;
 }
 
-void NeuralNetworkFit::showLoss(std::vector<double> batchLoss, int epochs) {
+void NeuralNetworkFit::showLoss(long loss, int epochs) {
       static int cont = 0;
-      int call = (epochs / batchSize) / 10;
-      double loss =
-          std::accumulate(batchLoss.begin(), batchLoss.end(), 0.0f) / batchSize;
+      int call = (epochs / mini_batch) / 10;
       if (cont++ == call) {
             if (loss < 10) {
-                  for (int i = 0; i < loss * 10; i++) {
+                  /*for (int i = 0; i < loss * 10; i++) {
                         std::cout << "█";
-                  }
+                  }*/
             }
             cont = 0;
-            std::cout << "::: " << loss << " in epoch: " << actualEpoch
+            std::cout << "::: " << loss << " in epoch: " << *actualEpoch
                       << " \n";
       }
 }

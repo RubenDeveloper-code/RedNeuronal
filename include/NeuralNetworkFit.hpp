@@ -9,23 +9,25 @@
 
 class NeuralNetworkFit {
     public:
-      NeuralNetworkFit(NetworkTrainData, int epochs, int batchSize,
-                       NeuralNetworkImpl *impl);
+      NeuralNetworkFit(NetworkTrainData, int mini_batch, int epochs,
+                       std::shared_ptr<int> epoch_ptr, NeuralNetworkImpl *impl);
       void fit();
 
     private:
       SetterData setterData;
       NeuralNetworkImpl *net_impl;
-      double actualEpoch;
-      int epochs, batchSize;
+      std::shared_ptr<int> actualEpoch;
+      int epochs, mini_batch;
+      ;
       std::vector<double> batchLoss{};
       int batch_ind = 0;
 
       Data prepareEpoch();
-      OutputNetworkData stepTrain();
-      double calculeLoss(OutputNetworkData target, OutputNetworkData out,
+      OutputNetworkData computeOutput();
+      double calculeLoss(std::vector<OutputNetworkData> desiredOutputs,
+                         std::vector<OutputNetworkData> computedOutputs,
                          int epochs);
-      void showLoss(std::vector<double> batchLoss, int epochs);
+      void showLoss(long loss, int epochs);
 };
 
 #endif

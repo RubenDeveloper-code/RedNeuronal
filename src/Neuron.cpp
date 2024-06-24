@@ -1,8 +1,15 @@
 #include "../include/Neuron.hpp"
 #include "../include/Algorithm.hpp"
 #include "../include/NeuronActivation.hpp"
+#include <iostream>
 #include <memory>
 #include <random>
+#include <vector>
+using namespace std;
+
+#define WEIGHT 1
+#define BIAS 0
+// ya lestoy agarrando el pedo
 
 Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,
                std::shared_ptr<Algorithms::OptimizationAlgorithm> opt,
@@ -41,30 +48,52 @@ double Neuron::calculateValue() {
       }
       return -1;
 }
+// Nuevos calculos dC/dwjk
+// YO SI JALO YA NI LE MUEVAS PAPI, A LO MUCHO LA FUNC DE PERDIDA
+long double
+Neuron::computeGradient(double prevActivation, int theta,
+                        std::vector<OutputNetworkData> activations,
+                        std::vector<OutputNetworkData> targetValues) {
+      const int N = activations.size();
+      if (type == TYPE::OUTPUT) {
+            double act = activation->derivative(prevY, y);
+            double accomulate_loss{};
+            double temp_delta, temp_gradient;
+            for (auto it = 0; it < N; it++) {
+                  accomulate_loss += lossFunction->derivative(activations[it],
+                                                              targetValues[it]);
+            }
+            delta = (accomulate_loss / N) * act;
+            return delta * -prevActivation;
+      } else if (type == TYPE::WIDE) {
+            double temp_delta{};
+            for (auto &conn : nextConnections) {
+                  temp_delta += (*conn->weight * conn->targetNeuron.delta);
+            }
+            temp_delta *= activation->derivative(prevY, y);
+            delta = temp_delta;
+            return temp_delta * -prevActivation;
+      }
+      return 0;
+}
 
-void Neuron::fixInputWeights() {
+void Neuron::recomputeParameters(
+    std::vector<OutputNetworkData> minibatch_activations,
+    std::vector<OutputNetworkData> minibatch_targets) {
       if (type == TYPE::INPUT)
             return;
       for (auto &prevConn : prevConnections) {
-            delta = checkError(prevConn->targetNeuron.y);
             *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
-                {*prevConn->weight, alpha, delta, prevConn->targetNeuron.y});
+                {*prevConn->weight, alpha,
+                 computeGradient(prevConn->targetNeuron.y, WEIGHT,
+                                 minibatch_activations, minibatch_targets)});
+            /* prevConn->weight =
+             *prevConn->weight - alpha * delta * -prevConn->targetNeuron.y;*/
       }
-      bias = optimizationAlgorithm->optimizeBias({bias, alpha, checkError(1)});
-}
-
-double Neuron::checkError(double prevActivation) {
-      double error{};
-      if (type == TYPE::OUTPUT) {
-            error = activation->derivative(prevY, y) *
-                    lossFunction->derivative(y, targetValue);
-      } else if (type == TYPE::WIDE) {
-            double summNextErrors = 0.0;
-            for (const auto &nextConn : nextConnections) {
-                  summNextErrors +=
-                      *nextConn->weight * nextConn->targetNeuron.delta;
-            }
-            error = activation->derivative(prevY, y) * summNextErrors;
-      }
-      return error;
+      bias = optimizationAlgorithm->optimizeBias(
+          {bias, alpha,
+           computeGradient(1.0, BIAS, minibatch_activations,
+                           minibatch_targets)});
+      // bias = optimizationAlgorithm->optimizeBias({bias, alpha,
+      // bias_gradient});
 }
