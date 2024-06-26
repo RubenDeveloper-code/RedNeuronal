@@ -15,14 +15,15 @@ class NeuralNetworkImpl {
       using NetworkDescription = std::vector<LayerDescription>;
       using Network = std::vector<Layer>;
       NeuralNetworkImpl(NetworkDescription, LossFuctions::TYPE,
-                        GlobalResourses &&);
+                        GlobalResourses &&,
+                        NetworkAlgorithms::AlgorithmsAlpha &_algorithmsAlpha);
       std::vector<double> _predict(InputNetworkData input);
       OutputNetworkData generateOutput();
       void recalculateWeights(std::vector<OutputNetworkData> acts,
                               std::vector<OutputNetworkData> targets);
 
       Network network;
-      NetworkAlgorithms::AlgorithmsAlpha netAlgorithmsAlpha;
+      NetworkAlgorithms::AlgorithmsAlpha *algorithmsAlpha;
       GlobalResourses GLOBAL_RESOURSES;
       Layer *getInputLayer() { return input; }
       Layer *getOutputLayer() { return output; }

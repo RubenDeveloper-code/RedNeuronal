@@ -17,7 +17,7 @@ void NeuralNetworkFit::fit() {
       std::vector<OutputNetworkData> desiredOutputs;
       net_impl->initAlphaAlgorithms();
       while ((*net_impl->GLOBAL_RESOURSES.epochs_it)++ < epochs) {
-            net_impl->netAlgorithmsAlpha.run();
+            net_impl->algorithmsAlpha->run();
             for (int multi = 1;
                  multi * mini_batch < setterData.getDataSize() + mini_batch;
                  multi++) {

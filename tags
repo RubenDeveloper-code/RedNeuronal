@@ -121,8 +121,8 @@ ARCHITECTURE_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#
 ARCHITECTURE_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
 Adams	include/OptimizationAlgorithms.hpp	/^      Adams(std::shared_ptr<int> _t, std::shared_ptr<double> alpha)$/;"	f	struct:OptimizationAlgorithms::Adams
 Adams	include/OptimizationAlgorithms.hpp	/^struct Adams : public OptimizationAlgorithm {$/;"	s	namespace:OptimizationAlgorithms
-Algorithm	include/NetworkAlgoritms.hpp	/^struct Algorithm {$/;"	s	namespace:NetworkAlgorithms
 AlgorithmsAlpha	include/NetworkAlgoritms.hpp	/^struct AlgorithmsAlpha {$/;"	s	namespace:NetworkAlgorithms
+AlphaAlgorithm	include/NetworkAlgoritms.hpp	/^struct AlphaAlgorithm {$/;"	s	namespace:NetworkAlgorithms
 BIAS	src/Neuron.cpp	/^#define BIAS /;"	d	file:
 CMAKE_AR	build/CMakeFiles/3.29.5/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
 CMAKE_AR	build/CMakeFiles/3.29.5/CMakeCXXCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
@@ -501,7 +501,7 @@ Data	include/Data.hpp	/^      Data(std::vector<double> in, std::vector<double> o
 Data	include/Data.hpp	/^struct Data {$/;"	s
 DecayLearningRate	include/NetworkAlgoritms.hpp	/^      DecayLearningRate(){};$/;"	f	struct:NetworkAlgorithms::DecayLearningRate
 DecayLearningRate	include/NetworkAlgoritms.hpp	/^      DecayLearningRate(double _initialAlpha, double _finalAlpha,$/;"	f	struct:NetworkAlgorithms::DecayLearningRate
-DecayLearningRate	include/NetworkAlgoritms.hpp	/^struct DecayLearningRate : public Algorithm {$/;"	s	namespace:NetworkAlgorithms
+DecayLearningRate	include/NetworkAlgoritms.hpp	/^struct DecayLearningRate : public AlphaAlgorithm {$/;"	s	namespace:NetworkAlgorithms
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 GLOBAL_RESOURSES	include/NeuralNetworkImpl.hpp	/^      GlobalResourses GLOBAL_RESOURSES;$/;"	m	class:NeuralNetworkImpl	typeref:typename:GlobalResourses
 GlobalResourses	include/NetworkGlobalResources.hpp	/^      GlobalResourses(double initialAlpha) {$/;"	f	struct:GlobalResourses
@@ -537,7 +537,7 @@ NeuralNetwork/fast	build/Makefile	/^NeuralNetwork\/fast:$/;"	t
 NeuralNetworkFit	include/NeuralNetworkFit.hpp	/^class NeuralNetworkFit {$/;"	c
 NeuralNetworkFit	src/NeuralNetworkFit.cpp	/^NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _batchSize,$/;"	f	class:NeuralNetworkFit
 NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^class NeuralNetworkImpl {$/;"	c
-NeuralNetworkImpl	src/NeuralNetworkImpl.cpp	/^NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription,$/;"	f	class:NeuralNetworkImpl
+NeuralNetworkImpl	src/NeuralNetworkImpl.cpp	/^NeuralNetworkImpl::NeuralNetworkImpl($/;"	f	class:NeuralNetworkImpl
 Neuron	include/Neuron.hpp	/^class Neuron {$/;"	c
 Neuron	src/Neuron.cpp	/^Neuron::Neuron($/;"	f	class:Neuron
 NeuronActivations	include/NeuronActivation.hpp	/^namespace NeuronActivations {$/;"	n
@@ -630,7 +630,7 @@ WEIGHT	src/Neuron.cpp	/^#define WEIGHT /;"	d	file:
 WIDE	include/Neuron.hpp	/^      enum class TYPE { INPUT, WIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
 WarmUp	include/NetworkAlgoritms.hpp	/^      WarmUp(){};$/;"	f	struct:NetworkAlgorithms::WarmUp
 WarmUp	include/NetworkAlgoritms.hpp	/^      WarmUp(double _initialAlpha, double _finalAlpha, int _limitEpochs)$/;"	f	struct:NetworkAlgorithms::WarmUp
-WarmUp	include/NetworkAlgoritms.hpp	/^struct WarmUp : public Algorithm {$/;"	s	namespace:NetworkAlgorithms
+WarmUp	include/NetworkAlgoritms.hpp	/^struct WarmUp : public AlphaAlgorithm {$/;"	s	namespace:NetworkAlgorithms
 __ALGORITMS_HPP__	include/OptimizationAlgorithms.hpp	/^#define __ALGORITMS_HPP__$/;"	d
 __DATA_HPP__	include/Data.hpp	/^#define __DATA_HPP__$/;"	d
 __LAYER_HPP__	include/Layer.hpp	/^#define __LAYER_HPP__$/;"	d
@@ -662,13 +662,13 @@ activation	include/Layer.hpp	/^      NeuronActivations::TYPE activation;$/;"	m	s
 activation	include/Neuron.hpp	/^      std::shared_ptr<NeuronActivations::activation> activation;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<NeuronActivations::activation>
 activation	include/NeuronActivation.hpp	/^struct activation {$/;"	s	namespace:NeuronActivations
 active	include/NetworkAlgoritms.hpp	/^      ALPHAALGORITHMS active = AlgorithmsAlpha::ALPHAALGORITHMS::UNDEFINED;$/;"	m	struct:NetworkAlgorithms::AlgorithmsAlpha	typeref:typename:ALPHAALGORITHMS
-addDecayLearningRate	src/NeuralNetwork.cpp	/^void NeuralNetwork::addDecayLearningRate(double initialAlpha, double finalAlpha,$/;"	f	class:NeuralNetwork	typeref:typename:void
-addWarmUp	src/NeuralNetwork.cpp	/^void NeuralNetwork::addWarmUp(double initialAlpha, double finalAlpha,$/;"	f	class:NeuralNetwork	typeref:typename:void
 algorithm	include/Layer.hpp	/^      OptimizationAlgorithms::TYPE algorithm;$/;"	m	struct:LayerDescription	typeref:typename:OptimizationAlgorithms::TYPE
+algorithmsAlpha	include/NeuralNetworkImpl.hpp	/^      NetworkAlgorithms::AlgorithmsAlpha *algorithmsAlpha;$/;"	m	class:NeuralNetworkImpl	typeref:typename:NetworkAlgorithms::AlgorithmsAlpha *
 alias_IO_layers	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::alias_IO_layers() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
 all	build/Makefile	/^all: cmake_check_build_system$/;"	t
 alpha	include/NetworkGlobalResources.hpp	/^      std::shared_ptr<double> alpha;$/;"	m	struct:GlobalResourses	typeref:typename:std::shared_ptr<double>
 alpha	include/OptimizationAlgorithms.hpp	/^      std::shared_ptr<double> alpha;$/;"	m	struct:OptimizationAlgorithms::OptimizationAlgorithm	typeref:typename:std::shared_ptr<double>
+alphaAlgorithms	include/NeuralNetwork.hpp	/^      NetworkAlgorithms::AlgorithmsAlpha alphaAlgorithms;$/;"	m	class:NeuralNetwork	typeref:typename:NetworkAlgorithms::AlgorithmsAlpha
 batchLoss	include/NeuralNetworkFit.hpp	/^      std::vector<double> batchLoss{};$/;"	m	class:NeuralNetworkFit	typeref:typename:std::vector<double>
 batch_ind	include/NeuralNetworkFit.hpp	/^      int batch_ind = 0;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 beta1	include/OptimizationAlgorithms.hpp	/^            double beta1 = 0.9, beta2 = 0.999;$/;"	m	struct:OptimizationAlgorithms::Adams::hiperparameters	typeref:typename:double
@@ -808,7 +808,6 @@ makeConnections	src/Neuron.cpp	/^void Neuron::makeConnections(Neurons &target, i
 mini_batch	include/NeuralNetworkFit.hpp	/^      int epochs, mini_batch;$/;"	m	class:NeuralNetworkFit	typeref:typename:int
 nNeurons	include/Layer.hpp	/^      int nNeurons;$/;"	m	struct:Layer	typeref:typename:int
 nNeurons	include/Layer.hpp	/^      int nNeurons;$/;"	m	struct:LayerDescription	typeref:typename:int
-netAlgorithmsAlpha	include/NeuralNetworkImpl.hpp	/^      NetworkAlgorithms::AlgorithmsAlpha netAlgorithmsAlpha;$/;"	m	class:NeuralNetworkImpl	typeref:typename:NetworkAlgorithms::AlgorithmsAlpha
 net_impl	include/NeuralNetwork.hpp	/^      NeuralNetworkImpl net_impl;$/;"	m	class:NeuralNetwork	typeref:typename:NeuralNetworkImpl
 net_impl	include/NeuralNetworkFit.hpp	/^      NeuralNetworkImpl *net_impl;$/;"	m	class:NeuralNetworkFit	typeref:typename:NeuralNetworkImpl *
 network	include/NeuralNetworkImpl.hpp	/^      Network network;$/;"	m	class:NeuralNetworkImpl	typeref:typename:Network

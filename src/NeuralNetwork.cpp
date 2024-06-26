@@ -7,22 +7,14 @@
 NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription,
                              LossFuctions::TYPE lossFunctionType,
                              double initialAlpha)
-    : net_impl{networkDescription, lossFunctionType, {initialAlpha}} {}
+    : alphaAlgorithms(), net_impl{networkDescription,
+                                  lossFunctionType,
+                                  {initialAlpha},
+                                  alphaAlgorithms} {}
 
 void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {
       NeuralNetworkFit net_fit(trainData, batchSize, epochs, &net_impl);
       net_fit.fit();
-}
-void NeuralNetwork::addWarmUp(double initialAlpha, double finalAlpha,
-                              int limitEpochs) {
-      net_impl.netAlgorithmsAlpha.upWarmUp(std::move(
-          NetworkAlgorithms::WarmUp{initialAlpha, finalAlpha, limitEpochs}));
-}
-void NeuralNetwork::addDecayLearningRate(double initialAlpha, double finalAlpha,
-                                         int limitEpochs) {
-      net_impl.netAlgorithmsAlpha.upDecayLearningRate(
-          std::move(NetworkAlgorithms::DecayLearningRate{
-              initialAlpha, finalAlpha, limitEpochs}));
 }
 
 std::vector<double> NeuralNetwork::predict(InputNetworkData input) {

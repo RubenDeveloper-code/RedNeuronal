@@ -19,7 +19,7 @@ int main() {
           0.1};
       /* network.fit({{{0, 0}, {0}}, {{0, 1}, {1}}, {{1, 0}, {1}}, {{1, 1},
          {1}}}, 500, 4);*/
-      // network.addDecayLearningRate(0.1, 0.01, 20);
+      network.alphaAlgorithms.upWarmUp({0.1, 0.01, 50});
       network.fit(
           {{
               {{-40}, {-40}}, {{-30}, {-22}}, {{-20}, {-4}}, {{-10}, {14}},

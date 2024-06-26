@@ -9,12 +9,12 @@ namespace NetworkAlgorithms {
 // modifica, para llamarlo una funcion de algorithm alha ejecutara los
 // algoritmos en true
 
-struct Algorithm {
+struct AlphaAlgorithm {
       virtual void init(GlobalResourses *globalResourses) = 0;
       virtual void run() = 0;
-      virtual ~Algorithm() = default;
+      virtual ~AlphaAlgorithm() = default;
 };
-struct WarmUp : public Algorithm {
+struct WarmUp : public AlphaAlgorithm {
       WarmUp(){};
       WarmUp(double _initialAlpha, double _finalAlpha, int _limitEpochs)
           : initialAlpha(_initialAlpha), finalAlpha(_finalAlpha),
@@ -33,6 +33,7 @@ struct WarmUp : public Algorithm {
                   else
                         *globalResourses->alpha = finalAlpha;
             }
+            std::cout << "warmup: " << *globalResourses->alpha << std::endl;
       }
       GlobalResourses *globalResourses;
       double initialAlpha;
@@ -41,7 +42,7 @@ struct WarmUp : public Algorithm {
       bool isInit = false;
 };
 
-struct DecayLearningRate : public Algorithm {
+struct DecayLearningRate : public AlphaAlgorithm {
       DecayLearningRate(){};
       DecayLearningRate(double _initialAlpha, double _finalAlpha,
                         int _limitEpochs)
@@ -61,6 +62,7 @@ struct DecayLearningRate : public Algorithm {
                   else
                         *globalResourses->alpha = finalAlpha;
             }
+            std::cout << "decay: " << *globalResourses->alpha << std::endl;
       }
       GlobalResourses *globalResourses;
       double initialAlpha;

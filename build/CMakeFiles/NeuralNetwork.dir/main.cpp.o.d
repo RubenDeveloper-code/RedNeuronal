@@ -189,6 +189,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/istream.tcc \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetwork.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp \
@@ -202,7 +203,6 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp \
  /usr/include/c++/14.1.1/utility \
  /usr/include/c++/14.1.1/bits/stl_relops.h \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp

@@ -3,6 +3,7 @@
 
 #include "Data.hpp"
 #include "LossFuctions.hpp"
+#include "NetworkAlgoritms.hpp"
 #include "NetworkGlobalResources.hpp"
 #include "NeuralNetworkImpl.hpp"
 #include <memory>
@@ -13,9 +14,7 @@ class NeuralNetwork {
                     LossFuctions::TYPE lossFunctionType, double initialAlpha);
       void fit(NetworkTrainData trainData, int epochs, int batchSize);
       OutputNetworkData predict(InputNetworkData input);
-      void addWarmUp(double initialAlpha, double finalAlpha, int periodEpoch);
-      void addDecayLearningRate(double initialAlpha, double finalAlpha,
-                                int periodEpoch);
+      NetworkAlgorithms::AlgorithmsAlpha alphaAlgorithms;
 
     private:
       NeuralNetworkImpl net_impl;

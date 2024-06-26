@@ -8,12 +8,14 @@
 #include <memory>
 #include <vector>
 
-NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription,
-                                     LossFuctions::TYPE _lossFunctionType,
-                                     GlobalResourses &&_globalResourses)
+NeuralNetworkImpl::NeuralNetworkImpl(
+    NetworkDescription networkDescription, LossFuctions::TYPE _lossFunctionType,
+    GlobalResourses &&_globalResourses,
+    NetworkAlgorithms::AlgorithmsAlpha &_algorithmsAlpha)
     : networkDescription(networkDescription),
       lossFunctionType(_lossFunctionType),
-      GLOBAL_RESOURSES(std::move(_globalResourses)) {
+      GLOBAL_RESOURSES(std::move(_globalResourses)),
+      algorithmsAlpha(&_algorithmsAlpha) {
       buildNetwork();
 }
 
@@ -111,5 +113,5 @@ void NeuralNetworkImpl::recalculateWeights(
       }
 }
 void NeuralNetworkImpl::initAlphaAlgorithms() {
-      netAlgorithmsAlpha.init(&GLOBAL_RESOURSES);
+      algorithmsAlpha->init(&GLOBAL_RESOURSES);
 }
