@@ -56,7 +56,7 @@ NeuralNetworkFit::calculeLoss(std::vector<OutputNetworkData> desiredOutputs,
       return loss;
 }
 
-void NeuralNetworkFit::showLoss(long loss, int epochs) {
+void NeuralNetworkFit::showLoss(double loss, int epochs) {
       static int cont = 0;
       int call = (epochs / mini_batch) / 10;
       if (cont++ == call) {

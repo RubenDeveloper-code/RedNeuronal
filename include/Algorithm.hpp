@@ -2,6 +2,7 @@
 #define __ALGORITMS_HPP__
 
 #include <cmath>
+#include <iostream>
 #include <memory>
 namespace Algorithms {
 enum class TYPE { SGD, ADAMS };
@@ -29,16 +30,15 @@ struct SDG : public OptimizationAlgorithm {
 struct Adams : public OptimizationAlgorithm {
       struct hiperparameters {
             double beta1 = 0.9, beta2 = 0.999;
-            double epsilon = 10e-9;
+            double epsilon = 10e-8;
             double m = 0, v = 0;
             double mC{}, vC{};
-            double gradient{};
-            double alpha = 0.01;
+            double alpha = 0.1;
       };
       hiperparameters biashp;
       hiperparameters weighthp;
       std::shared_ptr<int> t{};
-      Adams(std::shared_ptr<int> _t) : t{_t} {};
+      Adams(std::shared_ptr<int> _t) : t{_t}, biashp(), weighthp(){};
       double optimizeWeigth(NeuronConectionInfo context) override {
             return computeParameter(context, weighthp);
       }
@@ -48,19 +48,24 @@ struct Adams : public OptimizationAlgorithm {
 
       double computeParameter(NeuronConectionInfo context,
                               hiperparameters &data) {
-            computeFirstFixedMomentum(data);
-            computeSecondFixedMomentum(data);
+            computeFirstFixedMomentum(data, context.gradient);
+            computeSecondFixedMomentum(data, context.gradient);
             return context.val -
                    data.alpha * (data.mC / (sqrt(data.vC) + data.epsilon));
       }
-      void computeFirstFixedMomentum(hiperparameters &data) {
-            data.m = data.beta1 * data.m + (1 - data.beta1) * data.gradient;
-            data.mC = data.m / (1 - pow(data.beta1, *t));
+      void computeFirstFixedMomentum(hiperparameters &data, double gradient) {
+            data.m = data.beta1 * data.m + (1.0 - data.beta1) * gradient;
+            data.mC = data.m / (1.0 - pow(data.beta1, *t));
       }
-      void computeSecondFixedMomentum(hiperparameters &data) {
+      void computeSecondFixedMomentum(hiperparameters &data, double gradient) {
             data.v = data.beta2 * data.v +
-                     (1 - data.beta2) * std::pow(data.gradient, 2);
-            data.vC = data.v / (1 - pow(data.beta2, *t));
+                     (1.0 - data.beta2) * std::pow(gradient, 2.0);
+            data.vC = data.v / (1.0 - pow(data.beta2, *t));
+      }
+      void normalizeGradient(NeuronConectionInfo &context) {
+            double norm = sqrt(context.gradient * context.gradient);
+            if (norm > 0)
+                  context.gradient /= norm;
       }
 };
 

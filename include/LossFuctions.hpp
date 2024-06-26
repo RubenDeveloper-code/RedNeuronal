@@ -19,17 +19,17 @@ struct MeanSquaredError : public LossFunction {
                       std::vector<OutputNetworkData> targets) override {
             const int SIZE_BATCH = activations.size();
             const int OUTPUT_SIZE = activations[0].size();
-            long summation{};
-            long loss{};
+            double summation{};
+            double loss{};
             for (auto itBatch = 0; itBatch < SIZE_BATCH; itBatch++) {
                   double individualLoss{};
                   for (int itSingle = 0; itSingle < OUTPUT_SIZE; itSingle++) {
                         summation +=
                             std::pow(targets[itBatch][itSingle] -
                                          activations[itBatch][itSingle],
-                                     2);
+                                     2.0);
                   }
-                  individualLoss = summation / ((double)OUTPUT_SIZE);
+                  individualLoss = summation / OUTPUT_SIZE;
                   loss += individualLoss;
             }
             loss /= (SIZE_BATCH);

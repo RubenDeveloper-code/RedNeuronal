@@ -27,7 +27,7 @@ class NeuralNetworkFit {
       double calculeLoss(std::vector<OutputNetworkData> desiredOutputs,
                          std::vector<OutputNetworkData> computedOutputs,
                          int epochs);
-      void showLoss(long loss, int epochs);
+      void showLoss(double loss, int epochs);
 };
 
 #endif

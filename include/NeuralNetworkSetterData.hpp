@@ -33,12 +33,14 @@ struct SetterData {
                                 output->neurons[outputIt++].setValue(value);
                           });
 
-            if ((++itData) == trainData.end())
+            if ((++itData) == trainData.end()) {
+                  unsigned seed = std::chrono::system_clock::now()
+                                      .time_since_epoch()
+                                      .count();
+                  std::default_random_engine engine(seed);
+                  std::shuffle(trainData.begin(), trainData.end(), engine);
                   itData = trainData.begin();
-            unsigned seed =
-                std::chrono::system_clock::now().time_since_epoch().count();
-            std::default_random_engine engine(seed);
-            std::shuffle(trainData.begin(), trainData.end(), engine);
+            }
             return data;
       }
       double getDataSize() { return trainData.size(); }

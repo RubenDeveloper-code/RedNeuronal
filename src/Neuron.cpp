@@ -1,6 +1,7 @@
 #include "../include/Neuron.hpp"
 #include "../include/Algorithm.hpp"
 #include "../include/NeuronActivation.hpp"
+#include <cmath>
 #include <iostream>
 #include <memory>
 #include <random>
@@ -64,7 +65,8 @@ Neuron::computeGradient(double prevActivation, int theta,
                                                               targetValues[it]);
             }
             delta = (accomulate_loss / N) * act;
-            return delta * -prevActivation;
+            long double gradient = delta * -prevActivation;
+            return gradient;
       } else if (type == TYPE::WIDE) {
             double temp_delta{};
             for (auto &conn : nextConnections) {
@@ -72,7 +74,8 @@ Neuron::computeGradient(double prevActivation, int theta,
             }
             temp_delta *= activation->derivative(prevY, y);
             delta = temp_delta;
-            return temp_delta * -prevActivation;
+            long double gradient = delta * -prevActivation;
+            return gradient;
       }
       return 0;
 }
