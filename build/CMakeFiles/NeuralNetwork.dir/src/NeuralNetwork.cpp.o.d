@@ -142,9 +142,19 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o: \
  /usr/include/c++/14.1.1/backward/auto_ptr.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NetworkGlobalResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuralNetworkImpl.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Layer.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Algorithm.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Neuron.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuronActivation.hpp \
+ /usr/include/c++/14.1.1/algorithm \
+ /usr/include/c++/14.1.1/bits/stl_algo.h \
+ /usr/include/c++/14.1.1/bits/algorithmfwd.h \
+ /usr/include/c++/14.1.1/bits/stl_heap.h \
+ /usr/include/c++/14.1.1/bits/uniform_int_dist.h \
+ /usr/include/c++/14.1.1/cstdlib \
+ /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/OptimizationAlgorithms.hpp \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/ostream \
  /usr/include/c++/14.1.1/ios /usr/include/c++/14.1.1/bits/char_traits.h \
  /usr/include/c++/14.1.1/bits/localefwd.h \
@@ -160,9 +170,8 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o: \
  /usr/include/c++/14.1.1/string_view \
  /usr/include/c++/14.1.1/bits/string_view.tcc \
  /usr/include/c++/14.1.1/ext/string_conversions.h \
- /usr/include/c++/14.1.1/cstdlib /usr/include/c++/14.1.1/cstdio \
- /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
- /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/c++/14.1.1/cstdio /usr/include/stdio.h \
+ /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/c++/14.1.1/cerrno \
@@ -187,17 +196,9 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o: \
  /usr/include/c++/14.1.1/bits/locale_facets.tcc \
  /usr/include/c++/14.1.1/bits/basic_ios.tcc \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/bits/istream.tcc \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Neuron.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuronActivation.hpp \
- /usr/include/c++/14.1.1/algorithm \
- /usr/include/c++/14.1.1/bits/stl_algo.h \
- /usr/include/c++/14.1.1/bits/algorithmfwd.h \
- /usr/include/c++/14.1.1/bits/stl_heap.h \
- /usr/include/c++/14.1.1/bits/uniform_int_dist.h \
- /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
- /usr/include/c++/14.1.1/utility \
+ /usr/include/c++/14.1.1/bits/istream.tcc /usr/include/c++/14.1.1/utility \
  /usr/include/c++/14.1.1/bits/stl_relops.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NetworkAlgoritms.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuralNetworkFit.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuralNetworkSetterData.hpp \

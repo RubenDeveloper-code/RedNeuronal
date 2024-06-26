@@ -3,14 +3,16 @@
 
 CMakeFiles/NeuralNetwork.dir/main.cpp.o
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/main.cpp
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Algorithm.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Layer.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetwork.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -259,16 +261,18 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o
 
 CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/NeuralNetwork.cpp
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Algorithm.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Layer.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetwork.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkFit.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkSetterData.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -530,15 +534,17 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetwork.cpp.o
 
 CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/NeuralNetworkFit.cpp
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Algorithm.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Layer.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkFit.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkSetterData.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -800,14 +806,16 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o
 
 CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkImpl.cpp.o
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/NeuralNetworkImpl.cpp
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Algorithm.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Layer.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkSetterData.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -1071,11 +1079,11 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkImpl.cpp.o
 
 CMakeFiles/NeuralNetwork.dir/src/Neuron.cpp.o
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/Neuron.cpp
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Algorithm.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

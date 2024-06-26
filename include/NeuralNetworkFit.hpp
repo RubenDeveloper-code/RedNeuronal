@@ -4,19 +4,17 @@
 #include "Data.hpp"
 #include "NeuralNetworkImpl.hpp"
 #include "NeuralNetworkSetterData.hpp"
-#include <memory>
 #include <vector>
 
 class NeuralNetworkFit {
     public:
       NeuralNetworkFit(NetworkTrainData, int mini_batch, int epochs,
-                       std::shared_ptr<int> epoch_ptr, NeuralNetworkImpl *impl);
+                       NeuralNetworkImpl *impl);
       void fit();
 
     private:
       SetterData setterData;
       NeuralNetworkImpl *net_impl;
-      std::shared_ptr<int> actualEpoch;
       int epochs, mini_batch;
       ;
       std::vector<double> batchLoss{};

@@ -4,22 +4,20 @@
 #include "../include/NeuralNetworkSetterData.hpp"
 #include <iostream>
 #include <memory>
-#include <numeric>
 #include <vector>
 
 NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _batchSize,
-                                   int _epochs, std::shared_ptr<int> epochs_ptr,
-                                   NeuralNetworkImpl *impl)
-    : mini_batch(_batchSize), epochs(_epochs), net_impl(impl),
-      actualEpoch(epochs_ptr) {
+                                   int _epochs, NeuralNetworkImpl *impl)
+    : mini_batch(_batchSize), epochs(_epochs), net_impl(impl) {
       setterData = SetterData(trainData);
 }
 
-// minibatch default 1
 void NeuralNetworkFit::fit() {
       std::vector<OutputNetworkData> computedOutputs;
       std::vector<OutputNetworkData> desiredOutputs;
-      while ((*actualEpoch)++ < epochs) {
+      net_impl->initAlphaAlgorithms();
+      while ((*net_impl->GLOBAL_RESOURSES.epochs_it)++ < epochs) {
+            net_impl->netAlgorithmsAlpha.run();
             for (int multi = 1;
                  multi * mini_batch < setterData.getDataSize() + mini_batch;
                  multi++) {
@@ -66,7 +64,8 @@ void NeuralNetworkFit::showLoss(double loss, int epochs) {
                   }*/
             }
             cont = 0;
-            std::cout << "::: " << loss << " in epoch: " << *actualEpoch
+            std::cout << "::: " << loss
+                      << " in epoch: " << *net_impl->GLOBAL_RESOURSES.epochs_it
                       << " \n";
       }
 }

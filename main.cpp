@@ -1,27 +1,25 @@
-#include "include/Algorithm.hpp"
 #include "include/Data.hpp"
 #include "include/LossFuctions.hpp"
+#include "include/NetworkAlgoritms.hpp"
 #include "include/NeuralNetwork.hpp"
 #include "include/Neuron.hpp"
 #include "include/NeuronActivation.hpp"
+#include "include/OptimizationAlgorithms.hpp"
 #include <iostream>
-
-// TODO: Tunear lo de perdida
-// TODO: Implementar el puto Adams
 
 int main() {
       NeuralNetwork network{
           {{Neuron::TYPE::INPUT, NeuronActivations::TYPE::SIGMOID,
-            Algorithms::TYPE::ADAMS, 1},
+            OptimizationAlgorithms::TYPE::ADAMS, 1},
            {Neuron::TYPE::WIDE, NeuronActivations::TYPE::REGRESSION,
-            Algorithms::TYPE::ADAMS, 1},
+            OptimizationAlgorithms::TYPE::ADAMS, 1},
            {Neuron::TYPE::OUTPUT, NeuronActivations::TYPE::REGRESSION,
-            Algorithms::TYPE::ADAMS, 1}},
-          LossFuctions::TYPE::MSE};
+            OptimizationAlgorithms::TYPE::ADAMS, 1}},
+          LossFuctions::TYPE::MSE,
+          0.1};
       /* network.fit({{{0, 0}, {0}}, {{0, 1}, {1}}, {{1, 0}, {1}}, {{1, 1},
          {1}}}, 500, 4);*/
-      // revisar la function de perdida
-      // SOLO NO FUNCIONA CUANDO SE USAN TODOS LOS DATOS DEL CONJUNTO
+      // network.addDecayLearningRate(0.1, 0.01, 20);
       network.fit(
           {{
               {{-40}, {-40}}, {{-30}, {-22}}, {{-20}, {-4}}, {{-10}, {14}},

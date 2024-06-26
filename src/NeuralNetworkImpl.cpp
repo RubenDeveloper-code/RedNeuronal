@@ -10,9 +10,10 @@
 
 NeuralNetworkImpl::NeuralNetworkImpl(NetworkDescription networkDescription,
                                      LossFuctions::TYPE _lossFunctionType,
-                                     std::shared_ptr<int> _epoch_ptr)
+                                     GlobalResourses &&_globalResourses)
     : networkDescription(networkDescription),
-      lossFunctionType(_lossFunctionType), epoch_ptr(_epoch_ptr) {
+      lossFunctionType(_lossFunctionType),
+      GLOBAL_RESOURSES(std::move(_globalResourses)) {
       buildNetwork();
 }
 
@@ -49,7 +50,8 @@ void NeuralNetworkImpl::createNetwork() {
       for (auto layerInfo : networkDescription) {
             buildingNetwork.emplace_back(
                 Layer(layerInfo.type, layerInfo.activation, layerInfo.algorithm,
-                      lossFunction, epoch_ptr, layerInfo.nNeurons));
+                      lossFunction, GLOBAL_RESOURSES.epochs_it,
+                      GLOBAL_RESOURSES.alpha, layerInfo.nNeurons));
       }
       std::sort(buildingNetwork.begin(), buildingNetwork.end(),
                 [](const Layer &a, const Layer &b) { return a.type < b.type; });
@@ -107,4 +109,7 @@ void NeuralNetworkImpl::recalculateWeights(
                   neuron.recomputeParameters(acts, targets);
             }
       }
+}
+void NeuralNetworkImpl::initAlphaAlgorithms() {
+      netAlgorithmsAlpha.init(&GLOBAL_RESOURSES);
 }

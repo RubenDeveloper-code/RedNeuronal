@@ -1,6 +1,6 @@
 #include "../include/Neuron.hpp"
-#include "../include/Algorithm.hpp"
 #include "../include/NeuronActivation.hpp"
+#include "../include/OptimizationAlgorithms.hpp"
 #include <cmath>
 #include <iostream>
 #include <memory>
@@ -12,9 +12,10 @@ using namespace std;
 #define BIAS 0
 // ya lestoy agarrando el pedo
 
-Neuron::Neuron(std::shared_ptr<NeuronActivations::activation> _activation,
-               std::shared_ptr<Algorithms::OptimizationAlgorithm> opt,
-               std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE _type)
+Neuron::Neuron(
+    std::shared_ptr<NeuronActivations::activation> _activation,
+    std::shared_ptr<OptimizationAlgorithms::OptimizationAlgorithm> opt,
+    std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE _type)
     : activation{_activation}, optimizationAlgorithm{opt},
       lossFunction(lossFoo), type{_type} {}
 
@@ -49,8 +50,6 @@ double Neuron::calculateValue() {
       }
       return -1;
 }
-// Nuevos calculos dC/dwjk
-// YO SI JALO YA NI LE MUEVAS PAPI, A LO MUCHO LA FUNC DE PERDIDA
 long double
 Neuron::computeGradient(double prevActivation, int theta,
                         std::vector<OutputNetworkData> activations,
@@ -59,7 +58,6 @@ Neuron::computeGradient(double prevActivation, int theta,
       if (type == TYPE::OUTPUT) {
             double act = activation->derivative(prevY, y);
             double accomulate_loss{};
-            double temp_delta, temp_gradient;
             for (auto it = 0; it < N; it++) {
                   accomulate_loss += lossFunction->derivative(activations[it],
                                                               targetValues[it]);
@@ -68,12 +66,12 @@ Neuron::computeGradient(double prevActivation, int theta,
             long double gradient = delta * -prevActivation;
             return gradient;
       } else if (type == TYPE::WIDE) {
-            double temp_delta{};
+            double summ_deltas{};
             for (auto &conn : nextConnections) {
-                  temp_delta += (*conn->weight * conn->targetNeuron.delta);
+                  summ_deltas += (*conn->weight * conn->targetNeuron.delta);
             }
-            temp_delta *= activation->derivative(prevY, y);
-            delta = temp_delta;
+            summ_deltas *= activation->derivative(prevY, y);
+            delta = summ_deltas;
             long double gradient = delta * -prevActivation;
             return gradient;
       }
@@ -87,12 +85,11 @@ void Neuron::recomputeParameters(
             return;
       for (auto &prevConn : prevConnections) {
             *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
-                {*prevConn->weight, alpha,
+                {*prevConn->weight,
                  computeGradient(prevConn->targetNeuron.y, WEIGHT,
                                  minibatch_activations, minibatch_targets)});
       }
       bias = optimizationAlgorithm->optimizeBias(
-          {bias, alpha,
-           computeGradient(1.0, BIAS, minibatch_activations,
-                           minibatch_targets)});
+          {bias, computeGradient(1.0, BIAS, minibatch_activations,
+                                 minibatch_targets)});
 }

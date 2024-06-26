@@ -1,10 +1,10 @@
 #ifndef __NEURON_HPP__
 #define __NEURON_HPP__
 
-#include "Algorithm.hpp"
 #include "Data.hpp"
 #include "LossFuctions.hpp"
 #include "NeuronActivation.hpp"
+#include "OptimizationAlgorithms.hpp"
 #include <algorithm>
 #include <memory>
 #include <utility>
@@ -18,7 +18,7 @@ class Neuron {
       enum class TYPE { INPUT, WIDE, OUTPUT };
 
       Neuron(std::shared_ptr<NeuronActivations::activation> act,
-             std::shared_ptr<Algorithms::OptimizationAlgorithm> opt,
+             std::shared_ptr<OptimizationAlgorithms::OptimizationAlgorithm> opt,
              std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE type);
 
       void makeConnections(Neurons &target, int prevLayerSize);
@@ -40,18 +40,16 @@ class Neuron {
     private:
       TYPE type;
       std::shared_ptr<NeuronActivations::activation> activation;
-      std::shared_ptr<Algorithms::OptimizationAlgorithm> optimizationAlgorithm;
+      std::shared_ptr<OptimizationAlgorithms::OptimizationAlgorithm>
+          optimizationAlgorithm;
       std::shared_ptr<LossFuctions::LossFunction> lossFunction;
       Connections prevConnections;
       Connections nextConnections;
       double delta;
       double bias = 1.0;
-      double alpha = 0.00001;
       double prevY;
 
       double targetValue;
-      long double weight_gradient;
-      long double bias_gradient;
 };
 
 struct Connection {

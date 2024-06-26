@@ -2,18 +2,27 @@
 #include "../include/Data.hpp"
 #include "../include/NeuralNetworkFit.hpp"
 #include "../include/NeuralNetworkImpl.hpp"
-#include <memory>
 #include <vector>
 
 NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription,
-                             LossFuctions::TYPE lossFunctionType)
-    : epochs_ptr(std::make_shared<int>(0)),
-      net_impl{networkDescription, lossFunctionType, epochs_ptr} {}
+                             LossFuctions::TYPE lossFunctionType,
+                             double initialAlpha)
+    : net_impl{networkDescription, lossFunctionType, {initialAlpha}} {}
 
 void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {
-      NeuralNetworkFit net_fit(trainData, batchSize, epochs, epochs_ptr,
-                               &net_impl);
+      NeuralNetworkFit net_fit(trainData, batchSize, epochs, &net_impl);
       net_fit.fit();
+}
+void NeuralNetwork::addWarmUp(double initialAlpha, double finalAlpha,
+                              int limitEpochs) {
+      net_impl.netAlgorithmsAlpha.upWarmUp(std::move(
+          NetworkAlgorithms::WarmUp{initialAlpha, finalAlpha, limitEpochs}));
+}
+void NeuralNetwork::addDecayLearningRate(double initialAlpha, double finalAlpha,
+                                         int limitEpochs) {
+      net_impl.netAlgorithmsAlpha.upDecayLearningRate(
+          std::move(NetworkAlgorithms::DecayLearningRate{
+              initialAlpha, finalAlpha, limitEpochs}));
 }
 
 std::vector<double> NeuralNetwork::predict(InputNetworkData input) {

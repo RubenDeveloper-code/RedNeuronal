@@ -3,18 +3,21 @@
 
 #include "Data.hpp"
 #include "LossFuctions.hpp"
+#include "NetworkGlobalResources.hpp"
 #include "NeuralNetworkImpl.hpp"
 #include <memory>
 class NeuralNetwork {
     public:
       using NetworkDescription = NeuralNetworkImpl::NetworkDescription;
       NeuralNetwork(NetworkDescription networkDescription,
-                    LossFuctions::TYPE lossFunctionType);
+                    LossFuctions::TYPE lossFunctionType, double initialAlpha);
       void fit(NetworkTrainData trainData, int epochs, int batchSize);
       OutputNetworkData predict(InputNetworkData input);
+      void addWarmUp(double initialAlpha, double finalAlpha, int periodEpoch);
+      void addDecayLearningRate(double initialAlpha, double finalAlpha,
+                                int periodEpoch);
 
     private:
-      std::shared_ptr<int> epochs_ptr;
       NeuralNetworkImpl net_impl;
 };
 

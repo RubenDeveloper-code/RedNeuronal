@@ -4,26 +4,28 @@
 #include <cmath>
 #include <iostream>
 #include <memory>
-namespace Algorithms {
+namespace OptimizationAlgorithms {
 enum class TYPE { SGD, ADAMS };
 struct NeuronConectionInfo {
-      NeuronConectionInfo(double _val, double _alpha, long double _gradient)
-          : val(_val), alpha(_alpha), gradient(_gradient) {}
+      NeuronConectionInfo(double _val, long double _gradient)
+          : val(_val), gradient(_gradient) {}
       double val;
-      double alpha;
       double gradient;
 };
 struct OptimizationAlgorithm {
+      OptimizationAlgorithm(std::shared_ptr<double> _alpha) : alpha(_alpha) {}
+      std::shared_ptr<double> alpha;
       virtual double optimizeWeigth(NeuronConectionInfo context) = 0;
       virtual double optimizeBias(NeuronConectionInfo context) = 0;
       virtual ~OptimizationAlgorithm() = default;
 };
 struct SDG : public OptimizationAlgorithm {
+      SDG(std::shared_ptr<double> _alpha) : OptimizationAlgorithm(_alpha){};
       double optimizeWeigth(NeuronConectionInfo context) override {
-            return context.val - context.alpha * context.gradient;
+            return context.val - *alpha * context.gradient;
       }
       double optimizeBias(NeuronConectionInfo context) override {
-            return context.val - context.alpha * context.gradient;
+            return context.val - *alpha * context.gradient;
       };
 };
 
@@ -33,12 +35,13 @@ struct Adams : public OptimizationAlgorithm {
             double epsilon = 10e-8;
             double m = 0, v = 0;
             double mC{}, vC{};
-            double alpha = 0.1;
       };
       hiperparameters biashp;
       hiperparameters weighthp;
       std::shared_ptr<int> t{};
-      Adams(std::shared_ptr<int> _t) : t{_t}, biashp(), weighthp(){};
+      Adams(std::shared_ptr<int> _t, std::shared_ptr<double> alpha)
+          : OptimizationAlgorithm(alpha), t{_t}, biashp(), weighthp(){};
+
       double optimizeWeigth(NeuronConectionInfo context) override {
             return computeParameter(context, weighthp);
       }
@@ -51,7 +54,7 @@ struct Adams : public OptimizationAlgorithm {
             computeFirstFixedMomentum(data, context.gradient);
             computeSecondFixedMomentum(data, context.gradient);
             return context.val -
-                   data.alpha * (data.mC / (sqrt(data.vC) + data.epsilon));
+                   *alpha * (data.mC / (sqrt(data.vC) + data.epsilon));
       }
       void computeFirstFixedMomentum(hiperparameters &data, double gradient) {
             data.m = data.beta1 * data.m + (1.0 - data.beta1) * gradient;
@@ -70,14 +73,15 @@ struct Adams : public OptimizationAlgorithm {
 };
 
 inline std::shared_ptr<OptimizationAlgorithm>
-newInstance(TYPE type, std::shared_ptr<int> t = nullptr) {
+newInstance(TYPE type, std::shared_ptr<double> alpha,
+            std::shared_ptr<int> t = nullptr) {
       switch (type) {
       case TYPE::SGD:
-            return std::make_shared<SDG>();
+            return std::make_shared<SDG>(alpha);
       case TYPE::ADAMS:
-            return std::make_shared<Adams>(t);
+            return std::make_shared<Adams>(t, alpha);
       }
-      return std::make_shared<SDG>();
+      return std::make_shared<SDG>(alpha);
 }
-} // namespace Algorithms
+} // namespace OptimizationAlgorithms
 #endif
