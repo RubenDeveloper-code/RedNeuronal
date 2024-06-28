@@ -9,14 +9,14 @@
 class NeuralNetworkFit {
     public:
       NeuralNetworkFit(NetworkTrainData, int mini_batch, int epochs,
-                       NeuralNetworkImpl *impl);
+                       double deadfitline, NeuralNetworkImpl *impl);
       void fit();
 
     private:
       SetterData setterData;
       NeuralNetworkImpl *net_impl;
       int epochs, mini_batch;
-      ;
+      double deadfitline;
       std::vector<double> batchLoss{};
       int batch_ind = 0;
 

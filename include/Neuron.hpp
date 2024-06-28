@@ -23,10 +23,10 @@ class Neuron {
 
       void makeConnections(Neurons &target, int prevLayerSize);
       double calculateValue();
-      void recomputeParameters(std::vector<OutputNetworkData>,
-                               std::vector<OutputNetworkData>);
-      long double computeGradient(double, int, std::vector<OutputNetworkData>,
-                                  std::vector<OutputNetworkData>);
+      void recomputeParameters(std::vector<double> activations = {},
+                               std::vector<double> targets = {});
+      long double computeGradient(double, int, std::vector<double>,
+                                  std::vector<double>);
       inline void setValue(int _y) {
             if (type == TYPE::INPUT)
                   y = _y;

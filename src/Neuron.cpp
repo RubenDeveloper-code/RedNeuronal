@@ -52,17 +52,14 @@ double Neuron::calculateValue() {
 }
 long double
 Neuron::computeGradient(double prevActivation, int theta,
-                        std::vector<OutputNetworkData> activations,
-                        std::vector<OutputNetworkData> targetValues) {
-      const int N = activations.size();
+                        std::vector<double> activations_in_minibatch,
+                        std::vector<double> targets_in_minibatch) {
       if (type == TYPE::OUTPUT) {
             double act = activation->derivative(prevY, y);
-            double accomulate_loss{};
-            for (auto it = 0; it < N; it++) {
-                  accomulate_loss += lossFunction->derivative(activations[it],
-                                                              targetValues[it]);
-            }
-            delta = (accomulate_loss / N) * act;
+            double loss{};
+            loss = lossFunction->derivative(activations_in_minibatch,
+                                            targets_in_minibatch);
+            delta = loss * act;
             long double gradient = delta * -prevActivation;
             return gradient;
       } else if (type == TYPE::WIDE) {
@@ -78,18 +75,18 @@ Neuron::computeGradient(double prevActivation, int theta,
       return 0;
 }
 
-void Neuron::recomputeParameters(
-    std::vector<OutputNetworkData> minibatch_activations,
-    std::vector<OutputNetworkData> minibatch_targets) {
+void Neuron::recomputeParameters(std::vector<double> activations_in_minibatch,
+                                 std::vector<double> targets_in_minibatch) {
       if (type == TYPE::INPUT)
             return;
       for (auto &prevConn : prevConnections) {
             *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
                 {*prevConn->weight,
                  computeGradient(prevConn->targetNeuron.y, WEIGHT,
-                                 minibatch_activations, minibatch_targets)});
+                                 activations_in_minibatch,
+                                 targets_in_minibatch)});
       }
       bias = optimizationAlgorithm->optimizeBias(
-          {bias, computeGradient(1.0, BIAS, minibatch_activations,
-                                 minibatch_targets)});
+          {bias, computeGradient(1.0, BIAS, activations_in_minibatch,
+                                 targets_in_minibatch)});
 }

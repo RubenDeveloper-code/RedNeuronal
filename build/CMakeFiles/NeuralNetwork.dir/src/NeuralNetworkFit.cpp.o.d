@@ -101,26 +101,26 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o: \
  /usr/include/c++/14.1.1/tr1/poly_hermite.tcc \
  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
- /usr/include/c++/14.1.1/memory \
- /usr/include/c++/14.1.1/bits/stl_tempbuf.h \
- /usr/include/c++/14.1.1/bits/stl_raw_storage_iter.h \
- /usr/include/c++/14.1.1/bits/align.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/wchar.h \
- /usr/include/bits/stdint-uintn.h /usr/include/bits/stdint-least.h \
- /usr/include/c++/14.1.1/bits/unique_ptr.h \
- /usr/include/c++/14.1.1/bits/shared_ptr.h /usr/include/c++/14.1.1/iosfwd \
+ /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/ostream \
+ /usr/include/c++/14.1.1/ios /usr/include/c++/14.1.1/iosfwd \
  /usr/include/c++/14.1.1/bits/stringfwd.h \
  /usr/include/c++/14.1.1/bits/postypes.h /usr/include/c++/14.1.1/cwchar \
  /usr/include/wchar.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h \
- /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
+ /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
+ /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h \
- /usr/include/c++/14.1.1/bits/shared_ptr_base.h \
+ /usr/include/bits/types/FILE.h /usr/include/c++/14.1.1/exception \
+ /usr/include/c++/14.1.1/bits/exception_ptr.h \
+ /usr/include/c++/14.1.1/bits/cxxabi_init_exception.h \
  /usr/include/c++/14.1.1/typeinfo \
- /usr/include/c++/14.1.1/bits/allocated_ptr.h \
- /usr/include/c++/14.1.1/ext/aligned_buffer.h \
+ /usr/include/c++/14.1.1/bits/nested_exception.h \
+ /usr/include/c++/14.1.1/bits/char_traits.h \
+ /usr/include/c++/14.1.1/bits/localefwd.h \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/14.1.1/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/14.1.1/cctype \
+ /usr/include/ctype.h /usr/include/c++/14.1.1/bits/ios_base.h \
  /usr/include/c++/14.1.1/ext/atomicity.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
@@ -133,34 +133,6 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o: \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
  /usr/include/sys/single_threaded.h \
- /usr/include/c++/14.1.1/ext/concurrence.h \
- /usr/include/c++/14.1.1/exception \
- /usr/include/c++/14.1.1/bits/exception_ptr.h \
- /usr/include/c++/14.1.1/bits/cxxabi_init_exception.h \
- /usr/include/c++/14.1.1/bits/nested_exception.h \
- /usr/include/c++/14.1.1/bits/shared_ptr_atomic.h \
- /usr/include/c++/14.1.1/bits/atomic_base.h \
- /usr/include/c++/14.1.1/bits/atomic_lockfree_defines.h \
- /usr/include/c++/14.1.1/backward/auto_ptr.h \
- /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
- /usr/include/c++/14.1.1/pstl/execution_defs.h \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Neuron.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuronActivation.hpp \
- /usr/include/c++/14.1.1/algorithm \
- /usr/include/c++/14.1.1/bits/stl_algo.h \
- /usr/include/c++/14.1.1/bits/algorithmfwd.h \
- /usr/include/c++/14.1.1/bits/stl_heap.h \
- /usr/include/c++/14.1.1/bits/uniform_int_dist.h \
- /usr/include/c++/14.1.1/cstdlib \
- /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/OptimizationAlgorithms.hpp \
- /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/ostream \
- /usr/include/c++/14.1.1/ios /usr/include/c++/14.1.1/bits/char_traits.h \
- /usr/include/c++/14.1.1/bits/localefwd.h \
- /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
- /usr/include/c++/14.1.1/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/14.1.1/cctype \
- /usr/include/ctype.h /usr/include/c++/14.1.1/bits/ios_base.h \
  /usr/include/c++/14.1.1/bits/locale_classes.h \
  /usr/include/c++/14.1.1/string \
  /usr/include/c++/14.1.1/bits/ostream_insert.h \
@@ -169,8 +141,9 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o: \
  /usr/include/c++/14.1.1/string_view \
  /usr/include/c++/14.1.1/bits/string_view.tcc \
  /usr/include/c++/14.1.1/ext/string_conversions.h \
- /usr/include/c++/14.1.1/cstdio /usr/include/stdio.h \
- /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
+ /usr/include/c++/14.1.1/cstdlib /usr/include/c++/14.1.1/cstdio \
+ /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
+ /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/c++/14.1.1/cerrno \
@@ -195,7 +168,35 @@ CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkFit.cpp.o: \
  /usr/include/c++/14.1.1/bits/locale_facets.tcc \
  /usr/include/c++/14.1.1/bits/basic_ios.tcc \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/bits/istream.tcc /usr/include/c++/14.1.1/utility \
+ /usr/include/c++/14.1.1/bits/istream.tcc /usr/include/c++/14.1.1/memory \
+ /usr/include/c++/14.1.1/bits/stl_tempbuf.h \
+ /usr/include/c++/14.1.1/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/14.1.1/bits/align.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h \
+ /usr/include/c++/14.1.1/bits/unique_ptr.h \
+ /usr/include/c++/14.1.1/bits/shared_ptr.h \
+ /usr/include/c++/14.1.1/bits/shared_ptr_base.h \
+ /usr/include/c++/14.1.1/bits/allocated_ptr.h \
+ /usr/include/c++/14.1.1/ext/aligned_buffer.h \
+ /usr/include/c++/14.1.1/ext/concurrence.h \
+ /usr/include/c++/14.1.1/bits/shared_ptr_atomic.h \
+ /usr/include/c++/14.1.1/bits/atomic_base.h \
+ /usr/include/c++/14.1.1/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/14.1.1/backward/auto_ptr.h \
+ /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
+ /usr/include/c++/14.1.1/pstl/execution_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/Neuron.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NeuronActivation.hpp \
+ /usr/include/c++/14.1.1/algorithm \
+ /usr/include/c++/14.1.1/bits/stl_algo.h \
+ /usr/include/c++/14.1.1/bits/algorithmfwd.h \
+ /usr/include/c++/14.1.1/bits/stl_heap.h \
+ /usr/include/c++/14.1.1/bits/uniform_int_dist.h \
+ /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/OptimizationAlgorithms.hpp \
+ /usr/include/c++/14.1.1/utility \
  /usr/include/c++/14.1.1/bits/stl_relops.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NetworkAlgoritms.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/../include/NetworkGlobalResources.hpp \

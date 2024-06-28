@@ -12,7 +12,8 @@ class NeuralNetwork {
       using NetworkDescription = NeuralNetworkImpl::NetworkDescription;
       NeuralNetwork(NetworkDescription networkDescription,
                     LossFuctions::TYPE lossFunctionType, double initialAlpha);
-      void fit(NetworkTrainData trainData, int epochs, int batchSize);
+      void fit(NetworkTrainData trainData, int epochs, int batchSize,
+               double deadfitline);
       OutputNetworkData predict(InputNetworkData input);
       NetworkAlgorithms::AlgorithmsAlpha alphaAlgorithms;
 

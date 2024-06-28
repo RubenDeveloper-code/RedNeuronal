@@ -12,8 +12,10 @@ NeuralNetwork::NeuralNetwork(NetworkDescription networkDescription,
                                   {initialAlpha},
                                   alphaAlgorithms} {}
 
-void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize) {
-      NeuralNetworkFit net_fit(trainData, batchSize, epochs, &net_impl);
+void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize,
+                        double deadfitline) {
+      NeuralNetworkFit net_fit(trainData, batchSize, epochs, deadfitline,
+                               &net_impl);
       net_fit.fit();
 }
 

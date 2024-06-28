@@ -7,8 +7,10 @@
 #include <vector>
 
 NeuralNetworkFit::NeuralNetworkFit(NetworkTrainData trainData, int _batchSize,
-                                   int _epochs, NeuralNetworkImpl *impl)
-    : mini_batch(_batchSize), epochs(_epochs), net_impl(impl) {
+                                   int _epochs, double _deadfitline,
+                                   NeuralNetworkImpl *impl)
+    : mini_batch(_batchSize), epochs(_epochs), deadfitline(_deadfitline),
+      net_impl(impl) {
       setterData = SetterData(trainData);
 }
 
@@ -16,6 +18,8 @@ void NeuralNetworkFit::fit() {
       std::vector<OutputNetworkData> computedOutputs;
       std::vector<OutputNetworkData> desiredOutputs;
       net_impl->initAlphaAlgorithms();
+      // con el tamaño del minibatch
+      double summLoss{};
       while ((*net_impl->GLOBAL_RESOURSES.epochs_it)++ < epochs) {
             net_impl->algorithmsAlpha->run();
             for (int multi = 1;
@@ -25,13 +29,21 @@ void NeuralNetworkFit::fit() {
                         auto newData = prepareEpoch();
                         desiredOutputs.push_back(newData.output);
                         computedOutputs.push_back(computeOutput());
+                        // Datos bien
+                        /*std::cout << newData.input[0] << "<" <<
+                           newData.input[1]
+                                  << "<<" << newData.output[0] << std::endl;*/
                   }
                   net_impl->recalculateWeights(computedOutputs, desiredOutputs);
                   double loss =
                       calculeLoss(computedOutputs, desiredOutputs, epochs);
+                  summLoss += loss;
                   computedOutputs.clear();
                   desiredOutputs.clear();
             }
+            if (summLoss / mini_batch < deadfitline)
+                  return;
+            summLoss = 0;
       }
 }
 
