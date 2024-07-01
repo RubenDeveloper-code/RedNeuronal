@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(include)
 
-add_executable(NeuralNetwork src/NeuralNetwork.cpp src/NeuralNetworkFit.cpp src/NeuralNetworkImpl.cpp src/Neuron.cpp main.cpp)
+add_executable(NeuralNetwork src/NeuralNetwork.cpp src/NeuralNetworkFit.cpp src/NeuralNetworkImpl.cpp src/Neuron.cpp src/csvReader.cpp main.cpp)

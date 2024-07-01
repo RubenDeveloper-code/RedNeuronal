@@ -5,24 +5,29 @@
 #include "include/Neuron.hpp"
 #include "include/NeuronActivation.hpp"
 #include "include/OptimizationAlgorithms.hpp"
+#include "include/csvReader.hpp"
 #include <iostream>
 
 int main() {
       NeuralNetwork network{
           {{Neuron::TYPE::INPUT, NeuronActivations::TYPE::SIGMOID,
-            OptimizationAlgorithms::TYPE::ADAMS, 2},
-           {Neuron::TYPE::WIDE, NeuronActivations::TYPE::SIGMOID,
-            OptimizationAlgorithms::TYPE::ADAMS, 2},
-           {Neuron::TYPE::OUTPUT, NeuronActivations::TYPE::SIGMOID,
-            OptimizationAlgorithms::TYPE::ADAMS, 2}},
+            OptimizationAlgorithms::TYPE::ADAMS, 13},
+           {Neuron::TYPE::WIDE, NeuronActivations::TYPE::REGRESSION,
+            OptimizationAlgorithms::TYPE::ADAMS, 128},
+           {Neuron::TYPE::WIDE, NeuronActivations::TYPE::RELU,
+            OptimizationAlgorithms::TYPE::ADAMS, 128},
+           {Neuron::TYPE::OUTPUT, NeuronActivations::TYPE::REGRESSION,
+            OptimizationAlgorithms::TYPE::ADAMS, 1}},
           LossFuctions::TYPE::MSE,
-          0.1};
-      // rpoblemas cuando es mas de una neurona
-      network.fit({{{0, 0}, {1, 0}},
-                   {{0, 1}, {0, 1}},
-                   {{1, 0}, {0, 1}},
-                   {{1, 1}, {1, 0}}},
-                  5000, 1, 10e-5);
+          0.001};
+
+      CSVReader reader("../res/Student_performance_data _.csv");
+      NetworkTrainData data = reader.toNetworkTrainData(
+          {"Age", "Gender", "Ethnicity", "ParentalEducation", "StudyTimeWeekly",
+           "Absences", "Tutoring", "ParentalSupport", "Extracurricular",
+           "Sports", "Music", "Volunteering", "GPA"},
+          {"GradeClass"}, 100);
+      network.fit(data, 2000, 32, 10e-2);
       // network.alphaAlgorithms.upDecayLearningRate({0.0001, 0.00001, 10});*/
       /*network.fit(
           {{
@@ -36,13 +41,14 @@ int main() {
           }},
           200, 1, 10e-5);*/
 
-      int nInputNeurons = 2;
+      int nInputNeurons = 13;
       InputNetworkData input(nInputNeurons);
       std::cout << "\nPredicciones"
                 << "\n";
 
-      while (std::cin >> input[0] >> input[1]) {
-            std::cout << network.predict(input)[0] << ">1" << std::endl;
-            std::cout << network.predict(input)[1] << ">0" << std::endl;
+      while (std::cin >> input[0] >> input[1] >> input[2] >> input[3] >>
+             input[4] >> input[5] >> input[6] >> input[7] >> input[8] >>
+             input[9] >> input[10] >> input[11] >> input[12]) {
+            std::cout << network.predict(input)[0] << std::endl;
       }
 }

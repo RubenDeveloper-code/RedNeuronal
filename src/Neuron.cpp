@@ -1,8 +1,6 @@
 #include "../include/Neuron.hpp"
 #include "../include/NeuronActivation.hpp"
 #include "../include/OptimizationAlgorithms.hpp"
-#include <cmath>
-#include <iostream>
 #include <memory>
 #include <random>
 #include <vector>
@@ -10,7 +8,6 @@ using namespace std;
 
 #define WEIGHT 1
 #define BIAS 0
-// ya lestoy agarrando el pedo
 
 Neuron::Neuron(
     std::shared_ptr<NeuronActivations::activation> _activation,

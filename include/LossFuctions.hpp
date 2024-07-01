@@ -46,7 +46,8 @@ struct MeanSquaredError : public LossFunction {
             double summ{};
             const int N = activation.size();
             for (int it = 0; it < N; it++) {
-                  summ += (2.0 / (N)) * (target[it] - activation[it]);
+                  // si estas buscando pedo con el batch checa aca
+                  summ += (2.0 / N) * (target[it] - activation[it]);
 
                   // summ += (2.0) * (target[it] - activation[it]);
             }
@@ -70,10 +71,13 @@ struct BinaryCrossEntropy : public LossFunction {
             double summ{};
             const int N = activation.size();
             for (int it = 0; it < N; it++) {
-                  summ += -(target[it] / activation[it]) +
-                          ((1.0 - target[it]) / (1.0 - activation[it]));
+                  if (activation[it] <= 1e-15)
+                        activation[it] = 1e-15;
+                  else if (activation[it] >= 1 - 1e-15)
+                        activation[it] = 1 - 1e-15;
+                  summ += (activation[it] - target[it]) /
+                          (activation[it] * (1 - activation[it]));
             }
-            // std::cout << "loss" << summ / N << std::endl;
             return (summ / N);
       }
 };

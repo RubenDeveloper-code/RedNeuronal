@@ -482,6 +482,8 @@ COMPILER_VERSION_TWEAK	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^
 COMPILER_VERSION_TWEAK	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+CSVReader	include/csvReader.hpp	/^class CSVReader {$/;"	c
+CSVReader	src/csvReader.cpp	/^CSVReader::CSVReader(std::string path) : csvFile(path) {}$/;"	f	class:CSVReader
 CXX_STD	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
@@ -502,6 +504,7 @@ DEC	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/
 DEC	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
 DEC	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
 DECAYLEARNINGRATE	include/NetworkAlgoritms.hpp	/^      enum class ALPHAALGORITHMS { WARMUP, DECAYLEARNINGRATE, UNDEFINED };$/;"	e	enum:NetworkAlgorithms::AlgorithmsAlpha::ALPHAALGORITHMS
+Data	include/Data.hpp	/^      Data(int szInput, int szOuput) : input(szInput), output(szOuput){};$/;"	f	struct:Data
 Data	include/Data.hpp	/^      Data(std::vector<double> in, std::vector<double> out)$/;"	f	struct:Data
 Data	include/Data.hpp	/^struct Data {$/;"	s
 DecayLearningRate	include/NetworkAlgoritms.hpp	/^      DecayLearningRate(){};$/;"	f	struct:NetworkAlgorithms::DecayLearningRate
@@ -649,6 +652,7 @@ WarmUp	include/NetworkAlgoritms.hpp	/^      WarmUp(){};$/;"	f	struct:NetworkAlgo
 WarmUp	include/NetworkAlgoritms.hpp	/^      WarmUp(double _initialAlpha, double _finalAlpha, int _limitEpochs)$/;"	f	struct:NetworkAlgorithms::WarmUp
 WarmUp	include/NetworkAlgoritms.hpp	/^struct WarmUp : public AlphaAlgorithm {$/;"	s	namespace:NetworkAlgorithms
 __ALGORITMS_HPP__	include/OptimizationAlgorithms.hpp	/^#define __ALGORITMS_HPP__$/;"	d
+__CSV_READER_HPP__	include/csvReader.hpp	/^#define __CSV_READER_HPP__$/;"	d
 __DATA_HPP__	include/Data.hpp	/^#define __DATA_HPP__$/;"	d
 __LAYER_HPP__	include/Layer.hpp	/^#define __LAYER_HPP__$/;"	d
 __LOSSFUNCTIONS_HPP__	include/LossFuctions.hpp	/^#define __LOSSFUNCTIONS_HPP__$/;"	d
@@ -671,6 +675,7 @@ __anon8425a7700202	include/NeuralNetworkSetterData.hpp	/^                       
 __anon8425a7700302	include/NeuralNetworkSetterData.hpp	/^                          [&outputIt, &output](double value) {$/;"	f	function:SetterData::prepareNextEpoch	file:
 __anonc22623da0102	include/LossFuctions.hpp	/^                             [](double target, double activation) -> double {$/;"	f	function:LossFuctions::MeanSquaredError::function	typeref:typename:double	file:
 __anonc22623da0202	include/LossFuctions.hpp	/^                activations, targets, [](double target, double activation) {$/;"	f	function:LossFuctions::BinaryCrossEntropy::function	file:
+__anond6ef4aec0102	src/csvReader.cpp	/^                             [](const int c) { return std::isdigit(c); })) {$/;"	f	function:CSVReader::readNextRow	file:
 __anonee37a5900102	src/NeuralNetworkImpl.cpp	/^                [](const Layer &a, const Layer &b) { return a.type < b.type; });$/;"	f	function:NeuralNetworkImpl::createNetwork	file:
 __has_include	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
 __has_include	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define __has_include(/;"	d	file:
@@ -719,6 +724,7 @@ connectNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::connectNetwor
 const	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 const	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 createNetwork	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::createNetwork() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:void
+csvFile	include/csvReader.hpp	/^      std::ifstream csvFile;$/;"	m	class:CSVReader	typeref:typename:std::ifstream
 deadfitline	include/NeuralNetworkFit.hpp	/^      double deadfitline;$/;"	m	class:NeuralNetworkFit	typeref:typename:double
 decayLearningRate	include/NetworkAlgoritms.hpp	/^      DecayLearningRate decayLearningRate;$/;"	m	struct:NetworkAlgorithms::AlgorithmsAlpha	typeref:typename:DecayLearningRate
 default_target	build/Makefile	/^default_target: all$/;"	t
@@ -734,6 +740,7 @@ epochs_it	include/NetworkGlobalResources.hpp	/^      std::shared_ptr<int> epochs
 epsilon	include/OptimizationAlgorithms.hpp	/^            double epsilon = 10e-8;$/;"	m	struct:OptimizationAlgorithms::AdaGrad::Hiperparameters	typeref:typename:double
 epsilon	include/OptimizationAlgorithms.hpp	/^            double epsilon = 10e-8;$/;"	m	struct:OptimizationAlgorithms::Adams::hiperparameters	typeref:typename:double
 epsilon	include/OptimizationAlgorithms.hpp	/^            double epsilon = 10e-8;$/;"	m	struct:OptimizationAlgorithms::RMSProp::Hiperparameters	typeref:typename:double
+fieldNames	include/csvReader.hpp	/^      std::vector<std::string> fieldNames;$/;"	m	class:CSVReader	typeref:typename:std::vector<std::string>
 finalAlpha	include/NetworkAlgoritms.hpp	/^      double finalAlpha;$/;"	m	struct:NetworkAlgorithms::DecayLearningRate	typeref:typename:double
 finalAlpha	include/NetworkAlgoritms.hpp	/^      double finalAlpha;$/;"	m	struct:NetworkAlgorithms::WarmUp	typeref:typename:double
 fit	src/NeuralNetwork.cpp	/^void NeuralNetwork::fit(NetworkTrainData trainData, int epochs, int batchSize,$/;"	f	class:NeuralNetwork	typeref:typename:void
@@ -742,10 +749,12 @@ function	include/LossFuctions.hpp	/^      double function(std::vector<OutputNetw
 function	include/LossFuctions.hpp	/^      double function(std::vector<OutputNetworkData> activations,$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
 function	include/NeuronActivation.hpp	/^      double (*function)(double) = nullptr;$/;"	m	struct:NeuronActivations::activation	typeref:typename:double (*)(double)
 generateOutput	src/NeuralNetworkImpl.cpp	/^OutputNetworkData NeuralNetworkImpl::generateOutput() {$/;"	f	class:NeuralNetworkImpl	typeref:typename:OutputNetworkData
+getColumnIndex	src/csvReader.cpp	/^int CSVReader::getColumnIndex(std::string name) {$/;"	f	class:CSVReader	typeref:typename:int
 getDataSize	include/NeuralNetworkSetterData.hpp	/^      double getDataSize() { return trainData.size(); }$/;"	f	struct:SetterData	typeref:typename:double
 getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(1.0 \/ seed); }$/;"	f	struct:NeuronActivations::sigmoid	typeref:typename:double
 getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::regression	typeref:typename:double
 getDevStandart	include/NeuronActivation.hpp	/^      double getDevStandart(double seed) { return std::sqrt(2.0 \/ seed); }$/;"	f	struct:NeuronActivations::relu	typeref:typename:double
+getFieldsName	src/csvReader.cpp	/^void CSVReader::getFieldsName() {$/;"	f	class:CSVReader	typeref:typename:void
 getInput	include/NeuralNetworkSetterData.hpp	/^      InputNetworkData getInput() { return itData->input; }$/;"	f	struct:SetterData	typeref:typename:InputNetworkData
 getInputLayer	include/NeuralNetworkImpl.hpp	/^      Layer *getInputLayer() { return input; }$/;"	f	class:NeuralNetworkImpl	typeref:typename:Layer *
 getInputSize	include/NeuralNetworkImpl.hpp	/^      inline int getInputSize() { return input->nNeurons; }$/;"	f	class:NeuralNetworkImpl	typeref:typename:int
@@ -876,6 +885,7 @@ qnxnto	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxn
 qnxnto	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qnxnto	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qnxnto	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
+readNextRow	src/csvReader.cpp	/^std::vector<double> CSVReader::readNextRow() {$/;"	f	class:CSVReader	typeref:typename:std::vector<double>
 rebuild_cache	build/Makefile	/^rebuild_cache:$/;"	t
 rebuild_cache/fast	build/Makefile	/^rebuild_cache\/fast: rebuild_cache$/;"	t
 recalculateWeights	src/NeuralNetworkImpl.cpp	/^void NeuralNetworkImpl::recalculateWeights($/;"	f	class:NeuralNetworkImpl	typeref:typename:void
@@ -916,10 +926,18 @@ src/Neuron.cpp.s	build/Makefile	/^src\/Neuron.cpp.s:$/;"	t
 src/Neuron.i	build/Makefile	/^src\/Neuron.i: src\/Neuron.cpp.i$/;"	t
 src/Neuron.o	build/Makefile	/^src\/Neuron.o: src\/Neuron.cpp.o$/;"	t
 src/Neuron.s	build/Makefile	/^src\/Neuron.s: src\/Neuron.cpp.s$/;"	t
+src/csvReader.cpp.i	build/Makefile	/^src\/csvReader.cpp.i:$/;"	t
+src/csvReader.cpp.o	build/Makefile	/^src\/csvReader.cpp.o:$/;"	t
+src/csvReader.cpp.s	build/Makefile	/^src\/csvReader.cpp.s:$/;"	t
+src/csvReader.i	build/Makefile	/^src\/csvReader.i: src\/csvReader.cpp.i$/;"	t
+src/csvReader.o	build/Makefile	/^src\/csvReader.o: src\/csvReader.cpp.o$/;"	t
+src/csvReader.s	build/Makefile	/^src\/csvReader.s: src\/csvReader.cpp.s$/;"	t
 summation	include/LossFuctions.hpp	/^      double summation(std::vector<OutputNetworkData> activations,$/;"	f	struct:LossFuctions::LossFunction	typeref:typename:double
 t	include/OptimizationAlgorithms.hpp	/^      std::shared_ptr<int> t{};$/;"	m	struct:OptimizationAlgorithms::Adams	typeref:typename:std::shared_ptr<int>
 targetNeuron	include/Neuron.hpp	/^      Neuron &targetNeuron;$/;"	m	struct:Connection	typeref:typename:Neuron &
 targetValue	include/Neuron.hpp	/^      double targetValue;$/;"	m	class:Neuron	typeref:typename:double
+toData	src/csvReader.cpp	/^Data CSVReader::toData(std::vector<double> row,$/;"	f	class:CSVReader	typeref:typename:Data
+toNetworkTrainData	src/csvReader.cpp	/^CSVReader::toNetworkTrainData(std::vector<std::string> inputColumns,$/;"	f	class:CSVReader	typeref:typename:NetworkTrainData
 trainData	include/NeuralNetworkSetterData.hpp	/^      NetworkTrainData trainData;$/;"	m	struct:SetterData	typeref:typename:NetworkTrainData
 type	include/Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:Layer	typeref:typename:Neuron::TYPE
 type	include/Layer.hpp	/^      Neuron::TYPE type;$/;"	m	struct:LayerDescription	typeref:typename:Neuron::TYPE
@@ -939,4 +957,5 @@ weighthp	include/OptimizationAlgorithms.hpp	/^      Hiperparameters biashp, weig
 weighthp	include/OptimizationAlgorithms.hpp	/^      Hiperparameters biashp, weighthp;$/;"	m	struct:OptimizationAlgorithms::RMSProp	typeref:typename:Hiperparameters
 weighthp	include/OptimizationAlgorithms.hpp	/^      hiperparameters weighthp;$/;"	m	struct:OptimizationAlgorithms::Adams	typeref:typename:hiperparameters
 y	include/Neuron.hpp	/^      double y;$/;"	m	class:Neuron	typeref:typename:double
+~CSVReader	include/csvReader.hpp	/^      ~CSVReader() { csvFile.close(); }$/;"	f	class:CSVReader
 ~NeuralNetworkImpl	include/NeuralNetworkImpl.hpp	/^      ~NeuralNetworkImpl() {}$/;"	f	class:NeuralNetworkImpl

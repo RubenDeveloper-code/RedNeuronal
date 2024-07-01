@@ -29,10 +29,6 @@ void NeuralNetworkFit::fit() {
                         auto newData = prepareEpoch();
                         desiredOutputs.push_back(newData.output);
                         computedOutputs.push_back(computeOutput());
-                        // Datos bien
-                        /*std::cout << newData.input[0] << "<" <<
-                           newData.input[1]
-                                  << "<<" << newData.output[0] << std::endl;*/
                   }
                   net_impl->recalculateWeights(computedOutputs, desiredOutputs);
                   double loss =
