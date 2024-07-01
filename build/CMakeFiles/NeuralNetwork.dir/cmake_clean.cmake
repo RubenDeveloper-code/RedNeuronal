@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/NeuralNetwork.dir/src/NeuralNetworkImpl.cpp.o.d"
   "CMakeFiles/NeuralNetwork.dir/src/Neuron.cpp.o"
   "CMakeFiles/NeuralNetwork.dir/src/Neuron.cpp.o.d"
+  "CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o"
+  "CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o.d"
   "NeuralNetwork"
   "NeuralNetwork.pdb"
 )

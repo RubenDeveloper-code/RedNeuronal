@@ -249,6 +249,30 @@ src/Neuron.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/Neuron.cpp.s
 .PHONY : src/Neuron.cpp.s
 
+src/csvReader.o: src/csvReader.cpp.o
+.PHONY : src/csvReader.o
+
+# target to build an object file
+src/csvReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o
+.PHONY : src/csvReader.cpp.o
+
+src/csvReader.i: src/csvReader.cpp.i
+.PHONY : src/csvReader.i
+
+# target to preprocess a source file
+src/csvReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.i
+.PHONY : src/csvReader.cpp.i
+
+src/csvReader.s: src/csvReader.cpp.s
+.PHONY : src/csvReader.s
+
+# target to generate assembly for a file
+src/csvReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.s
+.PHONY : src/csvReader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... src/Neuron.o"
 	@echo "... src/Neuron.i"
 	@echo "... src/Neuron.s"
+	@echo "... src/csvReader.o"
+	@echo "... src/csvReader.i"
+	@echo "... src/csvReader.s"
 .PHONY : help
 
 
