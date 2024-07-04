@@ -185,11 +185,10 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/backward/auto_ptr.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetwork.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/LossFuctions.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp \
@@ -205,6 +204,17 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/stl_relops.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Normalizations.hpp \
+ /usr/include/c++/14.1.1/functional \
+ /usr/include/c++/14.1.1/bits/std_function.h \
+ /usr/include/c++/14.1.1/unordered_map \
+ /usr/include/c++/14.1.1/bits/unordered_map.h \
+ /usr/include/c++/14.1.1/bits/hashtable.h \
+ /usr/include/c++/14.1.1/bits/hashtable_policy.h \
+ /usr/include/c++/14.1.1/bits/enable_special_members.h \
+ /usr/include/c++/14.1.1/bits/node_handle.h \
+ /usr/include/c++/14.1.1/bits/erase_if.h /usr/include/c++/14.1.1/array \
+ /usr/include/c++/14.1.1/compare \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/csvReader.hpp \
  /usr/include/c++/14.1.1/fstream /usr/include/c++/14.1.1/bits/codecvt.h \

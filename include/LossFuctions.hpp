@@ -47,11 +47,11 @@ struct MeanSquaredError : public LossFunction {
             const int N = activation.size();
             for (int it = 0; it < N; it++) {
                   // si estas buscando pedo con el batch checa aca
-                  summ += (2.0 / N) * (target[it] - activation[it]);
+                  summ += (2.0) * (target[it] - activation[it]);
 
                   // summ += (2.0) * (target[it] - activation[it]);
             }
-            return (summ);
+            return summ / (N);
       }
 };
 

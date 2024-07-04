@@ -24,7 +24,7 @@ CSVReader::toNetworkTrainData(std::vector<std::string> inputColumns,
       csvFile.clear();
       csvFile.seekg(0, std::ios::beg);
       getFieldsName();
-      nLines = 200;
+      nLines = 10;
       while (nLines-- > 0) {
             std::vector<double> nextRowData = readNextRow();
             trainData.push_back(

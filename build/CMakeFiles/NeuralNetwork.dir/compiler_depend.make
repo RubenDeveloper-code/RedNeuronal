@@ -11,6 +11,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkImpl.hpp \
   /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Neuron.hpp \
   /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuronActivation.hpp \
+  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Normalizations.hpp \
   /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/OptimizationAlgorithms.hpp \
   /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/csvReader.hpp \
   /usr/include/alloca.h \
@@ -88,6 +89,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/c++/14.1.1/algorithm \
+  /usr/include/c++/14.1.1/array \
   /usr/include/c++/14.1.1/backward/auto_ptr.h \
   /usr/include/c++/14.1.1/backward/binders.h \
   /usr/include/c++/14.1.1/bit \
@@ -109,6 +111,8 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/bits/cpp_type_traits.h \
   /usr/include/c++/14.1.1/bits/cxxabi_forced.h \
   /usr/include/c++/14.1.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14.1.1/bits/enable_special_members.h \
+  /usr/include/c++/14.1.1/bits/erase_if.h \
   /usr/include/c++/14.1.1/bits/exception.h \
   /usr/include/c++/14.1.1/bits/exception_defines.h \
   /usr/include/c++/14.1.1/bits/exception_ptr.h \
@@ -116,6 +120,8 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/bits/functexcept.h \
   /usr/include/c++/14.1.1/bits/functional_hash.h \
   /usr/include/c++/14.1.1/bits/hash_bytes.h \
+  /usr/include/c++/14.1.1/bits/hashtable.h \
+  /usr/include/c++/14.1.1/bits/hashtable_policy.h \
   /usr/include/c++/14.1.1/bits/invoke.h \
   /usr/include/c++/14.1.1/bits/ios_base.h \
   /usr/include/c++/14.1.1/bits/istream.tcc \
@@ -129,6 +135,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/bits/move.h \
   /usr/include/c++/14.1.1/bits/nested_exception.h \
   /usr/include/c++/14.1.1/bits/new_allocator.h \
+  /usr/include/c++/14.1.1/bits/node_handle.h \
   /usr/include/c++/14.1.1/bits/ostream.tcc \
   /usr/include/c++/14.1.1/bits/ostream_insert.h \
   /usr/include/c++/14.1.1/bits/postypes.h \
@@ -142,6 +149,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/bits/shared_ptr_base.h \
   /usr/include/c++/14.1.1/bits/specfun.h \
   /usr/include/c++/14.1.1/bits/std_abs.h \
+  /usr/include/c++/14.1.1/bits/std_function.h \
   /usr/include/c++/14.1.1/bits/stl_algo.h \
   /usr/include/c++/14.1.1/bits/stl_algobase.h \
   /usr/include/c++/14.1.1/bits/stl_bvector.h \
@@ -163,6 +171,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/bits/stringfwd.h \
   /usr/include/c++/14.1.1/bits/uniform_int_dist.h \
   /usr/include/c++/14.1.1/bits/unique_ptr.h \
+  /usr/include/c++/14.1.1/bits/unordered_map.h \
   /usr/include/c++/14.1.1/bits/uses_allocator.h \
   /usr/include/c++/14.1.1/bits/uses_allocator_args.h \
   /usr/include/c++/14.1.1/bits/utility.h \
@@ -172,6 +181,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/cerrno \
   /usr/include/c++/14.1.1/clocale \
   /usr/include/c++/14.1.1/cmath \
+  /usr/include/c++/14.1.1/compare \
   /usr/include/c++/14.1.1/concepts \
   /usr/include/c++/14.1.1/cstddef \
   /usr/include/c++/14.1.1/cstdio \
@@ -189,6 +199,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/ext/string_conversions.h \
   /usr/include/c++/14.1.1/ext/type_traits.h \
   /usr/include/c++/14.1.1/fstream \
+  /usr/include/c++/14.1.1/functional \
   /usr/include/c++/14.1.1/initializer_list \
   /usr/include/c++/14.1.1/ios \
   /usr/include/c++/14.1.1/iosfwd \
@@ -222,6 +233,7 @@ CMakeFiles/NeuralNetwork.dir/main.cpp.o: /home/ruben/Programacion/estudio/c++/Ne
   /usr/include/c++/14.1.1/tuple \
   /usr/include/c++/14.1.1/type_traits \
   /usr/include/c++/14.1.1/typeinfo \
+  /usr/include/c++/14.1.1/unordered_map \
   /usr/include/c++/14.1.1/utility \
   /usr/include/c++/14.1.1/vector \
   /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
@@ -1598,8 +1610,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/stl_numeric.h:
 
-/usr/include/c++/14.1.1/bits/random.tcc:
-
 /usr/include/c++/14.1.1/bits/chrono.h:
 
 /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetworkSetterData.hpp:
@@ -1616,15 +1626,33 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/wchar.h:
 
-/usr/include/c++/14.1.1/bits/nested_exception.h:
+/usr/include/sys/single_threaded.h:
 
-/usr/include/c++/14.1.1/bits/locale_facets.tcc:
+/usr/include/sys/select.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/c++/14.1.1/bits/random.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/math.h:
 
 /usr/include/c++/14.1.1/bits/locale_classes.h:
 
 /usr/include/bits/thread-shared-types.h:
 
 /usr/include/c++/14.1.1/bits/ios_base.h:
+
+/usr/include/c++/14.1.1/bits/hashtable_policy.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/c++/14.1.1/bits/align.h:
+
+/usr/include/bits/timex.h:
 
 /usr/include/c++/14.1.1/cctype:
 
@@ -1633,6 +1661,10 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 /usr/include/bits/byteswap.h:
 
 /usr/include/c++/14.1.1/bits/concept_check.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/c++/14.1.1/bits/stl_vector.h:
 
 /usr/include/locale.h:
 
@@ -1674,17 +1706,19 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/functexcept.h:
 
+/usr/include/pthread.h:
+
+/usr/include/c++/14.1.1/exception:
+
+/usr/include/stdio.h:
+
+/usr/include/bits/wordsize.h:
+
 /usr/include/bits/wctype-wchar.h:
 
 /usr/include/c++/14.1.1/bits/hash_bytes.h:
 
 /usr/include/c++/14.1.1/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/14.1.1/bits/stl_vector.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
 
 /usr/include/bits/types/struct_tm.h:
 
@@ -1708,10 +1742,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/tr1/legendre_function.tcc:
 
-/usr/include/c++/14.1.1/bits/memory_resource.h:
-
-/usr/include/bits/types/mbstate_t.h:
-
 /usr/include/c++/14.1.1/bits/exception.h:
 
 /usr/include/bits/types/locale_t.h:
@@ -1726,19 +1756,17 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/functional_hash.h:
 
+/usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/usr/include/c++/14.1.1/bits/memory_resource.h:
+
 /usr/include/c++/14.1.1/ext/aligned_buffer.h:
 
 /usr/include/bits/floatn-common.h:
 
 /usr/include/c++/14.1.1/bits/cxxabi_forced.h:
-
-/usr/include/bits/errno.h:
-
-/usr/include/c++/14.1.1/bits/align.h:
-
-/usr/include/bits/timex.h:
-
-/usr/include/c++/14.1.1/bits/ptr_traits.h:
 
 /usr/include/bits/types/timer_t.h:
 
@@ -1752,8 +1780,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/bits/typesizes.h:
 
-/usr/include/bits/cpu-set.h:
-
 /usr/include/c++/14.1.1/bits/algorithmfwd.h:
 
 /usr/include/bits/time64.h:
@@ -1766,31 +1792,37 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
-/usr/include/c++/14.1.1/bit:
-
-/usr/include/bits/locale.h:
-
-/home/ruben/Programacion/estudio/c++/NeuralNetwork/main.cpp:
-
-/usr/include/bits/struct_mutex.h:
-
-/home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp:
-
 /usr/include/alloca.h:
 
 /usr/include/c++/14.1.1/chrono:
 
 /usr/include/c++/14.1.1/bits/stringfwd.h:
 
+/usr/include/bits/struct_mutex.h:
+
+/home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Data.hpp:
+
 /usr/include/c++/14.1.1/backward/binders.h:
-
-/usr/include/c++/14.1.1/bits/localefwd.h:
-
-/usr/include/bits/stdint-least.h:
 
 /usr/include/c++/14.1.1/pstl/glue_numeric_defs.h:
 
 /usr/include/c++/14.1.1/cstdlib:
+
+/usr/include/c++/14.1.1/bit:
+
+/usr/include/bits/locale.h:
+
+/home/ruben/Programacion/estudio/c++/NeuralNetwork/main.cpp:
+
+/home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Normalizations.hpp:
+
+/usr/include/wctype.h:
+
+/usr/include/sched.h:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/c++/14.1.1/bits/hashtable.h:
 
 /usr/include/bits/types/sigset_t.h:
 
@@ -1804,8 +1836,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/bits/endianness.h:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
-
 /usr/include/bits/atomic_wide_counter.h:
 
 /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkAlgoritms.hpp:
@@ -1818,9 +1848,9 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NeuralNetwork.hpp:
 
-/usr/include/bits/libc-header-start.h:
-
 /usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/libc-header-start.h:
 
 /usr/include/c++/14.1.1/bits/fstream.tcc:
 
@@ -1831,8 +1861,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 /usr/include/c++/14.1.1/ostream:
 
 /usr/include/bits/math-vector.h:
-
-/usr/include/c++/14.1.1/bits/move.h:
 
 /usr/include/bits/mathcalls-helper-functions.h:
 
@@ -1878,8 +1906,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/bits/types/struct_timeval.h:
 
-/usr/include/c++/14.1.1/bits/memoryfwd.h:
-
 /usr/include/c++/14.1.1/clocale:
 
 /usr/include/bits/stdint-uintn.h:
@@ -1898,11 +1924,35 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/bits/types/__FILE.h:
 
+/usr/include/c++/14.1.1/bits/locale_facets.tcc:
+
+/usr/include/bits/stdint-least.h:
+
+/usr/include/c++/14.1.1/bits/localefwd.h:
+
+/usr/include/c++/14.1.1/bits/ptr_traits.h:
+
+/usr/include/c++/14.1.1/bits/memoryfwd.h:
+
+/usr/include/c++/14.1.1/bits/move.h:
+
+/usr/include/c++/14.1.1/bits/nested_exception.h:
+
+/usr/include/c++/14.1.1/bits/random.tcc:
+
+/usr/include/c++/14.1.1/bits/node_handle.h:
+
 /usr/include/c++/14.1.1/bits/ostream.tcc:
+
+/usr/include/c++/14.1.1/bits/erase_if.h:
 
 /usr/include/c++/14.1.1/bits/postypes.h:
 
 /usr/include/c++/14.1.1/ext/alloc_traits.h:
+
+/usr/include/stdint.h:
+
+/usr/include/endian.h:
 
 /usr/include/c++/14.1.1/bits/ostream_insert.h:
 
@@ -1912,10 +1962,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/predefined_ops.h:
 
-/usr/include/c++/14.1.1/bits/random.h:
-
-/usr/include/stdc-predef.h:
-
 /usr/include/bits/types/struct_itimerspec.h:
 
 /usr/include/c++/14.1.1/bits/range_access.h:
@@ -1924,11 +1970,11 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/uniform_int_dist.h:
 
-/usr/include/sys/single_threaded.h:
-
 /usr/include/c++/14.1.1/cstdint:
 
 /usr/include/bits/mathcalls.h:
+
+/usr/include/c++/14.1.1/array:
 
 /usr/include/c++/14.1.1/bits/requires_hosted.h:
 
@@ -1943,6 +1989,10 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 /usr/include/c++/14.1.1/string_view:
 
 /usr/include/c++/14.1.1/bits/specfun.h:
+
+/usr/include/c++/14.1.1/bits/std_function.h:
+
+/usr/include/c++/14.1.1/cwchar:
 
 /usr/include/c++/14.1.1/typeinfo:
 
@@ -1978,6 +2028,10 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/stl_tempbuf.h:
 
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/14.1.1/bits/unordered_map.h:
+
 /usr/include/bits/floatn.h:
 
 /usr/include/c++/14.1.1/bits/uses_allocator.h:
@@ -1994,11 +2048,13 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/bits/version.h:
 
-/usr/include/math.h:
-
 /usr/include/c++/14.1.1/cmath:
 
-/usr/include/c++/14.1.1/cwchar:
+/usr/include/c++/14.1.1/bits/enable_special_members.h:
+
+/usr/include/c++/14.1.1/compare:
+
+/usr/include/c++/14.1.1/tr1/special_function_util.h:
 
 /usr/include/c++/14.1.1/cwctype:
 
@@ -2018,6 +2074,8 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/fstream:
 
+/usr/include/c++/14.1.1/functional:
+
 /usr/include/c++/14.1.1/initializer_list:
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
@@ -2028,10 +2086,6 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/iostream:
 
-/usr/include/c++/14.1.1/exception:
-
-/usr/include/pthread.h:
-
 /usr/include/c++/14.1.1/istream:
 
 /usr/include/c++/14.1.1/tr1/hypergeometric.tcc:
@@ -2041,6 +2095,10 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 /usr/include/c++/14.1.1/tr1/beta_function.tcc:
 
 /usr/include/c++/14.1.1/memory:
+
+/usr/include/bits/cpu-set.h:
+
+/usr/include/c++/14.1.1/unordered_map:
 
 /usr/include/c++/14.1.1/bits/stl_construct.h:
 
@@ -2076,13 +2134,15 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 
 /usr/include/c++/14.1.1/tr1/modified_bessel_func.tcc:
 
-/usr/include/sys/select.h:
+/usr/include/time.h:
+
+/usr/include/c++/14.1.1/bits/shared_ptr_base.h:
+
+/usr/include/c++/14.1.1/tr1/poly_hermite.tcc:
 
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc:
-
-/usr/include/c++/14.1.1/tr1/special_function_util.h:
 
 /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/NetworkGlobalResources.hpp:
 
@@ -2121,27 +2181,3 @@ CMakeFiles/NeuralNetwork.dir/src/csvReader.cpp.o: /home/ruben/Programacion/estud
 /usr/include/gnu/stubs-64.h:
 
 /usr/include/linux/errno.h:
-
-/usr/include/wctype.h:
-
-/usr/include/bits/fp-fast.h:
-
-/usr/include/sched.h:
-
-/usr/include/endian.h:
-
-/usr/include/stdint.h:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/stdio.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/c++/14.1.1/bits/shared_ptr_base.h:
-
-/usr/include/c++/14.1.1/tr1/poly_hermite.tcc:
-
-/usr/include/time.h:

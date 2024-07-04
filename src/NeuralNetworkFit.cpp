@@ -37,8 +37,13 @@ void NeuralNetworkFit::fit() {
                   computedOutputs.clear();
                   desiredOutputs.clear();
             }
-            if (summLoss / mini_batch < deadfitline)
+            showLoss(summLoss / mini_batch, epochs);
+            if (summLoss / mini_batch < deadfitline) {
+                  std::cout << "done in epoch: "
+                            << *net_impl->GLOBAL_RESOURSES.epochs_it << " loss "
+                            << summLoss / mini_batch << std::endl;
                   return;
+            }
             summLoss = 0;
       }
 }
@@ -58,22 +63,19 @@ NeuralNetworkFit::calculeLoss(std::vector<OutputNetworkData> desiredOutputs,
                               int epochs) {
       double loss =
           net_impl->lossFunction->function(desiredOutputs, computedOutputs);
-      showLoss(loss, epochs);
       return loss;
 }
 
 void NeuralNetworkFit::showLoss(double loss, int epochs) {
       static int cont = 0;
-      int call = (epochs / mini_batch) / 10;
-      if (cont++ == call) {
-            if (loss < 10) {
-                  /*for (int i = 0; i < loss * 10; i++) {
-                        std::cout << "█";
-                  }*/
-            }
-            cont = 0;
-            std::cout << "::: " << loss
-                      << " in epoch: " << *net_impl->GLOBAL_RESOURSES.epochs_it
-                      << " \n";
+      // int call = (epochs / mini_batch) / 10;
+      if (loss < 10) {
+            /*for (int i = 0; i < loss * 10; i++) {
+                  std::cout << "█";
+            }*/
       }
+      cont = 0;
+      std::cout << "::: " << loss
+                << " in epoch: " << *net_impl->GLOBAL_RESOURSES.epochs_it
+                << " \n";
 }

@@ -33,7 +33,7 @@ struct WarmUp : public AlphaAlgorithm {
                   else
                         *globalResourses->alpha = finalAlpha;
             }
-            std::cout << "warmup: " << *globalResourses->alpha << std::endl;
+            // std::cout << "warmup: " << *globalResourses->alpha << std::endl;
       }
       GlobalResourses *globalResourses;
       double initialAlpha;
@@ -62,7 +62,7 @@ struct DecayLearningRate : public AlphaAlgorithm {
                   else
                         *globalResourses->alpha = finalAlpha;
             }
-            std::cout << "decay: " << *globalResourses->alpha << std::endl;
+            // std::cout << "decay: " << *globalResourses->alpha << std::endl;
       }
       GlobalResourses *globalResourses;
       double initialAlpha;
