@@ -1,0 +1,29 @@
+#include "../include/Model.hpp"
+#include <memory>
+Model::Model(ModelDesign::LossFuction loss_function)
+    : model_design(), neural_network(model_design) {
+      model_design.loss_function = loss_function;
+}
+
+void Model::addLayer(LayerDesign layer_design) {
+      layer_design.loss_function =
+          static_cast<LayerDesign::LossFuctions>(model_design.loss_function);
+      model_design.design.emplace_back(layer_design);
+}
+
+void Model::upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,
+                            AlphaAlgorithms::Arguments args) {
+      algorithms_spects.alphaModifier = alfaModifier;
+      algorithms_spects.args_alpha_modifier = args;
+}
+
+void Model::fit(TrainSpects train_spects) {
+      // throw si falla
+      neural_network.construct();
+      neural_network.fit(train_spects, algorithms_spects);
+}
+
+OutputNetworkData Model::predict(std::vector<double> input) {
+      auto prediction = neural_network.predict(input);
+      return prediction;
+}

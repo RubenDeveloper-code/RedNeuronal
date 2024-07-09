@@ -1,10 +1,15 @@
-cmake_minimum_required(VERSION 3.10)
-
 project(NeuralNetwork)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(include)
 
-add_executable(NeuralNetwork src/NeuralNetwork.cpp src/NeuralNetworkFit.cpp src/NeuralNetworkImpl.cpp src/Neuron.cpp src/csvReader.cpp main.cpp)
+file(GLOB_RECURSE SOURCES "src/*.cpp" "libs/*.cpp")
+
+list(APPEND SOURCES "main.cpp")
+
+add_executable(NeuralNetwork ${SOURCES})
+
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Werror")
+
