@@ -3,8 +3,8 @@
 
 #include "../algorithms/AlphaAlgoritms.hpp"
 struct AlgorithmsSpects {
-      enum class AlphaModifier { WARMUP, DECAY };
-      AlphaModifier alphaModifier;
+      enum class AlphaModifier { WARMUP, DECAY, UNDEFINED };
+      AlphaModifier alphaModifier = AlgorithmsSpects::AlphaModifier::UNDEFINED;
       AlphaAlgorithms::Arguments args_alpha_modifier;
 };
 #endif

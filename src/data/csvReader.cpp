@@ -18,7 +18,6 @@ std::vector<std::vector<double>> CSVReader::toVector() {
       rollback_ifstream(csvFile);
       readFieldsName();
       // error con 1 dato
-      n_lines = 200;
       while (n_lines-- > 0) {
             std::vector<double> nextRowData = readNextRow();
             csv_vector.push_back(nextRowData);

@@ -6,6 +6,8 @@
 #include <utility>
 #include <vector>
 struct DataSet {
+      DataSet(){};
+      DataSet(int n) : set(n), column_names(n){};
       std::vector<Data> set;
       std::vector<std::string> column_names;
       std::vector<Data>::iterator iterator;

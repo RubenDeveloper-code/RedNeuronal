@@ -4,6 +4,7 @@
 #include <utility>
 #include <vector>
 struct Data {
+      Data(){};
       Data(int szInput, int szOuput) : input(szInput), output(szOuput){};
       Data(std::vector<double> in, std::vector<double> out)
           : input{in}, output{out} {};

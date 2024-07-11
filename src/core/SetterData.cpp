@@ -9,22 +9,24 @@ SetterData::SetterData(DataSet _dataset) : dataset(_dataset) {
 }
 void SetterData::preparePrediction(Layer &input, InputNetworkData dataInput) {
       int inputIt{};
-      std::for_each(dataInput.begin(), dataInput.end(),
-                    [&inputIt, &input](double value) {
-                          input.neurons[inputIt++].setValue(value);
-                    });
+      std::for_each(
+          dataInput.begin(), dataInput.end(), [&inputIt, &input](double value) {
+                input.neurons[inputIt++].initializeAccordingType(value);
+          });
 }
 Data SetterData::prepareNextEpoch(Layer &input, Layer &output) {
       Data data = *dataset.iterator;
       int inputIt{};
       std::for_each(data.input.begin(), data.input.end(),
                     [&inputIt, &input](double value) {
-                          input.neurons[inputIt++].setValue(value);
+                          input.neurons[inputIt++].initializeAccordingType(
+                              value);
                     });
       int outputIt{};
       std::for_each(data.output.begin(), data.output.end(),
                     [&outputIt, &output](double value) {
-                          output.neurons[outputIt++].setValue(value);
+                          output.neurons[outputIt++].initializeAccordingType(
+                              value);
                     });
 
       if ((++dataset.iterator) == dataset.end()) {

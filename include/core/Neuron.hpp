@@ -1,43 +1,35 @@
 #ifndef __NEURON_HPP__
 #define __NEURON_HPP__
 
+#include "../../include/types/Parameters.hpp"
 #include "../algorithms/Activations.hpp"
 #include "../algorithms/LossFuctions.hpp"
 #include "../algorithms/Optimizers.hpp"
-#include "../data/Data.hpp"
-#include <algorithm>
 #include <memory>
-#include <utility>
 #include <vector>
 struct Connection;
 class Neuron {
-
     public:
+      enum class TYPE { INPUT, HIDE, OUTPUT };
       using Connections = std::vector<std::shared_ptr<Connection>>;
       using Neurons = std::vector<Neuron>;
-      enum class TYPE { INPUT, HIDE, OUTPUT };
-
       Neuron(std::shared_ptr<Activations::activation> act,
              std::shared_ptr<Optimizers::Optimizer> opt,
              std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE type);
-
       void makeConnections(Neurons &target, int prevLayerSize);
-      double calculateValue();
+
+      double computeActivation();
       void recomputeParameters(std::vector<double> activations = {},
                                std::vector<double> targets = {});
       long double computeGradient(double, int, std::vector<double>,
                                   std::vector<double>);
-      inline void setValue(int _y) {
-            if (type == TYPE::INPUT)
-                  y = _y;
-            else if (type == TYPE::OUTPUT)
-                  targetValue = _y;
-      }
+      void initializeAccordingType(int _y);
+      Parameters getParameters();
+      void loadParameters(Parameters parameters);
       TYPE type;
-      // debuig
-      double y;
 
     private:
+      double neuron_activation;
       std::shared_ptr<Activations::activation> activation;
       std::shared_ptr<Optimizers::Optimizer> optimizationAlgorithm;
       std::shared_ptr<LossFuctions::LossFunction> lossFunction;
@@ -45,11 +37,9 @@ class Neuron {
       Connections nextConnections;
       double delta;
       double bias = 1.0;
-      double prevY;
-
+      double weighted_sum;
       double targetValue;
 };
-
 struct Connection {
       Connection(Neuron &_targetNeuron, std::shared_ptr<double> _weight)
           : targetNeuron{_targetNeuron}, weight{_weight} {};

@@ -2,12 +2,9 @@ CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkOperator.cpp \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkOperator.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Network.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Layer.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/LayerDesign.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../algorithms/LossFuctions.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../algorithms/../data/Data.hpp \
- /usr/include/c++/14.1.1/utility \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/types/Parameters.hpp \
+ /usr/include/c++/14.1.1/vector \
+ /usr/include/c++/14.1.1/bits/requires_hosted.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -16,21 +13,18 @@ CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/14.1.1/pstl/pstl_config.h \
- /usr/include/c++/14.1.1/bits/stl_relops.h \
+ /usr/include/c++/14.1.1/bits/stl_algobase.h \
+ /usr/include/c++/14.1.1/bits/functexcept.h \
+ /usr/include/c++/14.1.1/bits/exception_defines.h \
+ /usr/include/c++/14.1.1/bits/cpp_type_traits.h \
+ /usr/include/c++/14.1.1/ext/type_traits.h \
+ /usr/include/c++/14.1.1/ext/numeric_traits.h \
  /usr/include/c++/14.1.1/bits/stl_pair.h \
  /usr/include/c++/14.1.1/type_traits \
  /usr/include/c++/14.1.1/bits/version.h \
  /usr/include/c++/14.1.1/bits/move.h \
  /usr/include/c++/14.1.1/bits/utility.h /usr/include/c++/14.1.1/compare \
  /usr/include/c++/14.1.1/concepts \
- /usr/include/c++/14.1.1/initializer_list \
- /usr/include/c++/14.1.1/ext/numeric_traits.h \
- /usr/include/c++/14.1.1/bits/cpp_type_traits.h \
- /usr/include/c++/14.1.1/ext/type_traits.h /usr/include/c++/14.1.1/vector \
- /usr/include/c++/14.1.1/bits/requires_hosted.h \
- /usr/include/c++/14.1.1/bits/stl_algobase.h \
- /usr/include/c++/14.1.1/bits/functexcept.h \
- /usr/include/c++/14.1.1/bits/exception_defines.h \
  /usr/include/c++/14.1.1/bits/stl_iterator_base_types.h \
  /usr/include/c++/14.1.1/bits/iterator_concepts.h \
  /usr/include/c++/14.1.1/bits/ptr_traits.h \
@@ -51,6 +45,7 @@ CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: \
  /usr/include/c++/14.1.1/ext/alloc_traits.h \
  /usr/include/c++/14.1.1/bits/alloc_traits.h \
  /usr/include/c++/14.1.1/bits/stl_vector.h \
+ /usr/include/c++/14.1.1/initializer_list \
  /usr/include/c++/14.1.1/bits/stl_bvector.h \
  /usr/include/c++/14.1.1/bits/functional_hash.h \
  /usr/include/c++/14.1.1/bits/hash_bytes.h \
@@ -68,7 +63,14 @@ CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: \
  /usr/include/c++/14.1.1/tuple /usr/include/c++/14.1.1/bits/ranges_util.h \
  /usr/include/c++/14.1.1/bits/ranges_base.h \
  /usr/include/c++/14.1.1/bits/max_size_type.h \
- /usr/include/c++/14.1.1/numbers /usr/include/c++/14.1.1/cmath \
+ /usr/include/c++/14.1.1/numbers \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Network.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Layer.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/LayerDesign.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../algorithms/LossFuctions.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../algorithms/../data/Data.hpp \
+ /usr/include/c++/14.1.1/utility \
+ /usr/include/c++/14.1.1/bits/stl_relops.h /usr/include/c++/14.1.1/cmath \
  /usr/include/math.h /usr/include/bits/libc-header-start.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/math-vector.h \
@@ -234,11 +236,10 @@ CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/LossFuctions.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Optimizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/../core/SharedResources.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /usr/include/c++/14.1.1/algorithm \
  /usr/include/c++/14.1.1/bits/ranges_algo.h \
  /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /usr/include/c++/14.1.1/ranges /usr/include/c++/14.1.1/iterator \
  /usr/include/c++/14.1.1/bits/stream_iterator.h \
  /usr/include/c++/14.1.1/bits/elements_of.h

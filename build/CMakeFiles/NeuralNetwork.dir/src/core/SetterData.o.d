@@ -234,15 +234,16 @@ CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o: \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Neuron.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/types/Parameters.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Activations.hpp \
  /usr/include/c++/14.1.1/math.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/LossFuctions.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Optimizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/../core/SharedResources.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /usr/include/c++/14.1.1/algorithm \
  /usr/include/c++/14.1.1/bits/ranges_algo.h \
  /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /usr/include/c++/14.1.1/chrono /usr/include/c++/14.1.1/bits/chrono.h \
  /usr/include/c++/14.1.1/ratio /usr/include/c++/14.1.1/sstream \
  /usr/include/c++/14.1.1/istream /usr/include/c++/14.1.1/bits/istream.tcc \

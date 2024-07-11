@@ -27,9 +27,13 @@ class ProgressBar {
       /* Shows tasks done out of the tasks to be done */
       void displayTasksDone();
 
-      void displayProgress(double progress);
+      void displayProgress(double progress, double total);
 
-      void displayTrail(float trail);
+      void endlBar();
+
+      void displayTrail(std::string trail_name, float trail);
+
+      void displayElapsedTime(int h, int m, int s);
       /* Returns the size of the progress bar */
       unsigned int getSize();
 

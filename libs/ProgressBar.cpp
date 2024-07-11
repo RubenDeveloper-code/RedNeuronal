@@ -1,5 +1,6 @@
 #include "ProgressBar.hpp"
 #include <memory>
+#include <ostream>
 /* Defining the constructor */
 ProgressBar::ProgressBar(char notDoneChar, char doneChar, unsigned int _size)
     : c(doneChar), ch(notDoneChar), size(100), todo(0), done(0) {
@@ -44,23 +45,28 @@ void ProgressBar::fillUp(int actual_val) {
       }
 }
 
+void ProgressBar::displayElapsedTime(int h, int m, int s) {
+      std::cout << " | et: " << h << ":" << m << ":" << s << std::flush;
+}
 /* Displays the percentage beside the bar */
 void ProgressBar::displayPercentage() {
       float percent = ((float)pos / (float)(bar.size() - 1)) * 100;
       std::cout << (int)percent << "%";
 }
 
-void ProgressBar::displayProgress(double progress) {
-      std::cout << " epoch: " << progress << " ";
+void ProgressBar::displayProgress(double progress, double total) {
+      std::cout << " epoch (" << progress << "/" << total << ")" << std::flush;
 }
 /* Shows tasks done out of the tasks to be done */
 void ProgressBar::displayTasksDone() {
       std::cout << '(' << done << '/' << todo << ')' << std::flush;
 }
 
-void ProgressBar::displayTrail(float trail) {
-      std::cout << "| loss: " << trail << std::flush;
+void ProgressBar::displayTrail(std::string trail_name, float trail) {
+      std::cout << " | " << trail_name << ": " << trail << std::flush;
 }
+
+void ProgressBar::endlBar() { std::cout << "      " << std::flush; }
 
 /* Returns the size of the progress bar */
 

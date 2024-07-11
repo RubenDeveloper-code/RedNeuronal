@@ -10,7 +10,7 @@ OutputNetworkData NetworkOperator::computeNetworkOutput(Network &network) {
                   continue;
             std::for_each(layer.begin(), layer.end(),
                           [&output](Neuron &neuron) {
-                                auto out = neuron.calculateValue();
+                                auto out = neuron.computeActivation();
                                 if (neuron.type == Neuron::TYPE::OUTPUT)
                                       output.push_back(out);
                           });
@@ -52,4 +52,32 @@ std::vector<PairOutputs> NetworkOperator::distributeResponsibilities(
             responsabilities.push_back(neuron_responsability);
       }
       return responsabilities;
+}
+
+std::vector<Parameters>
+NetworkOperator::getNetworkParameters(Network &network) {
+      std::vector<Parameters> network_params;
+      for (auto &layer : network) {
+            if (layer.type != Layer::TYPE::INPUT) {
+                  for (auto &neuron : layer) {
+                        auto params = neuron.getParameters();
+                        network_params.push_back(params);
+                  }
+            }
+      }
+      return network_params;
+}
+
+void NetworkOperator::loadCheckpointParameters(
+    Network &network, std::vector<Parameters> network_params) {
+      std::vector<Parameters>::iterator neuron_parameters =
+          network_params.begin();
+      for (auto &layer : network) {
+            if (layer.type != Layer::TYPE::INPUT) {
+                  for (auto &neuron : layer) {
+                        neuron.loadParameters(*neuron_parameters);
+                        neuron_parameters++;
+                  }
+            }
+      }
 }

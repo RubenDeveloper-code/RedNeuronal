@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o.d"
   "CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o"
   "CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o.d"
+  "CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o"
+  "CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o.d"
   "CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o"
   "CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o.d"
   "CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o"

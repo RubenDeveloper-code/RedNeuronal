@@ -2,7 +2,9 @@ CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/DataSetProcess.cpp \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/DataSetProcess.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/TrainingDataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/../data/Data.hpp \
  /usr/include/c++/14.1.1/utility \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -64,9 +66,8 @@ CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: \
  /usr/include/c++/14.1.1/tuple /usr/include/c++/14.1.1/bits/ranges_util.h \
  /usr/include/c++/14.1.1/bits/ranges_base.h \
  /usr/include/c++/14.1.1/bits/max_size_type.h \
- /usr/include/c++/14.1.1/numbers \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/DataSet.hpp \
- /usr/include/c++/14.1.1/string /usr/include/c++/14.1.1/bits/stringfwd.h \
+ /usr/include/c++/14.1.1/numbers /usr/include/c++/14.1.1/string \
+ /usr/include/c++/14.1.1/bits/stringfwd.h \
  /usr/include/c++/14.1.1/bits/char_traits.h \
  /usr/include/c++/14.1.1/bits/postypes.h /usr/include/c++/14.1.1/cwchar \
  /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
@@ -118,6 +119,8 @@ CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: \
  /usr/include/bits/types/error_t.h \
  /usr/include/c++/14.1.1/bits/charconv.h \
  /usr/include/c++/14.1.1/bits/basic_string.tcc \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/DataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/Normalizers.hpp \
  /usr/include/c++/14.1.1/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \

@@ -231,17 +231,17 @@ CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/LayerDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Neuron.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/types/Parameters.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Activations.hpp \
  /usr/include/c++/14.1.1/math.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/LossFuctions.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Optimizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/../core/SharedResources.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/Data.hpp \
- /usr/include/c++/14.1.1/algorithm \
- /usr/include/c++/14.1.1/bits/ranges_algo.h \
- /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/alerts/messages.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Layer.hpp \
+ /usr/include/c++/14.1.1/algorithm \
+ /usr/include/c++/14.1.1/bits/ranges_algo.h \
+ /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
  /usr/include/c++/14.1.1/iterator \
  /usr/include/c++/14.1.1/bits/stream_iterator.h

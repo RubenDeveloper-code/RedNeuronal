@@ -6,7 +6,6 @@ inline void printList(std::initializer_list<std::string> args) {
       }
 }
 void Messages::Message(std::initializer_list<std::string> args) {
-      std::cout << "Mensage: ";
       printList(args);
       std::cout << "\n";
 }

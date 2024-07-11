@@ -18,7 +18,6 @@ void Model::upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,
 }
 
 void Model::fit(TrainSpects train_spects) {
-      // throw si falla
       neural_network.construct();
       neural_network.fit(train_spects, algorithms_spects);
 }
@@ -26,4 +25,9 @@ void Model::fit(TrainSpects train_spects) {
 OutputNetworkData Model::predict(std::vector<double> input) {
       auto prediction = neural_network.predict(input);
       return prediction;
+}
+
+void Model::loadCheckpoint(std::string path) {
+      neural_network.construct();
+      neural_network.loadCheckpoint(path);
 }

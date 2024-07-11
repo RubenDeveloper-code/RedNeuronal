@@ -400,6 +400,21 @@ src/data/Normalizers.s:
 .PHONY : src/data/Normalizers.s
 
 # target to build an object file
+src/data/checkpoints.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o
+.PHONY : src/data/checkpoints.o
+
+# target to preprocess a source file
+src/data/checkpoints.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.i
+.PHONY : src/data/checkpoints.i
+
+# target to generate assembly for a file
+src/data/checkpoints.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.s
+.PHONY : src/data/checkpoints.s
+
+# target to build an object file
 src/data/csvReader.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o
 .PHONY : src/data/csvReader.o
@@ -507,6 +522,9 @@ help:
 	@echo "... src/data/Normalizers.o"
 	@echo "... src/data/Normalizers.i"
 	@echo "... src/data/Normalizers.s"
+	@echo "... src/data/checkpoints.o"
+	@echo "... src/data/checkpoints.i"
+	@echo "... src/data/checkpoints.s"
 	@echo "... src/data/csvReader.o"
 	@echo "... src/data/csvReader.i"
 	@echo "... src/data/csvReader.s"

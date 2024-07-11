@@ -1,6 +1,7 @@
 #include "../../include/core/Neuron.hpp"
 #include "../../include/algorithms/Activations.hpp"
 #include "../../include/algorithms/Optimizers.hpp"
+#include "../../include/types/Parameters.hpp"
 #include <iostream>
 #include <memory>
 #include <random>
@@ -34,16 +35,16 @@ void Neuron::makeConnections(Neurons &target, int prevLayerSize) {
       }
 }
 
-double Neuron::calculateValue() {
-      y = 0;
-      for (const auto &prevConn : prevConnections) {
-            y += (prevConn->targetNeuron.y * *prevConn->weight);
+double Neuron::computeActivation() {
+      weighted_sum = 0;
+      for (auto &prevConn : prevConnections) {
+            weighted_sum +=
+                (prevConn->targetNeuron.neuron_activation * *prevConn->weight);
       }
-      y += (bias);
-      prevY = y;
-      y = activation->function(y);
+      weighted_sum += bias;
+      neuron_activation = activation->function(weighted_sum);
       if (type == TYPE::OUTPUT) {
-            return y;
+            return neuron_activation;
       }
       return -1;
 }
@@ -52,7 +53,8 @@ Neuron::computeGradient(double prevActivation, int theta,
                         std::vector<double> activations_in_minibatch,
                         std::vector<double> targets_in_minibatch) {
       if (type == TYPE::OUTPUT) {
-            double act = activation->derivative(prevY, y);
+            double act =
+                activation->derivative(weighted_sum, neuron_activation);
             double loss{};
             loss = lossFunction->derivative(activations_in_minibatch,
                                             targets_in_minibatch);
@@ -64,7 +66,8 @@ Neuron::computeGradient(double prevActivation, int theta,
             for (auto &conn : nextConnections) {
                   summ_deltas += (*conn->weight * conn->targetNeuron.delta);
             }
-            summ_deltas *= activation->derivative(prevY, y);
+            summ_deltas *=
+                activation->derivative(weighted_sum, neuron_activation);
             delta = summ_deltas;
             long double gradient = delta * -prevActivation;
             return gradient;
@@ -79,11 +82,32 @@ void Neuron::recomputeParameters(std::vector<double> activations_in_minibatch,
       for (auto &prevConn : prevConnections) {
             *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
                 {*prevConn->weight,
-                 computeGradient(prevConn->targetNeuron.y, WEIGHT,
-                                 activations_in_minibatch,
+                 computeGradient(prevConn->targetNeuron.neuron_activation,
+                                 WEIGHT, activations_in_minibatch,
                                  targets_in_minibatch)});
       }
       bias = optimizationAlgorithm->optimizeBias(
           {bias, computeGradient(1.0, BIAS, activations_in_minibatch,
                                  targets_in_minibatch)});
+}
+Parameters Neuron::getParameters() {
+      std::vector<double> weights;
+      for (auto &prevConn : prevConnections) {
+            weights.push_back(*prevConn->weight);
+      }
+      return Parameters{weights, bias};
+}
+
+void Neuron::loadParameters(Parameters parameters) {
+      for (auto w_pos = 0; w_pos < prevConnections.size(); w_pos++) {
+            *prevConnections[w_pos]->weight = parameters.weights[w_pos];
+      }
+      bias = parameters.bias;
+}
+
+void Neuron::initializeAccordingType(int init_val) {
+      if (type == TYPE::INPUT)
+            neuron_activation = init_val;
+      else if (type == TYPE::OUTPUT)
+            targetValue = init_val;
 }

@@ -238,21 +238,19 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/TrainSpects.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/../data/DataSet.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/../types/TrainingDataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/../types/../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/../types/../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../designs/LayerDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/Neuron.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../../include/types/Parameters.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../algorithms/Activations.hpp \
  /usr/include/c++/14.1.1/math.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../algorithms/LossFuctions.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../algorithms/Optimizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../algorithms/../core/SharedResources.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/../data/Data.hpp \
- /usr/include/c++/14.1.1/algorithm \
- /usr/include/c++/14.1.1/bits/ranges_algo.h \
- /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/SharedResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/NetworkOperator.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/Data.hpp \
@@ -264,6 +262,7 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/algorithms/Optimizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/core/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/DataSetProcess.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/../types/TrainingDataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/DataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/Normalizers.hpp \
@@ -285,4 +284,5 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/Normalizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/LayerDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/ModelDesign.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/TrainSpects.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/TrainSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/types/TrainingDataSet.hpp

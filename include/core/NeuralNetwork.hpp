@@ -16,12 +16,15 @@ class NeuralNetwork {
       void construct();
       void fit(TrainSpects &train_spects, AlgorithmsSpects &algorithms_spects);
       OutputNetworkData predict(InputNetworkData input);
+      void loadCheckpoint(std::string path);
+      void saveCheckpoint(std::string dest_forlder);
 
     private:
       NetworkOperator network_operator;
       ModelDesign &model_design;
       SharedResources shared_resources;
       std::shared_ptr<LossFuctions::LossFunction> loss_function;
+      bool builded;
 };
 
 #endif

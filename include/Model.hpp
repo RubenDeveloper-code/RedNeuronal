@@ -17,6 +17,7 @@ class Model {
                            AlphaAlgorithms::Arguments args);
       void fit(TrainSpects train_spects);
       OutputNetworkData predict(std::vector<double> input);
+      void loadCheckpoint(std::string path);
 
     private:
       ModelDesign model_design;

@@ -236,23 +236,34 @@ CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o: \
  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/TrainSpects.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../data/DataSet.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../types/TrainingDataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../types/../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../types/../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/LayerDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Neuron.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/types/Parameters.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Activations.hpp \
  /usr/include/c++/14.1.1/math.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/LossFuctions.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Optimizers.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/Data.hpp \
- /usr/include/c++/14.1.1/algorithm \
- /usr/include/c++/14.1.1/bits/ranges_algo.h \
- /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkOperator.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/alerts/messages.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkConstructor.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/data/checkpoints.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/data/../../include/core/Network.hpp \
+ /usr/include/c++/14.1.1/fstream \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/14.1.1/bits/fstream.tcc \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../libs/ProgressBar.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SetterData.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/DataSet.hpp
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/data/checkpoints.hpp \
+ /usr/include/c++/14.1.1/algorithm \
+ /usr/include/c++/14.1.1/bits/ranges_algo.h \
+ /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h

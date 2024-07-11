@@ -7,6 +7,7 @@
 #include "include/designs/LayerDesign.hpp"
 #include "include/designs/ModelDesign.hpp"
 #include "include/designs/TrainSpects.hpp"
+#include "include/types/TrainingDataSet.hpp"
 #include <iostream>
 #include <memory>
 
@@ -25,15 +26,34 @@ int main() {
                                  LayerDesign::Activations::REGRESSION,
                                  LayerDesign::Optimizers::ADAMS, 1});
       DataSetProcess dataset("../res/Student_performance_data _.csv");
-      // dataset.applyNormalization(Normalizations::TYPE::ZCORE);
-      DataSet data = dataset.getDataset(
-          {"Age", "Gender", "Ethnicity", "ParentalEducation", "StudyTimeWeekly",
-           "Absences", "Tutoring", "ParentalSupport", "Extracurricular",
-           "Sports", "Music", "Volunteering"},
-          {"GradeClass"});
+      dataset.applyNormalization(Normalizations::TYPE::ZCORE);
+      std::vector<std::string> tagsInput = {"Age",
+                                            "Gender",
+                                            "Ethnicity",
+                                            "ParentalEducation",
+                                            "StudyTimeWeekly",
+                                            "Absences",
+                                            "Tutoring",
+                                            "ParentalSupport",
+                                            "Extracurricular",
+                                            "Sports",
+                                            "Music",
+                                            "Volunteering"};
+      std::vector<std::string> tagsOutput = {"GradeClass"};
+      TrainingDataSet training_dataset =
+          dataset.getTrainingDataSet(tagsInput, tagsOutput, 70, 20, 10);
 
-      TrainSpects train_spects{data, 10000, 1, 10e-3, 100, 0.00001};
+      TrainSpects train_spects{std::move(training_dataset),
+                               800,
+                               1,
+                               10e-3,
+                               0.1,
+                               10,
+                               "../checkpoints",
+                               10,
+                               true};
       model.fit(train_spects);
+      // model.loadCheckpoint("../checkpoints/checkpoint_2024-7-9_17_4_59.ckpt");
       auto out =
           model.predict({17, 1, 0, 2, 19.833722807854713, 7, 1, 2, 0, 0, 1, 0});
       std::cout << "->debe ser 2.0 " << out[0] << std::endl;
