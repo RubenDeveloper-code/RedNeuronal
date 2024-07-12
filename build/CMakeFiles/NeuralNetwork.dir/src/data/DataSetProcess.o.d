@@ -2,9 +2,9 @@ CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/DataSetProcess.cpp \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/DataSetProcess.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/TrainingDataSet.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/../data/DataSet.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/data/TrainingDataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/data/../../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/../../include/data/../types/data/../../data/Data.hpp \
  /usr/include/c++/14.1.1/utility \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

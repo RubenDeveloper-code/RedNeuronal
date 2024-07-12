@@ -1,7 +1,7 @@
 #ifndef __ALGORITMS_HPP__
 #define __ALGORITMS_HPP__
 
-#include "../core/SharedResources.hpp"
+#include "../network/resources/SharedResources.hpp"
 #include <cmath>
 #include <memory>
 namespace Optimizers {

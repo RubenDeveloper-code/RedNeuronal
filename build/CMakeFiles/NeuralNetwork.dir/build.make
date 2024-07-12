@@ -69,19 +69,19 @@ include CMakeFiles/NeuralNetwork.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/NeuralNetwork.dir/flags.make
 
-CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar.cpp
-CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o -MF CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o.d -o CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar.cpp
+CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar/ProgressBar.cpp
+CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o -MF CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o.d -o CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar/ProgressBar.cpp
 
-CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar.cpp > CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.i
+CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar/ProgressBar.cpp > CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.i
 
-CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar.cpp -o CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.s
+CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/libs/ProgressBar/ProgressBar.cpp -o CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.s
 
 CMakeFiles/NeuralNetwork.dir/src/Model.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/src/Model.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/Model.cpp
@@ -181,178 +181,10 @@ CMakeFiles/NeuralNetwork.dir/src/algorithms/Optimizers.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/algorithms/Optimizers.s"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/Optimizers.cpp -o CMakeFiles/NeuralNetwork.dir/src/algorithms/Optimizers.s
 
-CMakeFiles/NeuralNetwork.dir/src/core/Layer.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/Layer.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Layer.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/Layer.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/Layer.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/Layer.o -MF CMakeFiles/NeuralNetwork.dir/src/core/Layer.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/Layer.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Layer.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/Layer.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/Layer.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Layer.cpp > CMakeFiles/NeuralNetwork.dir/src/core/Layer.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/Layer.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/Layer.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Layer.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/Layer.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkConstructor.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkConstructor.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkConstructor.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkConstructor.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkOperator.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkOperator.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkOperator.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkOperator.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Checks.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Checks.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Checks.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Checks.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Iteration.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Iteration.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Iteration.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Iteration.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelCheckpoint.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelCheckpoint.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelCheckpoint.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelCheckpoint.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelLoss.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelLoss.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelLoss.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/ModelLoss.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Trainer.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Trainer.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Trainer.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/Trainer.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/TrainerUI.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/TrainerUI.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/TrainerUI.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NetworkTrainer/TrainerUI.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NeuralNetwork.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o -MF CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NeuralNetwork.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NeuralNetwork.cpp > CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/NeuralNetwork.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Neuron.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o -MF CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Neuron.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/Neuron.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/Neuron.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Neuron.cpp > CMakeFiles/NeuralNetwork.dir/src/core/Neuron.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/Neuron.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/Neuron.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/Neuron.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/Neuron.s
-
-CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/SetterData.cpp
-CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o -MF CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o.d -o CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/SetterData.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/core/SetterData.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/core/SetterData.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/SetterData.cpp > CMakeFiles/NeuralNetwork.dir/src/core/SetterData.i
-
-CMakeFiles/NeuralNetwork.dir/src/core/SetterData.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/core/SetterData.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/SetterData.cpp -o CMakeFiles/NeuralNetwork.dir/src/core/SetterData.s
-
 CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/DataSetProcess.cpp
 CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o -MF CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o.d -o CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/DataSetProcess.cpp
 
 CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.i: cmake_force
@@ -366,7 +198,7 @@ CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.s: cmake_force
 CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/Normalizers.cpp
 CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o -MF CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o.d -o CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/Normalizers.cpp
 
 CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.i: cmake_force
@@ -377,24 +209,10 @@ CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.s"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/Normalizers.cpp -o CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.s
 
-CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o: CMakeFiles/NeuralNetwork.dir/flags.make
-CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/checkpoints.cpp
-CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o -MF CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o.d -o CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/checkpoints.cpp
-
-CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.i"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/checkpoints.cpp > CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.i
-
-CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.s"
-	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/checkpoints.cpp -o CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.s
-
 CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/csvReader.cpp
 CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o -MF CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o.d -o CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/data/csvReader.cpp
 
 CMakeFiles/NeuralNetwork.dir/src/data/csvReader.i: cmake_force
@@ -408,7 +226,7 @@ CMakeFiles/NeuralNetwork.dir/src/data/csvReader.s: cmake_force
 CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/designs/LayerDesign.cpp
 CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o -MF CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o.d -o CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/designs/LayerDesign.cpp
 
 CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.i: cmake_force
@@ -422,7 +240,7 @@ CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.s: cmake_force
 CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/designs/ModelDesign.cpp
 CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o -MF CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o.d -o CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/designs/ModelDesign.cpp
 
 CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.i: cmake_force
@@ -432,6 +250,188 @@ CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.i: cmake_force
 CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.s"
 	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/designs/ModelDesign.cpp -o CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Layer.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o -MF CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Layer.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Layer.cpp > CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Layer.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Neuron.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o -MF CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Neuron.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Neuron.cpp > CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/body/Neuron.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/constructor/NetworkConstructor.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o -MF CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/constructor/NetworkConstructor.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/constructor/NetworkConstructor.cpp > CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/constructor/NetworkConstructor.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/NeuralNetwork.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o -MF CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/NeuralNetwork.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/NeuralNetwork.cpp > CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/NeuralNetwork.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/NetworkOperator.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o -MF CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/NetworkOperator.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/NetworkOperator.cpp > CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/NetworkOperator.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/SetterData.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o -MF CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/SetterData.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/SetterData.cpp > CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/SetterData.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/checkpoints.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o -MF CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/checkpoints.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/checkpoints.cpp > CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/operator/checkpoints.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Checks.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o -MF CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Checks.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Checks.cpp > CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Checks.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Iteration.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o -MF CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Iteration.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Iteration.cpp > CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Iteration.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelCheckpoint.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o -MF CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelCheckpoint.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelCheckpoint.cpp > CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelCheckpoint.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelLoss.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o -MF CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelLoss.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelLoss.cpp > CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelLoss.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Trainer.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o -MF CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Trainer.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Trainer.cpp > CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Trainer.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.s
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o: CMakeFiles/NeuralNetwork.dir/flags.make
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/TrainerUI.cpp
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o: CMakeFiles/NeuralNetwork.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ruben/Programacion/estudio/c++/NeuralNetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o -MF CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o.d -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o -c /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/TrainerUI.cpp
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.i"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/TrainerUI.cpp > CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.i
+
+CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.s"
+	/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/TrainerUI.cpp -o CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.s
 
 CMakeFiles/NeuralNetwork.dir/main.o: CMakeFiles/NeuralNetwork.dir/flags.make
 CMakeFiles/NeuralNetwork.dir/main.o: /home/ruben/Programacion/estudio/c++/NeuralNetwork/main.cpp
@@ -449,7 +449,7 @@ CMakeFiles/NeuralNetwork.dir/main.s: cmake_force
 
 # Object files for target NeuralNetwork
 NeuralNetwork_OBJECTS = \
-"CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o" \
+"CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o" \
 "CMakeFiles/NeuralNetwork.dir/src/Model.o" \
 "CMakeFiles/NeuralNetwork.dir/src/alerts/handler.o" \
 "CMakeFiles/NeuralNetwork.dir/src/alerts/messages.o" \
@@ -457,30 +457,30 @@ NeuralNetwork_OBJECTS = \
 "CMakeFiles/NeuralNetwork.dir/src/algorithms/AlphaAlgorithms.o" \
 "CMakeFiles/NeuralNetwork.dir/src/algorithms/LossFunctions.o" \
 "CMakeFiles/NeuralNetwork.dir/src/algorithms/Optimizers.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/Layer.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o" \
-"CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o" \
 "CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o" \
 "CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o" \
-"CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o" \
 "CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o" \
 "CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o" \
 "CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o" \
+"CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o" \
 "CMakeFiles/NeuralNetwork.dir/main.o"
 
 # External object files for target NeuralNetwork
 NeuralNetwork_EXTERNAL_OBJECTS =
 
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/Model.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/alerts/handler.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/alerts/messages.o
@@ -488,24 +488,24 @@ NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/algorithms/Activations.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/algorithms/AlphaAlgorithms.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/algorithms/LossFunctions.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/algorithms/Optimizers.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/Layer.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.o
-NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/data/csvReader.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/designs/LayerDesign.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o
+NeuralNetwork: CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/main.o
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/build.make
 NeuralNetwork: CMakeFiles/NeuralNetwork.dir/link.txt

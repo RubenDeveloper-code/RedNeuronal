@@ -2,7 +2,7 @@ CMakeFiles/NeuralNetwork.dir/src/algorithms/AlphaAlgorithms.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/AlphaAlgorithms.cpp \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/AlphaAlgoritms.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/../core/SharedResources.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/memory /usr/include/c++/14.1.1/bits/memoryfwd.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

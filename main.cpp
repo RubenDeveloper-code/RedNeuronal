@@ -1,13 +1,14 @@
 #include "include/Model.hpp"
 #include "include/algorithms/Activations.hpp"
 #include "include/algorithms/Optimizers.hpp"
-#include "include/core/Layer.hpp"
 #include "include/data/DataSetProcess.hpp"
 #include "include/data/Normalizers.hpp"
 #include "include/designs/LayerDesign.hpp"
 #include "include/designs/ModelDesign.hpp"
-#include "include/designs/Train/TrainSpects.hpp"
-#include "include/types/TrainingDataSet.hpp"
+#include "include/designs/train/AlgorithmsSpects.hpp"
+#include "include/designs/train/TrainSpects.hpp"
+#include "include/network/body/Layer.hpp"
+#include "include/types/data/TrainingDataSet.hpp"
 #include <iostream>
 #include <memory>
 
@@ -25,6 +26,9 @@ int main() {
       model.addLayer(LayerDesign{LayerDesign::LayerClass::OUTPUT,
                                  LayerDesign::Activations::REGRESSION,
                                  LayerDesign::Optimizers::ADAMS, 1});
+      // son la misma mamada nomas cambia los argumentos
+      // model.upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier::DECAY,
+      //  {1, 0.1, 10, true, 0.001});
       DataSetProcess dataset("../res/Student_performance_data _.csv");
       dataset.applyNormalization(Normalizations::TYPE::ZCORE);
       std::vector<std::string> tagsInput = {"Age",
@@ -44,13 +48,13 @@ int main() {
           dataset.getTrainingDataSet(tagsInput, tagsOutput, 70, 20, 10);
 
       TrainSpects train_spects{std::move(training_dataset),
-                               100,
+                               300,
                                1,
                                10e-3,
                                0.00001,
                                100,
                                "../checkpoints",
-                               50,
+                               5,
                                true};
       model.fit(train_spects);
       // model.loadCheckpoint("../checkpoints/checkpoint_2024-7-9_17_4_59.ckpt");

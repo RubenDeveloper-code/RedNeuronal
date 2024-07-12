@@ -130,19 +130,19 @@ NeuralNetwork/fast:
 .PHONY : NeuralNetwork/fast
 
 # target to build an object file
-libs/ProgressBar.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.o
-.PHONY : libs/ProgressBar.o
+libs/ProgressBar/ProgressBar.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.o
+.PHONY : libs/ProgressBar/ProgressBar.o
 
 # target to preprocess a source file
-libs/ProgressBar.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.i
-.PHONY : libs/ProgressBar.i
+libs/ProgressBar/ProgressBar.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.i
+.PHONY : libs/ProgressBar/ProgressBar.i
 
 # target to generate assembly for a file
-libs/ProgressBar.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/libs/ProgressBar.s
-.PHONY : libs/ProgressBar.s
+libs/ProgressBar/ProgressBar.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/libs/ProgressBar/ProgressBar.s
+.PHONY : libs/ProgressBar/ProgressBar.s
 
 # target to build an object file
 main.o:
@@ -265,186 +265,6 @@ src/algorithms/Optimizers.s:
 .PHONY : src/algorithms/Optimizers.s
 
 # target to build an object file
-src/core/Layer.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/Layer.o
-.PHONY : src/core/Layer.o
-
-# target to preprocess a source file
-src/core/Layer.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/Layer.i
-.PHONY : src/core/Layer.i
-
-# target to generate assembly for a file
-src/core/Layer.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/Layer.s
-.PHONY : src/core/Layer.s
-
-# target to build an object file
-src/core/NetworkConstructor.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.o
-.PHONY : src/core/NetworkConstructor.o
-
-# target to preprocess a source file
-src/core/NetworkConstructor.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.i
-.PHONY : src/core/NetworkConstructor.i
-
-# target to generate assembly for a file
-src/core/NetworkConstructor.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkConstructor.s
-.PHONY : src/core/NetworkConstructor.s
-
-# target to build an object file
-src/core/NetworkOperator.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.o
-.PHONY : src/core/NetworkOperator.o
-
-# target to preprocess a source file
-src/core/NetworkOperator.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.i
-.PHONY : src/core/NetworkOperator.i
-
-# target to generate assembly for a file
-src/core/NetworkOperator.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkOperator.s
-.PHONY : src/core/NetworkOperator.s
-
-# target to build an object file
-src/core/NetworkTrainer/Checks.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.o
-.PHONY : src/core/NetworkTrainer/Checks.o
-
-# target to preprocess a source file
-src/core/NetworkTrainer/Checks.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.i
-.PHONY : src/core/NetworkTrainer/Checks.i
-
-# target to generate assembly for a file
-src/core/NetworkTrainer/Checks.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Checks.s
-.PHONY : src/core/NetworkTrainer/Checks.s
-
-# target to build an object file
-src/core/NetworkTrainer/Iteration.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.o
-.PHONY : src/core/NetworkTrainer/Iteration.o
-
-# target to preprocess a source file
-src/core/NetworkTrainer/Iteration.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.i
-.PHONY : src/core/NetworkTrainer/Iteration.i
-
-# target to generate assembly for a file
-src/core/NetworkTrainer/Iteration.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Iteration.s
-.PHONY : src/core/NetworkTrainer/Iteration.s
-
-# target to build an object file
-src/core/NetworkTrainer/ModelCheckpoint.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.o
-.PHONY : src/core/NetworkTrainer/ModelCheckpoint.o
-
-# target to preprocess a source file
-src/core/NetworkTrainer/ModelCheckpoint.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.i
-.PHONY : src/core/NetworkTrainer/ModelCheckpoint.i
-
-# target to generate assembly for a file
-src/core/NetworkTrainer/ModelCheckpoint.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelCheckpoint.s
-.PHONY : src/core/NetworkTrainer/ModelCheckpoint.s
-
-# target to build an object file
-src/core/NetworkTrainer/ModelLoss.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.o
-.PHONY : src/core/NetworkTrainer/ModelLoss.o
-
-# target to preprocess a source file
-src/core/NetworkTrainer/ModelLoss.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.i
-.PHONY : src/core/NetworkTrainer/ModelLoss.i
-
-# target to generate assembly for a file
-src/core/NetworkTrainer/ModelLoss.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/ModelLoss.s
-.PHONY : src/core/NetworkTrainer/ModelLoss.s
-
-# target to build an object file
-src/core/NetworkTrainer/Trainer.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.o
-.PHONY : src/core/NetworkTrainer/Trainer.o
-
-# target to preprocess a source file
-src/core/NetworkTrainer/Trainer.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.i
-.PHONY : src/core/NetworkTrainer/Trainer.i
-
-# target to generate assembly for a file
-src/core/NetworkTrainer/Trainer.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/Trainer.s
-.PHONY : src/core/NetworkTrainer/Trainer.s
-
-# target to build an object file
-src/core/NetworkTrainer/TrainerUI.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.o
-.PHONY : src/core/NetworkTrainer/TrainerUI.o
-
-# target to preprocess a source file
-src/core/NetworkTrainer/TrainerUI.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.i
-.PHONY : src/core/NetworkTrainer/TrainerUI.i
-
-# target to generate assembly for a file
-src/core/NetworkTrainer/TrainerUI.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NetworkTrainer/TrainerUI.s
-.PHONY : src/core/NetworkTrainer/TrainerUI.s
-
-# target to build an object file
-src/core/NeuralNetwork.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o
-.PHONY : src/core/NeuralNetwork.o
-
-# target to preprocess a source file
-src/core/NeuralNetwork.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.i
-.PHONY : src/core/NeuralNetwork.i
-
-# target to generate assembly for a file
-src/core/NeuralNetwork.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.s
-.PHONY : src/core/NeuralNetwork.s
-
-# target to build an object file
-src/core/Neuron.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/Neuron.o
-.PHONY : src/core/Neuron.o
-
-# target to preprocess a source file
-src/core/Neuron.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/Neuron.i
-.PHONY : src/core/Neuron.i
-
-# target to generate assembly for a file
-src/core/Neuron.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/Neuron.s
-.PHONY : src/core/Neuron.s
-
-# target to build an object file
-src/core/SetterData.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/SetterData.o
-.PHONY : src/core/SetterData.o
-
-# target to preprocess a source file
-src/core/SetterData.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/SetterData.i
-.PHONY : src/core/SetterData.i
-
-# target to generate assembly for a file
-src/core/SetterData.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/core/SetterData.s
-.PHONY : src/core/SetterData.s
-
-# target to build an object file
 src/data/DataSetProcess.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/DataSetProcess.o
 .PHONY : src/data/DataSetProcess.o
@@ -473,21 +293,6 @@ src/data/Normalizers.i:
 src/data/Normalizers.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/Normalizers.s
 .PHONY : src/data/Normalizers.s
-
-# target to build an object file
-src/data/checkpoints.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.o
-.PHONY : src/data/checkpoints.o
-
-# target to preprocess a source file
-src/data/checkpoints.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.i
-.PHONY : src/data/checkpoints.i
-
-# target to generate assembly for a file
-src/data/checkpoints.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/data/checkpoints.s
-.PHONY : src/data/checkpoints.s
 
 # target to build an object file
 src/data/csvReader.o:
@@ -534,6 +339,201 @@ src/designs/ModelDesign.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/designs/ModelDesign.s
 .PHONY : src/designs/ModelDesign.s
 
+# target to build an object file
+src/network/body/Layer.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.o
+.PHONY : src/network/body/Layer.o
+
+# target to preprocess a source file
+src/network/body/Layer.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.i
+.PHONY : src/network/body/Layer.i
+
+# target to generate assembly for a file
+src/network/body/Layer.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/body/Layer.s
+.PHONY : src/network/body/Layer.s
+
+# target to build an object file
+src/network/body/Neuron.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.o
+.PHONY : src/network/body/Neuron.o
+
+# target to preprocess a source file
+src/network/body/Neuron.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.i
+.PHONY : src/network/body/Neuron.i
+
+# target to generate assembly for a file
+src/network/body/Neuron.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/body/Neuron.s
+.PHONY : src/network/body/Neuron.s
+
+# target to build an object file
+src/network/constructor/NetworkConstructor.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.o
+.PHONY : src/network/constructor/NetworkConstructor.o
+
+# target to preprocess a source file
+src/network/constructor/NetworkConstructor.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.i
+.PHONY : src/network/constructor/NetworkConstructor.i
+
+# target to generate assembly for a file
+src/network/constructor/NetworkConstructor.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/constructor/NetworkConstructor.s
+.PHONY : src/network/constructor/NetworkConstructor.s
+
+# target to build an object file
+src/network/container/NeuralNetwork.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o
+.PHONY : src/network/container/NeuralNetwork.o
+
+# target to preprocess a source file
+src/network/container/NeuralNetwork.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.i
+.PHONY : src/network/container/NeuralNetwork.i
+
+# target to generate assembly for a file
+src/network/container/NeuralNetwork.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.s
+.PHONY : src/network/container/NeuralNetwork.s
+
+# target to build an object file
+src/network/operator/NetworkOperator.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.o
+.PHONY : src/network/operator/NetworkOperator.o
+
+# target to preprocess a source file
+src/network/operator/NetworkOperator.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.i
+.PHONY : src/network/operator/NetworkOperator.i
+
+# target to generate assembly for a file
+src/network/operator/NetworkOperator.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/NetworkOperator.s
+.PHONY : src/network/operator/NetworkOperator.s
+
+# target to build an object file
+src/network/operator/SetterData.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.o
+.PHONY : src/network/operator/SetterData.o
+
+# target to preprocess a source file
+src/network/operator/SetterData.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.i
+.PHONY : src/network/operator/SetterData.i
+
+# target to generate assembly for a file
+src/network/operator/SetterData.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/SetterData.s
+.PHONY : src/network/operator/SetterData.s
+
+# target to build an object file
+src/network/operator/checkpoints.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.o
+.PHONY : src/network/operator/checkpoints.o
+
+# target to preprocess a source file
+src/network/operator/checkpoints.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.i
+.PHONY : src/network/operator/checkpoints.i
+
+# target to generate assembly for a file
+src/network/operator/checkpoints.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/operator/checkpoints.s
+.PHONY : src/network/operator/checkpoints.s
+
+# target to build an object file
+src/network/trainer/Checks.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.o
+.PHONY : src/network/trainer/Checks.o
+
+# target to preprocess a source file
+src/network/trainer/Checks.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.i
+.PHONY : src/network/trainer/Checks.i
+
+# target to generate assembly for a file
+src/network/trainer/Checks.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Checks.s
+.PHONY : src/network/trainer/Checks.s
+
+# target to build an object file
+src/network/trainer/Iteration.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.o
+.PHONY : src/network/trainer/Iteration.o
+
+# target to preprocess a source file
+src/network/trainer/Iteration.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.i
+.PHONY : src/network/trainer/Iteration.i
+
+# target to generate assembly for a file
+src/network/trainer/Iteration.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Iteration.s
+.PHONY : src/network/trainer/Iteration.s
+
+# target to build an object file
+src/network/trainer/ModelCheckpoint.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o
+.PHONY : src/network/trainer/ModelCheckpoint.o
+
+# target to preprocess a source file
+src/network/trainer/ModelCheckpoint.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.i
+.PHONY : src/network/trainer/ModelCheckpoint.i
+
+# target to generate assembly for a file
+src/network/trainer/ModelCheckpoint.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.s
+.PHONY : src/network/trainer/ModelCheckpoint.s
+
+# target to build an object file
+src/network/trainer/ModelLoss.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o
+.PHONY : src/network/trainer/ModelLoss.o
+
+# target to preprocess a source file
+src/network/trainer/ModelLoss.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.i
+.PHONY : src/network/trainer/ModelLoss.i
+
+# target to generate assembly for a file
+src/network/trainer/ModelLoss.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.s
+.PHONY : src/network/trainer/ModelLoss.s
+
+# target to build an object file
+src/network/trainer/Trainer.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o
+.PHONY : src/network/trainer/Trainer.o
+
+# target to preprocess a source file
+src/network/trainer/Trainer.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.i
+.PHONY : src/network/trainer/Trainer.i
+
+# target to generate assembly for a file
+src/network/trainer/Trainer.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.s
+.PHONY : src/network/trainer/Trainer.s
+
+# target to build an object file
+src/network/trainer/TrainerUI.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o
+.PHONY : src/network/trainer/TrainerUI.o
+
+# target to preprocess a source file
+src/network/trainer/TrainerUI.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.i
+.PHONY : src/network/trainer/TrainerUI.i
+
+# target to generate assembly for a file
+src/network/trainer/TrainerUI.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.s
+.PHONY : src/network/trainer/TrainerUI.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -543,9 +543,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... NeuralNetwork"
-	@echo "... libs/ProgressBar.o"
-	@echo "... libs/ProgressBar.i"
-	@echo "... libs/ProgressBar.s"
+	@echo "... libs/ProgressBar/ProgressBar.o"
+	@echo "... libs/ProgressBar/ProgressBar.i"
+	@echo "... libs/ProgressBar/ProgressBar.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -570,51 +570,12 @@ help:
 	@echo "... src/algorithms/Optimizers.o"
 	@echo "... src/algorithms/Optimizers.i"
 	@echo "... src/algorithms/Optimizers.s"
-	@echo "... src/core/Layer.o"
-	@echo "... src/core/Layer.i"
-	@echo "... src/core/Layer.s"
-	@echo "... src/core/NetworkConstructor.o"
-	@echo "... src/core/NetworkConstructor.i"
-	@echo "... src/core/NetworkConstructor.s"
-	@echo "... src/core/NetworkOperator.o"
-	@echo "... src/core/NetworkOperator.i"
-	@echo "... src/core/NetworkOperator.s"
-	@echo "... src/core/NetworkTrainer/Checks.o"
-	@echo "... src/core/NetworkTrainer/Checks.i"
-	@echo "... src/core/NetworkTrainer/Checks.s"
-	@echo "... src/core/NetworkTrainer/Iteration.o"
-	@echo "... src/core/NetworkTrainer/Iteration.i"
-	@echo "... src/core/NetworkTrainer/Iteration.s"
-	@echo "... src/core/NetworkTrainer/ModelCheckpoint.o"
-	@echo "... src/core/NetworkTrainer/ModelCheckpoint.i"
-	@echo "... src/core/NetworkTrainer/ModelCheckpoint.s"
-	@echo "... src/core/NetworkTrainer/ModelLoss.o"
-	@echo "... src/core/NetworkTrainer/ModelLoss.i"
-	@echo "... src/core/NetworkTrainer/ModelLoss.s"
-	@echo "... src/core/NetworkTrainer/Trainer.o"
-	@echo "... src/core/NetworkTrainer/Trainer.i"
-	@echo "... src/core/NetworkTrainer/Trainer.s"
-	@echo "... src/core/NetworkTrainer/TrainerUI.o"
-	@echo "... src/core/NetworkTrainer/TrainerUI.i"
-	@echo "... src/core/NetworkTrainer/TrainerUI.s"
-	@echo "... src/core/NeuralNetwork.o"
-	@echo "... src/core/NeuralNetwork.i"
-	@echo "... src/core/NeuralNetwork.s"
-	@echo "... src/core/Neuron.o"
-	@echo "... src/core/Neuron.i"
-	@echo "... src/core/Neuron.s"
-	@echo "... src/core/SetterData.o"
-	@echo "... src/core/SetterData.i"
-	@echo "... src/core/SetterData.s"
 	@echo "... src/data/DataSetProcess.o"
 	@echo "... src/data/DataSetProcess.i"
 	@echo "... src/data/DataSetProcess.s"
 	@echo "... src/data/Normalizers.o"
 	@echo "... src/data/Normalizers.i"
 	@echo "... src/data/Normalizers.s"
-	@echo "... src/data/checkpoints.o"
-	@echo "... src/data/checkpoints.i"
-	@echo "... src/data/checkpoints.s"
 	@echo "... src/data/csvReader.o"
 	@echo "... src/data/csvReader.i"
 	@echo "... src/data/csvReader.s"
@@ -624,6 +585,45 @@ help:
 	@echo "... src/designs/ModelDesign.o"
 	@echo "... src/designs/ModelDesign.i"
 	@echo "... src/designs/ModelDesign.s"
+	@echo "... src/network/body/Layer.o"
+	@echo "... src/network/body/Layer.i"
+	@echo "... src/network/body/Layer.s"
+	@echo "... src/network/body/Neuron.o"
+	@echo "... src/network/body/Neuron.i"
+	@echo "... src/network/body/Neuron.s"
+	@echo "... src/network/constructor/NetworkConstructor.o"
+	@echo "... src/network/constructor/NetworkConstructor.i"
+	@echo "... src/network/constructor/NetworkConstructor.s"
+	@echo "... src/network/container/NeuralNetwork.o"
+	@echo "... src/network/container/NeuralNetwork.i"
+	@echo "... src/network/container/NeuralNetwork.s"
+	@echo "... src/network/operator/NetworkOperator.o"
+	@echo "... src/network/operator/NetworkOperator.i"
+	@echo "... src/network/operator/NetworkOperator.s"
+	@echo "... src/network/operator/SetterData.o"
+	@echo "... src/network/operator/SetterData.i"
+	@echo "... src/network/operator/SetterData.s"
+	@echo "... src/network/operator/checkpoints.o"
+	@echo "... src/network/operator/checkpoints.i"
+	@echo "... src/network/operator/checkpoints.s"
+	@echo "... src/network/trainer/Checks.o"
+	@echo "... src/network/trainer/Checks.i"
+	@echo "... src/network/trainer/Checks.s"
+	@echo "... src/network/trainer/Iteration.o"
+	@echo "... src/network/trainer/Iteration.i"
+	@echo "... src/network/trainer/Iteration.s"
+	@echo "... src/network/trainer/ModelCheckpoint.o"
+	@echo "... src/network/trainer/ModelCheckpoint.i"
+	@echo "... src/network/trainer/ModelCheckpoint.s"
+	@echo "... src/network/trainer/ModelLoss.o"
+	@echo "... src/network/trainer/ModelLoss.i"
+	@echo "... src/network/trainer/ModelLoss.s"
+	@echo "... src/network/trainer/Trainer.o"
+	@echo "... src/network/trainer/Trainer.i"
+	@echo "... src/network/trainer/Trainer.s"
+	@echo "... src/network/trainer/TrainerUI.o"
+	@echo "... src/network/trainer/TrainerUI.i"
+	@echo "... src/network/trainer/TrainerUI.s"
 .PHONY : help
 
 

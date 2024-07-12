@@ -2,12 +2,12 @@
 #define __MODEL_HPP__
 
 #include "algorithms/AlphaAlgoritms.hpp"
-#include "core/NeuralNetwork.hpp"
 #include "data/Data.hpp"
-#include "designs/AlgorithmsSpects.hpp"
 #include "designs/LayerDesign.hpp"
 #include "designs/ModelDesign.hpp"
-#include "designs/Train/TrainSpects.hpp"
+#include "designs/train/AlgorithmsSpects.hpp"
+#include "designs/train/TrainSpects.hpp"
+#include "network/container/NeuralNetwork.hpp"
 #include <vector>
 class Model {
     public:

@@ -14,7 +14,8 @@ void Model::addLayer(LayerDesign layer_design) {
 void Model::upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,
                             AlphaAlgorithms::Arguments args) {
       algorithms_spects.alphaModifier = alfaModifier;
-      algorithms_spects.args_alpha_modifier = args;
+      algorithms_spects.args_alpha_modifier =
+          std::make_unique<AlphaAlgorithms::Arguments>(args);
 }
 
 void Model::fit(TrainSpects train_spects) {

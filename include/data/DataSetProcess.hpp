@@ -1,7 +1,7 @@
 #ifndef __TRAIN_DATA_HPP__
 #define __TRAIN_DATA_HPP__
 
-#include "../types/TrainingDataSet.hpp"
+#include "../types/data/TrainingDataSet.hpp"
 #include "Data.hpp"
 #include "DataSet.hpp"
 #include "Normalizers.hpp"
