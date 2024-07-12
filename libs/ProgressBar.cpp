@@ -72,4 +72,4 @@ void ProgressBar::endlBar() { std::cout << "      " << std::flush; }
 
 unsigned int ProgressBar::getSize() { return bar.size() - 2; }
 
-void ProgressBar::end() { std::cout << std::endl; }
+void ProgressBar::end() { std::cout << std::endl << std::flush; }

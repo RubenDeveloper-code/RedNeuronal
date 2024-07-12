@@ -1,7 +1,7 @@
 #include "../../include/core/NeuralNetwork.hpp"
 #include "../../include/alerts/messages.hpp"
 #include "../../include/core/NetworkConstructor.hpp"
-#include "../../include/core/NetworkTrainer.hpp"
+#include "../../include/core/NetworkTrainer/Trainer.hpp"
 #include "../../include/data/checkpoints.hpp"
 #include <algorithm>
 #include <memory>
@@ -24,15 +24,17 @@ void NeuralNetwork::construct() {
 void NeuralNetwork::fit(TrainSpects &train_spects,
                         AlgorithmsSpects &algorithms_spects) {
       shared_resources.init(train_spects.alpha);
-      NetworkTrainer network_trainer;
-      NetworkTrainer::Status status = network_trainer.fit(
-          network, shared_resources, train_spects, algorithms_spects,
-          network_operator, loss_function);
-      if (status == NetworkTrainer::Status::RELOAD) {
-            loadCheckpoint(train_spects.tempcheckpoints_folder +
-                           "/temp_best.ckpt");
+      Trainer network_trainer(network, shared_resources, train_spects,
+                              algorithms_spects, loss_function);
+      Trainer::Status status = network_trainer.fit();
+      if (status == Trainer::Status::RELOAD) {
+            Messages::Message({"Rollback best checkpoint"});
+            loadCheckpoint(
+                train_spects.checkpoints_spects.tempcheckpoints_folder +
+                "/temp_best.ckpt");
             fit(train_spects, algorithms_spects);
-      }
+      } else
+            Messages::Message({"Model trained"});
 }
 
 OutputNetworkData NeuralNetwork::predict(InputNetworkData input) {

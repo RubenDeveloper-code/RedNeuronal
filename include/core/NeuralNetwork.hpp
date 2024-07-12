@@ -4,7 +4,7 @@
 #include "../algorithms/AlphaAlgoritms.hpp"
 #include "../designs/AlgorithmsSpects.hpp"
 #include "../designs/ModelDesign.hpp"
-#include "../designs/TrainSpects.hpp"
+#include "../designs/Train/TrainSpects.hpp"
 #include "Network.hpp"
 #include "NetworkOperator.hpp"
 #include "SharedResources.hpp"

@@ -6,7 +6,7 @@
 #include "include/data/Normalizers.hpp"
 #include "include/designs/LayerDesign.hpp"
 #include "include/designs/ModelDesign.hpp"
-#include "include/designs/TrainSpects.hpp"
+#include "include/designs/Train/TrainSpects.hpp"
 #include "include/types/TrainingDataSet.hpp"
 #include <iostream>
 #include <memory>
@@ -44,13 +44,13 @@ int main() {
           dataset.getTrainingDataSet(tagsInput, tagsOutput, 70, 20, 10);
 
       TrainSpects train_spects{std::move(training_dataset),
-                               800,
+                               100,
                                1,
                                10e-3,
-                               0.1,
-                               10,
+                               0.00001,
+                               100,
                                "../checkpoints",
-                               10,
+                               50,
                                true};
       model.fit(train_spects);
       // model.loadCheckpoint("../checkpoints/checkpoint_2024-7-9_17_4_59.ckpt");

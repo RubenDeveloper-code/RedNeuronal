@@ -7,7 +7,7 @@
 #include "designs/AlgorithmsSpects.hpp"
 #include "designs/LayerDesign.hpp"
 #include "designs/ModelDesign.hpp"
-#include "designs/TrainSpects.hpp"
+#include "designs/Train/TrainSpects.hpp"
 #include <vector>
 class Model {
     public:

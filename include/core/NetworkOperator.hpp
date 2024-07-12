@@ -2,6 +2,7 @@
 #define __NETWORK_OPERATOR_HPP__
 
 #include "../../include/types/Parameters.hpp"
+#include "../types/PairOutputs.hpp"
 #include "Network.hpp"
 #include <vector>
 class NetworkOperator {

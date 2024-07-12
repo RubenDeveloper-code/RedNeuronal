@@ -520,6 +520,9 @@ C_VERSION	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^#  define C_V
 C_VERSION	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
 Checkpoint	include/data/checkpoints.hpp	/^      Checkpoint(){};$/;"	f	struct:Checkpoint
 Checkpoint	include/data/checkpoints.hpp	/^struct Checkpoint {$/;"	s
+CheckpointSpects	include/designs/Train/CheckpointSpects.hpp	/^struct CheckpointSpects {$/;"	s
+Checks	include/core/NetworkTrainer/Checks.hpp	/^class Checks {$/;"	c
+Checks	src/core/NetworkTrainer/Checks.cpp	/^Checks::Checks(Network &network, EarlyStopSpects &earlystop_spects)$/;"	f	class:Checks
 Confirmation	src/alerts/messages.cpp	/^bool Messages::Confirmation(std::initializer_list<std::string> args) {$/;"	f	class:Messages	typeref:typename:bool
 Connection	include/core/Neuron.hpp	/^      Connection(Neuron &_targetNeuron, std::shared_ptr<double> _weight)$/;"	f	struct:Connection
 Connection	include/core/Neuron.hpp	/^struct Connection {$/;"	s
@@ -530,7 +533,7 @@ DEC	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	f
 DEC	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
 DECAY	include/designs/AlgorithmsSpects.hpp	/^      enum class AlphaModifier { WARMUP, DECAY, UNDEFINED };$/;"	e	enum:AlgorithmsSpects::AlphaModifier
 DECAY_LEARNING_RATE	include/algorithms/AlphaAlgoritms.hpp	/^enum class TYPE { WARM_UP, DECAY_LEARNING_RATE };$/;"	e	enum:AlphaAlgorithms::TYPE
-DONE	include/core/NetworkTrainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	e	enum:NetworkTrainer::Status
+DONE	include/core/NetworkTrainer/Trainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	e	enum:Trainer::Status
 Data	include/data/Data.hpp	/^      Data(){};$/;"	f	struct:Data
 Data	include/data/Data.hpp	/^      Data(int szInput, int szOuput) : input(szInput), output(szOuput){};$/;"	f	struct:Data
 Data	include/data/Data.hpp	/^      Data(std::vector<double> in, std::vector<double> out)$/;"	f	struct:Data
@@ -543,8 +546,9 @@ DataSetProcess	src/data/DataSetProcess.cpp	/^DataSetProcess::DataSetProcess(std:
 DecayLearningRate	include/algorithms/AlphaAlgoritms.hpp	/^      DecayLearningRate(AlphaAlgorithms::Arguments args)$/;"	f	struct:AlphaAlgorithms::DecayLearningRate
 DecayLearningRate	include/algorithms/AlphaAlgoritms.hpp	/^struct DecayLearningRate : public AlphaAlgorithm {$/;"	s	namespace:AlphaAlgorithms
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
+EarlyStopSpects	include/designs/Train/EarlyStopSpects.hpp	/^struct EarlyStopSpects {$/;"	s
 Eg	include/algorithms/Optimizers.hpp	/^            double Eg{};$/;"	m	struct:Optimizers::RMSProp::Hiperparameters	typeref:typename:double
-FITTING	include/core/NetworkTrainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	e	enum:NetworkTrainer::Status
+FITTING	include/core/NetworkTrainer/Trainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	e	enum:Trainer::Status
 G	include/algorithms/Optimizers.hpp	/^            double G{};$/;"	m	struct:Optimizers::AdaGrad::Hiperparameters	typeref:typename:double
 GET_AMOUNT	src/data/DataSetProcess.cpp	/^int GET_AMOUNT(double percent, double max) {$/;"	f	typeref:typename:int
 HEX	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
@@ -565,6 +569,8 @@ INPUT	include/core/Layer.hpp	/^      enum class TYPE { INPUT, HIDE, OUTPUT };$/;
 INPUT	include/core/Neuron.hpp	/^      enum class TYPE { INPUT, HIDE, OUTPUT };$/;"	e	enum:Neuron::TYPE
 INPUT	include/designs/LayerDesign.hpp	/^      enum class LayerClass { INPUT, HIDE, OUTPUT } type;$/;"	e	enum:LayerDesign::LayerClass
 InputNetworkData	include/data/Data.hpp	/^using InputNetworkData = std::vector<double>;$/;"	t	typeref:typename:std::vector<double>
+Iteration	include/core/NetworkTrainer/Iteration.hpp	/^class Iteration {$/;"	c
+Iteration	src/core/NetworkTrainer/Iteration.cpp	/^Iteration::Iteration(Network &network, SetterData &&setter_data,$/;"	f	class:Iteration
 L2Gradient	include/algorithms/Optimizers.hpp	/^      double L2Gradient(double theta, double gradient) {$/;"	f	struct:Optimizers::Optimizer	typeref:typename:double
 Layer	include/core/Layer.hpp	/^class Layer {$/;"	c
 Layer	src/core/Layer.cpp	/^Layer::Layer(LayerDesign layer_design,$/;"	f	class:Layer
@@ -585,13 +591,16 @@ Message	src/alerts/messages.cpp	/^void Messages::Message(std::initializer_list<s
 Messages	include/alerts/messages.hpp	/^namespace Messages {$/;"	n
 Model	include/Model.hpp	/^class Model {$/;"	c
 Model	src/Model.cpp	/^Model::Model(ModelDesign::LossFuction loss_function)$/;"	f	class:Model
+ModelCheckpoint	include/core/NetworkTrainer/ModelCheckpoint.hpp	/^class ModelCheckpoint {$/;"	c
+ModelCheckpoint	src/core/NetworkTrainer/ModelCheckpoint.cpp	/^ModelCheckpoint::ModelCheckpoint(Network &network,$/;"	f	class:ModelCheckpoint
 ModelDesign	include/designs/ModelDesign.hpp	/^class ModelDesign {$/;"	c
+ModelLoss	include/core/NetworkTrainer/ModelLoss.hpp	/^class ModelLoss {$/;"	c
+ModelLoss	src/core/NetworkTrainer/ModelLoss.cpp	/^ModelLoss::ModelLoss(std::shared_ptr<LossFuctions::LossFunction> loss_function)$/;"	f	class:ModelLoss
 Momentum	include/algorithms/Optimizers.hpp	/^      Momentum(std::shared_ptr<double> alpha) : Optimizer(alpha){};$/;"	f	struct:Optimizers::Momentum
 Momentum	include/algorithms/Optimizers.hpp	/^struct Momentum : public Optimizer {$/;"	s	namespace:Optimizers
 Network	include/core/Network.hpp	/^class Network {$/;"	c
 NetworkConstructor	include/core/NetworkConstructor.hpp	/^class NetworkConstructor {$/;"	c
 NetworkOperator	include/core/NetworkOperator.hpp	/^class NetworkOperator {$/;"	c
-NetworkTrainer	include/core/NetworkTrainer.hpp	/^class NetworkTrainer {$/;"	c
 NeuralNetwork	CMakeLists.txt	/^add_executable(NeuralNetwork ${SOURCES})$/;"	t
 NeuralNetwork	CMakeLists.txt	/^project(NeuralNetwork)$/;"	p
 NeuralNetwork	build/Makefile	/^NeuralNetwork: cmake_check_build_system$/;"	t
@@ -630,14 +639,14 @@ PLATFORM_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  de
 PLATFORM_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
-PairOutputs	include/data/Data.hpp	/^struct PairOutputs {$/;"	s
+PairOutputs	include/types/PairOutputs.hpp	/^struct PairOutputs {$/;"	s
 Parameters	include/types/Parameters.hpp	/^      Parameters(std::vector<double> w, double b) : weights(w), bias(b) {}$/;"	f	class:Parameters
 Parameters	include/types/Parameters.hpp	/^class Parameters {$/;"	c
 ProgressBar	libs/ProgressBar.cpp	/^ProgressBar::ProgressBar(char notDoneChar, char doneChar, unsigned int _size)$/;"	f	class:ProgressBar
 ProgressBar	libs/ProgressBar.hpp	/^class ProgressBar {$/;"	c
 REGRESSION	include/algorithms/Activations.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:Activations::TYPE
 REGRESSION	include/designs/LayerDesign.hpp	/^      enum class Activations { SIGMOID, RELU, REGRESSION } activation;$/;"	e	enum:LayerDesign::Activations
-RELOAD	include/core/NetworkTrainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	e	enum:NetworkTrainer::Status
+RELOAD	include/core/NetworkTrainer/Trainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	e	enum:Trainer::Status
 RELU	include/algorithms/Activations.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	e	enum:Activations::TYPE
 RELU	include/designs/LayerDesign.hpp	/^      enum class Activations { SIGMOID, RELU, REGRESSION } activation;$/;"	e	enum:LayerDesign::Activations
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E rm -f$/;"	m
@@ -703,7 +712,7 @@ SetterData	include/core/SetterData.hpp	/^struct SetterData {$/;"	s
 SetterData	src/core/SetterData.cpp	/^SetterData::SetterData(DataSet _dataset) : dataset(_dataset) {$/;"	f	class:SetterData
 SharedResources	include/core/SharedResources.hpp	/^      SharedResources() {$/;"	f	struct:SharedResources
 SharedResources	include/core/SharedResources.hpp	/^struct SharedResources {$/;"	s
-Status	include/core/NetworkTrainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	g	class:NetworkTrainer
+Status	include/core/NetworkTrainer/Trainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	g	class:Trainer
 TEMP	include/data/checkpoints.hpp	/^      enum class TYPE_CKPT { TEMP, SAVE, SKIP } type_ckpt;$/;"	e	enum:Checkpoint::TYPE_CKPT
 TYPE	include/algorithms/Activations.hpp	/^enum class TYPE { SIGMOID, RELU, REGRESSION };$/;"	g	namespace:Activations
 TYPE	include/algorithms/AlphaAlgoritms.hpp	/^enum class TYPE { WARM_UP, DECAY_LEARNING_RATE };$/;"	g	namespace:AlphaAlgorithms
@@ -713,14 +722,21 @@ TYPE	include/core/Layer.hpp	/^      enum class TYPE { INPUT, HIDE, OUTPUT };$/;"
 TYPE	include/core/Neuron.hpp	/^      enum class TYPE { INPUT, HIDE, OUTPUT };$/;"	g	class:Neuron
 TYPE	include/data/Normalizers.hpp	/^enum class TYPE { ZCORE };$/;"	g	namespace:Normalizations
 TYPE_CKPT	include/data/checkpoints.hpp	/^      enum class TYPE_CKPT { TEMP, SAVE, SKIP } type_ckpt;$/;"	g	struct:Checkpoint
-TrainSpects	include/designs/TrainSpects.hpp	/^      TrainSpects(TrainingDataSet &&dataset, int epochs, int mini_batch,$/;"	f	struct:TrainSpects
-TrainSpects	include/designs/TrainSpects.hpp	/^struct TrainSpects {$/;"	s
+TrainPerfomance	include/core/TrainPerfomance.hpp	/^class TrainPerfomance {}$/;"	c
+TrainSpects	include/designs/Train/TrainSpects.hpp	/^      TrainSpects(TrainingDataSet &&dataset, int epochs, int mini_batch,$/;"	f	struct:TrainSpects
+TrainSpects	include/designs/Train/TrainSpects.hpp	/^struct TrainSpects {$/;"	s
+Trainer	include/core/NetworkTrainer/Trainer.hpp	/^class Trainer {$/;"	c
+Trainer	src/core/NetworkTrainer/Trainer.cpp	/^Trainer::Trainer(Network &network, SharedResources &shared_resources,$/;"	f	class:Trainer
+TrainerUI	include/core/NetworkTrainer/TrainerUI.hpp	/^class TrainerUI {$/;"	c
+TrainerUI	src/core/NetworkTrainer/TrainerUI.cpp	/^TrainerUI::TrainerUI(int total_epochs)$/;"	f	class:TrainerUI
 TrainingDataSet	include/types/TrainingDataSet.hpp	/^      TrainingDataSet(DataSet &&train, DataSet &&val, DataSet &&test)$/;"	f	struct:TrainingDataSet
 TrainingDataSet	include/types/TrainingDataSet.hpp	/^struct TrainingDataSet {$/;"	s
 TrainingParameters	include/types/TrainingParameters.hpp	/^      TrainingParameters(TrainSpects &train_spects)$/;"	f	struct:TrainingParameters
 TrainingParameters	include/types/TrainingParameters.hpp	/^struct TrainingParameters {$/;"	s
 UNDEFINED	include/designs/AlgorithmsSpects.hpp	/^      enum class AlphaModifier { WARMUP, DECAY, UNDEFINED };$/;"	e	enum:AlgorithmsSpects::AlphaModifier
 UNDEFINED	include/designs/ModelDesign.hpp	/^            UNDEFINED$/;"	e	enum:ModelDesign::LossFuction
+Validation	include/core/NetworkTrainer/Validation.hpp	/^class Validation {$/;"	c
+Validation	src/core/NetworkTrainer/Validation.cpp	/^Validation::Validation(ModelLoss &model_loss) : model_loss(model_loss) {}$/;"	f	class:Validation
 WARMUP	include/designs/AlgorithmsSpects.hpp	/^      enum class AlphaModifier { WARMUP, DECAY, UNDEFINED };$/;"	e	enum:AlgorithmsSpects::AlphaModifier
 WARM_UP	include/algorithms/AlphaAlgoritms.hpp	/^enum class TYPE { WARM_UP, DECAY_LEARNING_RATE };$/;"	e	enum:AlphaAlgorithms::TYPE
 WEIGHT	src/core/Neuron.cpp	/^#define WEIGHT /;"	d	file:
@@ -731,6 +747,7 @@ Zscore	include/data/Normalizers.hpp	/^struct Zscore : public Normalization {$/;"
 __ALGORITHMS_SPECTS_HPP__	include/designs/AlgorithmsSpects.hpp	/^#define __ALGORITHMS_SPECTS_HPP__$/;"	d
 __ALGORITMS_HPP__	include/algorithms/Optimizers.hpp	/^#define __ALGORITMS_HPP__$/;"	d
 __CHECKPOINTS_HPP__	include/data/checkpoints.hpp	/^#define __CHECKPOINTS_HPP__$/;"	d
+__CHECKPOINT_SECTS_HPP__	include/designs/Train/CheckpointSpects.hpp	/^#define __CHECKPOINT_SECTS_HPP__$/;"	d
 __CSV_READER_HPP__	include/data/csvReader.hpp	/^#define __CSV_READER_HPP__$/;"	d
 __DATASET_HPP__	include/data/DataSet.hpp	/^#define __DATASET_HPP__$/;"	d
 __DATA_HPP__	include/data/Data.hpp	/^#define __DATA_HPP__$/;"	d
@@ -740,23 +757,32 @@ __LAYER_HPP__	include/core/Layer.hpp	/^#define __LAYER_HPP__$/;"	d
 __LOSSFUNCTIONS_HPP__	include/algorithms/LossFuctions.hpp	/^#define __LOSSFUNCTIONS_HPP__$/;"	d
 __MESSAGES_HPP__	include/alerts/messages.hpp	/^#define __MESSAGES_HPP__$/;"	d
 __MODELDEDIGN_HPP__	include/designs/ModelDesign.hpp	/^#define __MODELDEDIGN_HPP__$/;"	d
+__MODEL_CKPT_HPP__	include/core/NetworkTrainer/ModelCheckpoint.hpp	/^#define __MODEL_CKPT_HPP__$/;"	d
 __MODEL_HPP__	include/Model.hpp	/^#define __MODEL_HPP__$/;"	d
+__MODEL_LOSS_HPP__	include/core/NetworkTrainer/ModelLoss.hpp	/^#define __MODEL_LOSS_HPP__$/;"	d
 __NETGLOBALRESOPURSES__	include/core/SharedResources.hpp	/^#define __NETGLOBALRESOPURSES__$/;"	d
 __NETWORK_ALGORITHS_HPP__	include/algorithms/AlphaAlgoritms.hpp	/^#define __NETWORK_ALGORITHS_HPP__$/;"	d
 __NETWORK_CONSTRUCTOR_HPP__	include/core/NetworkConstructor.hpp	/^#define __NETWORK_CONSTRUCTOR_HPP__$/;"	d
 __NETWORK_HPP__	include/core/Network.hpp	/^#define __NETWORK_HPP__$/;"	d
+__NETWORK_ITERATION_HPP__	include/core/NetworkTrainer/Iteration.hpp	/^#define __NETWORK_ITERATION_HPP__$/;"	d
 __NETWORK_OPERATOR_HPP__	include/core/NetworkOperator.hpp	/^#define __NETWORK_OPERATOR_HPP__$/;"	d
-__NETWORK_TRAINER_HPP__	include/core/NetworkTrainer.hpp	/^#define __NETWORK_TRAINER_HPP__$/;"	d
+__NETWORK_TRAINER_HPP__	include/core/NetworkTrainer/Trainer.hpp	/^#define __NETWORK_TRAINER_HPP__$/;"	d
 __NEURALNETWORKSETTERDATA_HPP__	include/core/SetterData.hpp	/^#define __NEURALNETWORKSETTERDATA_HPP__$/;"	d
 __NEURALNETWORK_HPP__	include/core/NeuralNetwork.hpp	/^#define __NEURALNETWORK_HPP__$/;"	d
 __NEURON_ACTVATION_H__	include/algorithms/Activations.hpp	/^#define __NEURON_ACTVATION_H__$/;"	d
 __NEURON_HPP__	include/core/Neuron.hpp	/^#define __NEURON_HPP__$/;"	d
 __NORMALIZATIONS_HPP__	include/data/Normalizers.hpp	/^#define __NORMALIZATIONS_HPP__$/;"	d
+__PAIR_OUTPUTS_HP__	include/types/PairOutputs.hpp	/^#define __PAIR_OUTPUTS_HP__$/;"	d
 __PARAMETER_HPP__	include/types/Parameters.hpp	/^#define __PARAMETER_HPP__$/;"	d
+__PATIENCE_HPP__	include/designs/Train/EarlyStopSpects.hpp	/^#define __PATIENCE_HPP__$/;"	d
+__PERFOMANCE_HPP__	include/core/NetworkTrainer/Checks.hpp	/^#define __PERFOMANCE_HPP__$/;"	d
+__TRAINER_UI_HPP__	include/core/NetworkTrainer/TrainerUI.hpp	/^#define __TRAINER_UI_HPP__$/;"	d
 __TRAINING_PARAMETER_HPP__	include/types/TrainingParameters.hpp	/^#define __TRAINING_PARAMETER_HPP__$/;"	d
 __TRAINNINGDATASET_HPP__	include/types/TrainingDataSet.hpp	/^#define __TRAINNINGDATASET_HPP__$/;"	d
 __TRAIN_DATA_HPP__	include/data/DataSetProcess.hpp	/^#define __TRAIN_DATA_HPP__$/;"	d
-__TRAIN_SPECTS_HPP__	include/designs/TrainSpects.hpp	/^#define __TRAIN_SPECTS_HPP__$/;"	d
+__TRAIN_PERFOMANCE_HPP__	include/core/TrainPerfomance.hpp	/^#define __TRAIN_PERFOMANCE_HPP__$/;"	d
+__TRAIN_SPECTS_HPP__	include/designs/Train/TrainSpects.hpp	/^#define __TRAIN_SPECTS_HPP__$/;"	d
+__VALIDATIONS_HPP__	include/core/NetworkTrainer/Validation.hpp	/^#define __VALIDATIONS_HPP__$/;"	d
 __anon203bfafc0102	include/algorithms/Activations.hpp	/^            function = [](double x) { return (1.0 \/ (1.0 + std::exp(-x))); };$/;"	f	function:Activations::sigmoid::sigmoid	file:
 __anon203bfafc0202	include/algorithms/Activations.hpp	/^            derivative = [](double x, double y) { return (y * (1.0 - y)); };$/;"	f	function:Activations::sigmoid::sigmoid	file:
 __anon203bfafc0302	include/algorithms/Activations.hpp	/^            function = [](double x) { return (std::max(0.0, x)); };$/;"	f	function:Activations::relu::relu	file:
@@ -776,8 +802,8 @@ __anone2e2afec0102	src/data/Normalizers.cpp	/^          means, data, [](double x
 __anone2e2afec0202	src/data/Normalizers.cpp	/^          [](double summ, double N) { return summ \/ N; });$/;"	f	function:Normalizations::computeMean	file:
 __anone2e2afec0302	src/data/Normalizers.cpp	/^          [](double x, double mean) { return pow(x - mean, 2); },$/;"	f	function:Normalizations::computeStandartDeviation	file:
 __anone2e2afec0402	src/data/Normalizers.cpp	/^          [](double summ, double N) { return sqrt(summ \/ N); }, means);$/;"	f	function:Normalizations::computeStandartDeviation	file:
-__anone954a9840102	src/core/NetworkTrainer.cpp	/^                          [&perfomance](double computed) {$/;"	f	function:NetworkTrainer::minibatchPerfomance	file:
-__anone954a9840202	src/core/NetworkTrainer.cpp	/^                          [&perfomance](double desired) {$/;"	f	function:NetworkTrainer::minibatchPerfomance	file:
+__anone6c693450102	src/core/NetworkTrainer/ModelLoss.cpp	/^                          [&perfomance](double computed) {$/;"	f	function:ModelLoss::minibatchPerfomance	file:
+__anone6c693450202	src/core/NetworkTrainer/ModelLoss.cpp	/^                          [&perfomance](double desired) {$/;"	f	function:ModelLoss::minibatchPerfomance	file:
 __anonea9b43e30102	include/algorithms/LossFuctions.hpp	/^                             [](double target, double activation) -> double {$/;"	f	function:LossFuctions::MeanSquaredError::function	typeref:typename:double	file:
 __anonea9b43e30202	include/algorithms/LossFuctions.hpp	/^                activations, targets, [](double target, double activation) {$/;"	f	function:LossFuctions::BinaryCrossEntropy::function	file:
 __anonf8c9e2340102	src/designs/ModelDesign.cpp	/^                [](const LayerDesign &lda, const LayerDesign &ldb) {$/;"	f	function:ModelDesign::sortLayerDesign	file:
@@ -790,18 +816,18 @@ activation	include/core/Neuron.hpp	/^      std::shared_ptr<Activations::activati
 activation	include/designs/LayerDesign.hpp	/^      enum class Activations { SIGMOID, RELU, REGRESSION } activation;$/;"	m	struct:LayerDesign	typeref:enum:LayerDesign::Activations
 actual_epoch	include/types/TrainingParameters.hpp	/^      std::shared_ptr<int> actual_epoch;$/;"	m	struct:TrainingParameters	typeref:typename:std::shared_ptr<int>
 addLayer	src/Model.cpp	/^void Model::addLayer(LayerDesign layer_design) {$/;"	f	class:Model	typeref:typename:void
-adminCheckpoint	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::adminCheckpoint(Network &network,$/;"	f	class:NetworkTrainer	typeref:typename:void
+adminCheckpoint	src/core/NetworkTrainer/ModelCheckpoint.cpp	/^void ModelCheckpoint::adminCheckpoint(int a_epoch, double validation_loss) {$/;"	f	class:ModelCheckpoint	typeref:typename:void
 algorithms_spects	include/Model.hpp	/^      AlgorithmsSpects algorithms_spects;$/;"	m	class:Model	typeref:typename:AlgorithmsSpects
 all	build/Makefile	/^all: cmake_check_build_system$/;"	t
 alpha	include/algorithms/Optimizers.hpp	/^      std::shared_ptr<double> alpha;$/;"	m	struct:Optimizers::Optimizer	typeref:typename:std::shared_ptr<double>
 alpha	include/core/SharedResources.hpp	/^      std::shared_ptr<double> alpha;$/;"	m	struct:SharedResources	typeref:typename:std::shared_ptr<double>
-alpha	include/designs/TrainSpects.hpp	/^      const double alpha;$/;"	m	struct:TrainSpects	typeref:typename:const double
+alpha	include/designs/Train/TrainSpects.hpp	/^      const double alpha;$/;"	m	struct:TrainSpects	typeref:typename:const double
 alphaModifier	include/designs/AlgorithmsSpects.hpp	/^      AlphaModifier alphaModifier = AlgorithmsSpects::AlphaModifier::UNDEFINED;$/;"	m	struct:AlgorithmsSpects	typeref:typename:AlphaModifier
-alpha_algorithm	include/core/NetworkTrainer.hpp	/^      std::unique_ptr<AlphaAlgorithms::AlphaAlgorithm> alpha_algorithm;$/;"	m	class:NetworkTrainer	typeref:typename:std::unique_ptr<AlphaAlgorithms::AlphaAlgorithm>
+alpha_algorithm	include/core/NetworkTrainer/Trainer.hpp	/^      std::unique_ptr<AlphaAlgorithms::AlphaAlgorithm> alpha_algorithm;$/;"	m	class:Trainer	typeref:typename:std::unique_ptr<AlphaAlgorithms::AlphaAlgorithm>
 applyNormalization	src/data/DataSetProcess.cpp	/^void DataSetProcess::applyNormalization(Normalizations::TYPE type) {$/;"	f	class:DataSetProcess	typeref:typename:void
 args	include/algorithms/AlphaAlgoritms.hpp	/^      Arguments args;$/;"	m	struct:AlphaAlgorithms::AlphaAlgorithm	typeref:typename:Arguments
 args_alpha_modifier	include/designs/AlgorithmsSpects.hpp	/^      AlphaAlgorithms::Arguments args_alpha_modifier;$/;"	m	struct:AlgorithmsSpects	typeref:typename:AlphaAlgorithms::Arguments
-backpropagation	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::backpropagation($/;"	f	class:NetworkTrainer	typeref:typename:void
+backpropagation	src/core/NetworkTrainer/Iteration.cpp	/^void Iteration::backpropagation(std::vector<PairOutputs> mini_batch_outputs) {$/;"	f	class:Iteration	typeref:typename:void
 bar	libs/ProgressBar.hpp	/^      std::vector<char> bar;$/;"	m	class:ProgressBar	typeref:typename:std::vector<char>
 begin	include/core/Layer.hpp	/^      std::vector<Neuron>::iterator begin() { return neurons.begin(); }$/;"	f	class:Layer	typeref:typename:std::vector<Neuron>::iterator
 begin	include/core/Network.hpp	/^      std::vector<Layer>::iterator begin() { return layers.begin(); }$/;"	f	class:Network	typeref:typename:std::vector<Layer>::iterator
@@ -820,13 +846,13 @@ biashp	include/algorithms/Optimizers.hpp	/^      hiperparameters biashp;$/;"	m	s
 builded	include/core/NeuralNetwork.hpp	/^      bool builded;$/;"	m	class:NeuralNetwork	typeref:typename:bool
 c	libs/ProgressBar.hpp	/^      char c;$/;"	m	class:ProgressBar	typeref:typename:char
 ch	libs/ProgressBar.hpp	/^      char ch;$/;"	m	class:ProgressBar	typeref:typename:char
-checkIfCheckpoint	src/core/NetworkTrainer.cpp	/^bool NetworkTrainer::checkIfCheckpoint(int a_epoch, int frec) {$/;"	f	class:NetworkTrainer	typeref:typename:bool
-checkIfReachUmbrall	src/core/NetworkTrainer.cpp	/^bool NetworkTrainer::checkIfReachUmbrall(double loss, double umbral,$/;"	f	class:NetworkTrainer	typeref:typename:bool
 checkIntegrity	src/designs/LayerDesign.cpp	/^void LayerDesign::checkIntegrity() {$/;"	f	class:LayerDesign	typeref:typename:void
 checkIntegrity	src/designs/ModelDesign.cpp	/^bool ModelDesign::checkIntegrity() {$/;"	f	class:ModelDesign	typeref:typename:bool
-checkValidationLoss	src/core/NetworkTrainer.cpp	/^double NetworkTrainer::checkValidationLoss($/;"	f	class:NetworkTrainer	typeref:typename:double
-checkpoint_frec	include/designs/TrainSpects.hpp	/^      const int checkpoint_frec;$/;"	m	struct:TrainSpects	typeref:typename:const int
-checkpoints_folder	include/designs/TrainSpects.hpp	/^      const std::string checkpoints_folder;$/;"	m	struct:TrainSpects	typeref:typename:const std::string
+checkpoint_frec	include/designs/Train/CheckpointSpects.hpp	/^      const int checkpoint_frec;$/;"	m	struct:CheckpointSpects	typeref:typename:const int
+checkpoints_folder	include/designs/Train/CheckpointSpects.hpp	/^      const std::string checkpoints_folder;$/;"	m	struct:CheckpointSpects	typeref:typename:const std::string
+checkpoints_spects	include/core/NetworkTrainer/ModelCheckpoint.hpp	/^      CheckpointSpects &checkpoints_spects;$/;"	m	class:ModelCheckpoint	typeref:typename:CheckpointSpects &
+checkpoints_spects	include/designs/Train/TrainSpects.hpp	/^      CheckpointSpects checkpoints_spects;$/;"	m	struct:TrainSpects	typeref:typename:CheckpointSpects
+checks	include/core/NetworkTrainer/Trainer.hpp	/^      Checks checks;$/;"	m	class:Trainer	typeref:typename:Checks
 clean	build/Makefile	/^clean:$/;"	t
 clean/fast	build/Makefile	/^clean\/fast: clean$/;"	t
 cmake_check_build_system	build/Makefile	/^cmake_check_build_system:$/;"	t
@@ -838,14 +864,14 @@ computeEg	include/algorithms/Optimizers.hpp	/^      void computeEg(Hiperparamete
 computeFirstFixedMomentum	include/algorithms/Optimizers.hpp	/^      void computeFirstFixedMomentum(hiperparameters &data, double gradient) {$/;"	f	struct:Optimizers::Adams	typeref:typename:void
 computeG	include/algorithms/Optimizers.hpp	/^      void computeG(Hiperparameters &hiperparameters, double gradient) {$/;"	f	struct:Optimizers::AdaGrad	typeref:typename:void
 computeGradient	src/core/Neuron.cpp	/^Neuron::computeGradient(double prevActivation, int theta,$/;"	f	class:Neuron	typeref:typename:long double
-computeLoss	src/core/NetworkTrainer.cpp	/^double NetworkTrainer::computeLoss($/;"	f	class:NetworkTrainer	typeref:typename:double
+computeLoss	src/core/NetworkTrainer/ModelLoss.cpp	/^double ModelLoss::computeLoss(std::vector<PairOutputs> pair_outputs) {$/;"	f	class:ModelLoss	typeref:typename:double
 computeMean	src/data/Normalizers.cpp	/^std::vector<double> Normalizations::computeMean(DataSet &data) {$/;"	f	class:Normalizations	typeref:typename:std::vector<double>
 computeNetworkOutput	src/core/NetworkOperator.cpp	/^OutputNetworkData NetworkOperator::computeNetworkOutput(Network &network) {$/;"	f	class:NetworkOperator	typeref:typename:OutputNetworkData
 computeParameter	include/algorithms/Optimizers.hpp	/^      double computeParameter(NeuronConectionInfo context,$/;"	f	struct:Optimizers::Adams	typeref:typename:double
 computeSecondFixedMomentum	include/algorithms/Optimizers.hpp	/^      void computeSecondFixedMomentum(hiperparameters &data, double gradient) {$/;"	f	struct:Optimizers::Adams	typeref:typename:void
 computeStandartDeviation	src/data/Normalizers.cpp	/^Normalizations::computeStandartDeviation(DataSet &data,$/;"	f	class:Normalizations	typeref:typename:std::vector<double>
 computeV	include/algorithms/Optimizers.hpp	/^      void computeV(Hiperparameters &hiperparameters, double gradient) {$/;"	f	struct:Optimizers::Momentum	typeref:typename:void
-computed	include/data/Data.hpp	/^      OutputNetworkData computed;$/;"	m	struct:PairOutputs	typeref:typename:OutputNetworkData
+computed	include/types/PairOutputs.hpp	/^      OutputNetworkData computed;$/;"	m	struct:PairOutputs	typeref:typename:OutputNetworkData
 connectLayers	src/core/NetworkConstructor.cpp	/^void NetworkConstructor::connectLayers(Network &network) {$/;"	f	class:NetworkConstructor	typeref:typename:void
 const	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 const	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
@@ -855,7 +881,7 @@ createCheckpoint	src/data/checkpoints.cpp	/^void Checkpoint::createCheckpoint(st
 createLayers	src/core/NetworkConstructor.cpp	/^void NetworkConstructor::createLayers($/;"	f	class:NetworkConstructor	typeref:typename:void
 csvFile	include/data/csvReader.hpp	/^      std::ifstream csvFile;$/;"	m	class:CSVReader	typeref:typename:std::ifstream
 dataset	include/core/SetterData.hpp	/^      DataSet dataset;$/;"	m	struct:SetterData	typeref:typename:DataSet
-dataset	include/designs/TrainSpects.hpp	/^      TrainingDataSet dataset;$/;"	m	struct:TrainSpects	typeref:typename:TrainingDataSet
+dataset	include/designs/Train/TrainSpects.hpp	/^      TrainingDataSet dataset;$/;"	m	struct:TrainSpects	typeref:typename:TrainingDataSet
 default_target	build/Makefile	/^default_target: all$/;"	t
 delta	include/core/Neuron.hpp	/^      double delta;$/;"	m	class:Neuron	typeref:typename:double
 depend	build/Makefile	/^depend:$/;"	t
@@ -863,10 +889,10 @@ derivative	include/algorithms/Activations.hpp	/^      double (*derivative)(doubl
 derivative	include/algorithms/LossFuctions.hpp	/^      double derivative(OutputNetworkData activation,$/;"	f	struct:LossFuctions::BinaryCrossEntropy	typeref:typename:double
 derivative	include/algorithms/LossFuctions.hpp	/^      double derivative(OutputNetworkData activation,$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
 design	include/designs/ModelDesign.hpp	/^      std::vector<LayerDesign> design;$/;"	m	class:ModelDesign	typeref:typename:std::vector<LayerDesign>
-desired	include/data/Data.hpp	/^      OutputNetworkData desired;$/;"	m	struct:PairOutputs	typeref:typename:OutputNetworkData
+desired	include/types/PairOutputs.hpp	/^      OutputNetworkData desired;$/;"	m	struct:PairOutputs	typeref:typename:OutputNetworkData
 dest	include/data/checkpoints.hpp	/^      std::string dest;$/;"	m	struct:Checkpoint	typeref:typename:std::string
 displayElapsedTime	libs/ProgressBar.cpp	/^void ProgressBar::displayElapsedTime(int h, int m, int s) {$/;"	f	class:ProgressBar	typeref:typename:void
-displayElapsedTime	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::displayElapsedTime(ProgressBar &bar, double segs) {$/;"	f	class:NetworkTrainer	typeref:typename:void
+displayElapsedTime	src/core/NetworkTrainer/TrainerUI.cpp	/^void TrainerUI::displayElapsedTime(double segs) {$/;"	f	class:TrainerUI	typeref:typename:void
 displayPercentage	libs/ProgressBar.cpp	/^void ProgressBar::displayPercentage() {$/;"	f	class:ProgressBar	typeref:typename:void
 displayProgress	libs/ProgressBar.cpp	/^void ProgressBar::displayProgress(double progress, double total) {$/;"	f	class:ProgressBar	typeref:typename:void
 displayTasksDone	libs/ProgressBar.cpp	/^void ProgressBar::displayTasksDone() {$/;"	f	class:ProgressBar	typeref:typename:void
@@ -876,17 +902,19 @@ divideDataSet	src/data/DataSetProcess.cpp	/^TrainingDataSet DataSetProcess::divi
 done	libs/ProgressBar.hpp	/^      unsigned int done;$/;"	m	class:ProgressBar	typeref:typename:unsigned int
 dropColumn	src/data/DataSetProcess.cpp	/^void DataSetProcess::dropColumn(std::string name) {$/;"	f	class:DataSetProcess	typeref:typename:void
 dumpParameters	src/data/checkpoints.cpp	/^void Checkpoint::dumpParameters(std::ofstream &checkpoint_file,$/;"	f	class:Checkpoint	typeref:typename:void
-earlyStop	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::earlyStop(bool restart) {$/;"	f	class:NetworkTrainer	typeref:typename:void
-earlyStop_restart	include/designs/TrainSpects.hpp	/^      const bool earlyStop_restart;$/;"	m	struct:TrainSpects	typeref:typename:const bool
+earlyStop_restart	include/designs/Train/EarlyStopSpects.hpp	/^      const bool earlyStop_restart;$/;"	m	struct:EarlyStopSpects	typeref:typename:const bool
+earlystop_spects	include/core/NetworkTrainer/Checks.hpp	/^      EarlyStopSpects &earlystop_spects;$/;"	m	class:Checks	typeref:typename:EarlyStopSpects &
+earlystop_spects	include/designs/Train/TrainSpects.hpp	/^      EarlyStopSpects earlystop_spects;$/;"	m	struct:TrainSpects	typeref:typename:EarlyStopSpects
 edit_cache	build/Makefile	/^edit_cache:$/;"	t
 edit_cache/fast	build/Makefile	/^edit_cache\/fast: edit_cache$/;"	t
 end	include/core/Layer.hpp	/^      std::vector<Neuron>::iterator end() { return neurons.end(); }$/;"	f	class:Layer	typeref:typename:std::vector<Neuron>::iterator
 end	include/core/Network.hpp	/^      std::vector<Layer>::iterator end() { return layers.end(); }$/;"	f	class:Network	typeref:typename:std::vector<Layer>::iterator
 end	include/data/DataSet.hpp	/^      std::vector<Data>::iterator end() { return set.end(); }$/;"	f	struct:DataSet	typeref:typename:std::vector<Data>::iterator
 end	include/types/Parameters.hpp	/^      std::vector<double>::iterator end() { return weights.end(); }$/;"	f	class:Parameters	typeref:typename:std::vector<double>::iterator
-end	libs/ProgressBar.cpp	/^void ProgressBar::end() { std::cout << std::endl; }$/;"	f	class:ProgressBar	typeref:typename:void
+end	libs/ProgressBar.cpp	/^void ProgressBar::end() { std::cout << std::endl << std::flush; }$/;"	f	class:ProgressBar	typeref:typename:void
+endBar	src/core/NetworkTrainer/TrainerUI.cpp	/^void TrainerUI::endBar() { progress_bar.end(); }$/;"	f	class:TrainerUI	typeref:typename:void
 endlBar	libs/ProgressBar.cpp	/^void ProgressBar::endlBar() { std::cout << "      " << std::flush; }$/;"	f	class:ProgressBar	typeref:typename:void
-epochs	include/designs/TrainSpects.hpp	/^      const int epochs;$/;"	m	struct:TrainSpects	typeref:typename:const int
+epochs	include/designs/Train/TrainSpects.hpp	/^      const int epochs;$/;"	m	struct:TrainSpects	typeref:typename:const int
 epochs	include/types/TrainingParameters.hpp	/^      const unsigned epochs;$/;"	m	struct:TrainingParameters	typeref:typename:const unsigned
 epochs_it	include/core/SharedResources.hpp	/^      std::shared_ptr<int> epochs_it;$/;"	m	struct:SharedResources	typeref:typename:std::shared_ptr<int>
 epsilon	include/algorithms/Optimizers.hpp	/^            double epsilon = 10e-8;$/;"	m	struct:Optimizers::AdaGrad::Hiperparameters	typeref:typename:double
@@ -897,9 +925,9 @@ fillUp	libs/ProgressBar.cpp	/^void ProgressBar::fillUp(int actual_val) {$/;"	f	c
 fillUpCells	libs/ProgressBar.cpp	/^void ProgressBar::fillUpCells(unsigned int cells) {$/;"	f	class:ProgressBar	typeref:typename:void
 final_alpha	include/algorithms/AlphaAlgoritms.hpp	/^      double final_alpha;$/;"	m	struct:AlphaAlgorithms::Arguments	typeref:typename:double
 fit	src/Model.cpp	/^void Model::fit(TrainSpects train_spects) {$/;"	f	class:Model	typeref:typename:void
-fit	src/core/NetworkTrainer.cpp	/^NetworkTrainer::fit(Network &network, SharedResources &shared_resources,$/;"	f	class:NetworkTrainer	typeref:typename:NetworkTrainer::Status
+fit	src/core/NetworkTrainer/Trainer.cpp	/^Trainer::Status Trainer::fit() {$/;"	f	class:Trainer	typeref:typename:Trainer::Status
 fit	src/core/NeuralNetwork.cpp	/^void NeuralNetwork::fit(TrainSpects &train_spects,$/;"	f	class:NeuralNetwork	typeref:typename:void
-forwardPropagation	src/core/NetworkTrainer.cpp	/^std::vector<PairOutputs> NetworkTrainer::forwardPropagation($/;"	f	class:NetworkTrainer	typeref:typename:std::vector<PairOutputs>
+forwardPropagation	src/core/NetworkTrainer/Iteration.cpp	/^std::vector<PairOutputs> Iteration::forwardPropagation() {$/;"	f	class:Iteration	typeref:typename:std::vector<PairOutputs>
 function	include/algorithms/Activations.hpp	/^      double (*function)(double) = nullptr;$/;"	m	struct:Activations::activation	typeref:typename:double (*)(double)
 function	include/algorithms/LossFuctions.hpp	/^      double function(OutputNetworkData activations,$/;"	f	struct:LossFuctions::BinaryCrossEntropy	typeref:typename:double
 function	include/algorithms/LossFuctions.hpp	/^      double function(OutputNetworkData activations,$/;"	f	struct:LossFuctions::MeanSquaredError	typeref:typename:double
@@ -919,7 +947,7 @@ getTrainingDataSet	src/data/DataSetProcess.cpp	/^TrainingDataSet DataSetProcess:
 gradient	include/algorithms/Optimizers.hpp	/^      double gradient;$/;"	m	struct:Optimizers::NeuronConectionInfo	typeref:typename:double
 help	build/Makefile	/^help:$/;"	t
 hiperparameters	include/algorithms/Optimizers.hpp	/^      struct hiperparameters {$/;"	s	struct:Optimizers::Adams
-individualDataForewardPropagation	src/core/NetworkTrainer.cpp	/^PairOutputs NetworkTrainer::individualDataForewardPropagation($/;"	f	class:NetworkTrainer	typeref:typename:PairOutputs
+individualDataForewardPropagation	src/core/NetworkTrainer/Iteration.cpp	/^PairOutputs Iteration::individualDataForewardPropagation() {$/;"	f	class:Iteration	typeref:typename:PairOutputs
 individualNormalization	include/data/Normalizers.hpp	/^      double individualNormalization(double val, double column_id) override {$/;"	f	struct:Normalizations::Zscore	typeref:typename:double
 info_arch	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
 info_arch	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
@@ -970,14 +998,15 @@ info_version_internal	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^c
 info_version_internal	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
 info_version_internal	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
 init	include/core/SharedResources.hpp	/^      void init(double _alpha) { *alpha = _alpha; }$/;"	f	struct:SharedResources	typeref:typename:void
-initAlgorithms	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::initAlgorithms(AlgorithmsSpects &algorithms_spects) {$/;"	f	class:NetworkTrainer	typeref:typename:void
+initAlgorithms	src/core/NetworkTrainer/Trainer.cpp	/^void Trainer::initAlgorithms(AlgorithmsSpects &algorithms_spects) {$/;"	f	class:Trainer	typeref:typename:void
 initial_alpha	include/algorithms/AlphaAlgoritms.hpp	/^      double initial_alpha;$/;"	m	struct:AlphaAlgorithms::Arguments	typeref:typename:double
 initializeAccordingType	src/core/Neuron.cpp	/^void Neuron::initializeAccordingType(int init_val) {$/;"	f	class:Neuron	typeref:typename:void
 initializeIterator	include/data/DataSet.hpp	/^      void initializeIterator() { iterator = set.begin(); }$/;"	f	struct:DataSet	typeref:typename:void
 input	include/core/Network.hpp	/^      Layer &input() { return layers[0]; }$/;"	f	class:Network	typeref:typename:Layer &
 input	include/data/Data.hpp	/^      std::vector<double> input;$/;"	m	struct:Data	typeref:typename:std::vector<double>
 inputSize	include/core/Network.hpp	/^      int inputSize() { return input().neurons.size(); }$/;"	f	class:Network	typeref:typename:int
-iteration	src/core/NetworkTrainer.cpp	/^double NetworkTrainer::iteration($/;"	f	class:NetworkTrainer	typeref:typename:double
+iterate	src/core/NetworkTrainer/Iteration.cpp	/^double Iteration::iterate() {$/;"	f	class:Iteration	typeref:typename:double
+iteration	include/core/NetworkTrainer/Trainer.hpp	/^      Iteration iteration;$/;"	m	class:Trainer	typeref:typename:Iteration
 iterator	include/data/DataSet.hpp	/^      std::vector<Data>::iterator iterator;$/;"	m	struct:DataSet	typeref:typename:std::vector<Data>::iterator
 layers	include/core/Network.hpp	/^      std::vector<Layer> layers;$/;"	m	class:Network	typeref:typename:std::vector<Layer>
 libs/ProgressBar.i	build/Makefile	/^libs\/ProgressBar.i:$/;"	t
@@ -990,6 +1019,8 @@ loadCheckpoint	src/data/checkpoints.cpp	/^std::vector<Parameters> Checkpoint::lo
 loadCheckpointParameters	src/core/NetworkOperator.cpp	/^void NetworkOperator::loadCheckpointParameters($/;"	f	class:NetworkOperator	typeref:typename:void
 loadParameters	src/core/Neuron.cpp	/^void Neuron::loadParameters(Parameters parameters) {$/;"	f	class:Neuron	typeref:typename:void
 lossFunction	include/core/Neuron.hpp	/^      std::shared_ptr<LossFuctions::LossFunction> lossFunction;$/;"	m	class:Neuron	typeref:typename:std::shared_ptr<LossFuctions::LossFunction>
+loss_funcion	include/core/NetworkTrainer/Trainer.hpp	/^      std::shared_ptr<LossFuctions::LossFunction> loss_funcion;$/;"	m	class:Trainer	typeref:typename:std::shared_ptr<LossFuctions::LossFunction>
+loss_function	include/core/NetworkTrainer/ModelLoss.hpp	/^      std::shared_ptr<LossFuctions::LossFunction> loss_function;$/;"	m	class:ModelLoss	typeref:typename:std::shared_ptr<LossFuctions::LossFunction>
 loss_function	include/core/NeuralNetwork.hpp	/^      std::shared_ptr<LossFuctions::LossFunction> loss_function;$/;"	m	class:NeuralNetwork	typeref:typename:std::shared_ptr<LossFuctions::LossFunction>
 loss_function	include/designs/LayerDesign.hpp	/^      enum class LossFuctions { MSE, BCE } loss_function;$/;"	m	struct:LayerDesign	typeref:enum:LayerDesign::LossFuctions
 loss_function	include/designs/ModelDesign.hpp	/^      } loss_function = ModelDesign::LossFuction::UNDEFINED;$/;"	m	class:ModelDesign	typeref:enum:ModelDesign::LossFuction
@@ -1008,13 +1039,25 @@ main.s	build/Makefile	/^main.s:$/;"	t
 makeConnections	src/core/Neuron.cpp	/^void Neuron::makeConnections(Neurons &target, int prevLayerSize) {$/;"	f	class:Neuron	typeref:typename:void
 max	libs/ProgressBar.hpp	/^      unsigned int max;$/;"	m	class:ProgressBar	typeref:typename:unsigned int
 means	include/data/Normalizers.hpp	/^      std::vector<double> means;$/;"	m	struct:Normalizations::Zscore	typeref:typename:std::vector<double>
-mini_batch	include/designs/TrainSpects.hpp	/^      const int mini_batch;$/;"	m	struct:TrainSpects	typeref:typename:const int
-minibatchPerfomance	src/core/NetworkTrainer.cpp	/^PairOutputs NetworkTrainer::minibatchPerfomance($/;"	f	class:NetworkTrainer	typeref:typename:PairOutputs
+mini_batch	include/designs/Train/TrainSpects.hpp	/^      const int mini_batch;$/;"	m	struct:TrainSpects	typeref:typename:const int
+minibatchPerfomance	src/core/NetworkTrainer/ModelLoss.cpp	/^ModelLoss::minibatchPerfomance(std::vector<PairOutputs> minibatchs_perfomance) {$/;"	f	class:ModelLoss	typeref:typename:PairOutputs
+minibatch_size	include/core/NetworkTrainer/Iteration.hpp	/^      int minibatch_size;$/;"	m	class:Iteration	typeref:typename:int
+model_ckpt	include/core/NetworkTrainer/Trainer.hpp	/^      ModelCheckpoint model_ckpt;$/;"	m	class:Trainer	typeref:typename:ModelCheckpoint
 model_design	include/Model.hpp	/^      ModelDesign model_design;$/;"	m	class:Model	typeref:typename:ModelDesign
 model_design	include/core/NeuralNetwork.hpp	/^      ModelDesign &model_design;$/;"	m	class:NeuralNetwork	typeref:typename:ModelDesign &
+model_loss	include/core/NetworkTrainer/Iteration.hpp	/^      ModelLoss &model_loss;$/;"	m	class:Iteration	typeref:typename:ModelLoss &
+model_loss	include/core/NetworkTrainer/Trainer.hpp	/^      ModelLoss model_loss;$/;"	m	class:Trainer	typeref:typename:ModelLoss
+model_loss	include/core/NetworkTrainer/Validation.hpp	/^      ModelLoss &model_loss;$/;"	m	class:Validation	typeref:typename:ModelLoss &
 n_neurons	include/designs/LayerDesign.hpp	/^      int n_neurons;$/;"	m	struct:LayerDesign	typeref:typename:int
 names	include/data/DataSetProcess.hpp	/^      std::vector<std::string> names;$/;"	m	class:DataSetProcess	typeref:typename:std::vector<std::string>
+network	include/core/NetworkTrainer/Checks.hpp	/^      Network &network;$/;"	m	class:Checks	typeref:typename:Network &
+network	include/core/NetworkTrainer/Iteration.hpp	/^      Network &network;$/;"	m	class:Iteration	typeref:typename:Network &
+network	include/core/NetworkTrainer/ModelCheckpoint.hpp	/^      Network &network;$/;"	m	class:ModelCheckpoint	typeref:typename:Network &
+network	include/core/NetworkTrainer/Trainer.hpp	/^      Network &network;$/;"	m	class:Trainer	typeref:typename:Network &
 network	include/core/NeuralNetwork.hpp	/^      Network network;$/;"	m	class:NeuralNetwork	typeref:typename:Network
+network_operator	include/core/NetworkTrainer/Iteration.hpp	/^      NetworkOperator network_operator;$/;"	m	class:Iteration	typeref:typename:NetworkOperator
+network_operator	include/core/NetworkTrainer/ModelCheckpoint.hpp	/^      NetworkOperator network_operator;$/;"	m	class:ModelCheckpoint	typeref:typename:NetworkOperator
+network_operator	include/core/NetworkTrainer/Trainer.hpp	/^      NetworkOperator network_operator;$/;"	m	class:Trainer	typeref:typename:NetworkOperator
 network_operator	include/core/NeuralNetwork.hpp	/^      NetworkOperator network_operator;$/;"	m	class:NeuralNetwork	typeref:typename:NetworkOperator
 neural_network	include/Model.hpp	/^      NeuralNetwork neural_network;$/;"	m	class:Model	typeref:typename:NeuralNetwork
 neuron_activation	include/core/Neuron.hpp	/^      double neuron_activation;$/;"	m	class:Neuron	typeref:typename:double
@@ -1043,7 +1086,7 @@ optimizer	include/designs/LayerDesign.hpp	/^      } optimizer;$/;"	m	struct:Laye
 ouput	include/core/Network.hpp	/^      Layer &ouput() { return layers[layers.size() - 1]; }$/;"	f	class:Network	typeref:typename:Layer &
 ouputSize	include/core/Network.hpp	/^      int ouputSize() { return ouput().neurons.size(); }$/;"	f	class:Network	typeref:typename:int
 output	include/data/Data.hpp	/^      std::vector<double> output;$/;"	m	struct:Data	typeref:typename:std::vector<double>
-patience	include/designs/TrainSpects.hpp	/^      const unsigned patience;$/;"	m	struct:TrainSpects	typeref:typename:const unsigned
+patience	include/designs/Train/EarlyStopSpects.hpp	/^      const unsigned patience;$/;"	m	struct:EarlyStopSpects	typeref:typename:const unsigned
 pos	libs/ProgressBar.hpp	/^      unsigned int pos = 1;$/;"	m	class:ProgressBar	typeref:typename:unsigned int
 predict	src/Model.cpp	/^OutputNetworkData Model::predict(std::vector<double> input) {$/;"	f	class:Model	typeref:typename:OutputNetworkData
 predict	src/core/NeuralNetwork.cpp	/^OutputNetworkData NeuralNetwork::predict(InputNetworkData input) {$/;"	f	class:NeuralNetwork	typeref:typename:OutputNetworkData
@@ -1054,11 +1097,14 @@ preparePrediction	src/core/SetterData.cpp	/^void SetterData::preparePrediction(L
 prevConnections	include/core/Neuron.hpp	/^      Connections prevConnections;$/;"	m	class:Neuron	typeref:typename:Connections
 printList	src/alerts/handler.cpp	/^inline void printList(std::initializer_list<std::string> args) {$/;"	f	typeref:typename:void
 printList	src/alerts/messages.cpp	/^inline void printList(std::initializer_list<std::string> args) {$/;"	f	typeref:typename:void
+progress_bar	include/core/NetworkTrainer/TrainerUI.hpp	/^      ProgressBar progress_bar;$/;"	m	class:TrainerUI	typeref:typename:ProgressBar
 qnxnto	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qnxnto	build/CMakeFiles/3.29.5/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qnxnto	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qnxnto	build/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 rbegin	include/core/Network.hpp	/^      std::vector<Layer>::reverse_iterator rbegin() { return layers.rbegin(); }$/;"	f	class:Network	typeref:typename:std::vector<Layer>::reverse_iterator
+reachPatience	src/core/NetworkTrainer/Checks.cpp	/^bool Checks::reachPatience(double validation_loss) {$/;"	f	class:Checks	typeref:typename:bool
+reachUmbrall	src/core/NetworkTrainer/Checks.cpp	/^bool Checks::reachUmbrall(double loss, double umbral, double epoch) {$/;"	f	class:Checks	typeref:typename:bool
 readCheckpoint	src/data/checkpoints.cpp	/^std::vector<Parameters> Checkpoint::readCheckpoint(std::string path) {$/;"	f	class:Checkpoint	typeref:typename:std::vector<Parameters>
 readFieldsName	src/data/csvReader.cpp	/^void CSVReader::readFieldsName() {$/;"	f	class:CSVReader	typeref:typename:void
 readNextRow	src/data/csvReader.cpp	/^std::vector<double> CSVReader::readNextRow() {$/;"	f	class:CSVReader	typeref:typename:std::vector<double>
@@ -1077,10 +1123,12 @@ rollback_ifstream	src/data/csvReader.cpp	/^void rollback_ifstream(std::ifstream 
 rows	include/data/DataSetProcess.hpp	/^      std::vector<std::vector<double>> rows;$/;"	m	class:DataSetProcess	typeref:typename:std::vector<std::vector<double>>
 run	include/algorithms/AlphaAlgoritms.hpp	/^      void run() {$/;"	f	struct:AlphaAlgorithms::DecayLearningRate	typeref:typename:void
 run	include/algorithms/AlphaAlgoritms.hpp	/^      void run() {$/;"	f	struct:AlphaAlgorithms::WarmUp	typeref:typename:void
-saveCheckpoint	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::saveCheckpoint(Network &network,$/;"	f	class:NetworkTrainer	typeref:typename:void
+saveCheckpoint	src/core/NetworkTrainer/ModelCheckpoint.cpp	/^void ModelCheckpoint::saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt) {$/;"	f	class:ModelCheckpoint	typeref:typename:void
 set	include/data/DataSet.hpp	/^      std::vector<Data> set;$/;"	m	struct:DataSet	typeref:typename:std::vector<Data>
-setter_data	include/core/NetworkTrainer.hpp	/^      SetterData setter_data;$/;"	m	class:NetworkTrainer	typeref:typename:SetterData
+setter_data	include/core/NetworkTrainer/Iteration.hpp	/^      SetterData setter_data;$/;"	m	class:Iteration	typeref:typename:SetterData
+setter_data	include/core/NetworkTrainer/Trainer.hpp	/^      SetterData setter_data;$/;"	m	class:Trainer	typeref:typename:SetterData
 shared_resources	include/algorithms/AlphaAlgoritms.hpp	/^      SharedResources *shared_resources;$/;"	m	struct:AlphaAlgorithms::Arguments	typeref:typename:SharedResources *
+shared_resources	include/core/NetworkTrainer/Trainer.hpp	/^      SharedResources &shared_resources;$/;"	m	class:Trainer	typeref:typename:SharedResources &
 shared_resources	include/core/NeuralNetwork.hpp	/^      SharedResources shared_resources;$/;"	m	class:NeuralNetwork	typeref:typename:SharedResources
 show	libs/ProgressBar.hpp	/^      bool show = false;$/;"	m	class:ProgressBar	typeref:typename:bool
 sigmoid	include/algorithms/Activations.hpp	/^      sigmoid() {$/;"	f	struct:Activations::sigmoid
@@ -1149,31 +1197,36 @@ src/designs/ModelDesign.i	build/Makefile	/^src\/designs\/ModelDesign.i:$/;"	t
 src/designs/ModelDesign.o	build/Makefile	/^src\/designs\/ModelDesign.o:$/;"	t
 src/designs/ModelDesign.s	build/Makefile	/^src\/designs\/ModelDesign.s:$/;"	t
 standartDeviations	include/data/Normalizers.hpp	/^      std::vector<double> standartDeviations;$/;"	m	struct:Normalizations::Zscore	typeref:typename:std::vector<double>
-status	include/core/NetworkTrainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	m	class:NetworkTrainer	typeref:enum:NetworkTrainer::Status
+status	include/core/NetworkTrainer/Trainer.hpp	/^      enum class Status { FITTING, DONE, RELOAD } status;$/;"	m	class:Trainer	typeref:enum:Trainer::Status
 summation	src/algorithms/LossFunctions.cpp	/^double LossFuctions::LossFunction::summation(OutputNetworkData activations,$/;"	f	class:LossFuctions::LossFunction	typeref:typename:double
 t	include/algorithms/Optimizers.hpp	/^      std::shared_ptr<int> t{};$/;"	m	struct:Optimizers::Adams	typeref:typename:std::shared_ptr<int>
 targetNeuron	include/core/Neuron.hpp	/^      Neuron &targetNeuron;$/;"	m	struct:Connection	typeref:typename:Neuron &
 targetValue	include/core/Neuron.hpp	/^      double targetValue;$/;"	m	class:Neuron	typeref:typename:double
-tempcheckpoints_folder	include/designs/TrainSpects.hpp	/^      const std::string tempcheckpoints_folder = "..\/temp";$/;"	m	struct:TrainSpects	typeref:typename:const std::string
+tempcheckpoints_folder	include/designs/Train/CheckpointSpects.hpp	/^      const std::string tempcheckpoints_folder = "..\/temp";$/;"	m	struct:CheckpointSpects	typeref:typename:const std::string
 terminalSystemError	src/alerts/handler.cpp	/^void Handler::terminalSystemError(std::initializer_list<std::string> args) {$/;"	f	class:Handler	typeref:typename:void
 terminalUserError	src/alerts/handler.cpp	/^void Handler::terminalUserError(std::initializer_list<std::string> args) {$/;"	f	class:Handler	typeref:typename:void
 test_dataset	include/types/TrainingDataSet.hpp	/^      DataSet test_dataset;$/;"	m	struct:TrainingDataSet	typeref:typename:DataSet
 time_to_fill	libs/ProgressBar.cpp	/^bool ProgressBar::time_to_fill(int actual_val) {$/;"	f	class:ProgressBar	typeref:typename:bool
 toVector	src/data/csvReader.cpp	/^std::vector<std::vector<double>> CSVReader::toVector() {$/;"	f	class:CSVReader	typeref:typename:std::vector<std::vector<double>>
 todo	libs/ProgressBar.hpp	/^      unsigned int todo;$/;"	m	class:ProgressBar	typeref:typename:unsigned int
+total_epochs	include/core/NetworkTrainer/TrainerUI.hpp	/^      int total_epochs;$/;"	m	class:TrainerUI	typeref:typename:int
+trainer_spects	include/core/NetworkTrainer/Trainer.hpp	/^      TrainSpects &trainer_spects;$/;"	m	class:Trainer	typeref:typename:TrainSpects &
+trainer_ui	include/core/NetworkTrainer/Trainer.hpp	/^      TrainerUI trainer_ui;$/;"	m	class:Trainer	typeref:typename:TrainerUI
 training_dataset	include/types/TrainingDataSet.hpp	/^      DataSet training_dataset;$/;"	m	struct:TrainingDataSet	typeref:typename:DataSet
 type	include/core/Layer.hpp	/^      TYPE type;$/;"	m	class:Layer	typeref:typename:TYPE
 type	include/core/Neuron.hpp	/^      TYPE type;$/;"	m	class:Neuron	typeref:typename:TYPE
 type	include/designs/LayerDesign.hpp	/^      enum class LayerClass { INPUT, HIDE, OUTPUT } type;$/;"	m	struct:LayerDesign	typeref:enum:LayerDesign::LayerClass
 type_ckpt	include/data/checkpoints.hpp	/^      enum class TYPE_CKPT { TEMP, SAVE, SKIP } type_ckpt;$/;"	m	struct:Checkpoint	typeref:enum:Checkpoint::TYPE_CKPT
-umbral	include/designs/TrainSpects.hpp	/^      const double umbral;$/;"	m	struct:TrainSpects	typeref:typename:const double
+umbral	include/designs/Train/TrainSpects.hpp	/^      const double umbral;$/;"	m	struct:TrainSpects	typeref:typename:const double
 upAlphaAlgoritm	src/Model.cpp	/^void Model::upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,$/;"	f	class:Model	typeref:typename:void
-updateBar	src/core/NetworkTrainer.cpp	/^void NetworkTrainer::updateBar(ProgressBar &progress_bar, int epochs_p,$/;"	f	class:NetworkTrainer	typeref:typename:void
+updateBar	src/core/NetworkTrainer/TrainerUI.cpp	/^void TrainerUI::updateBar(int epochs_p, double loss, double validation_loss) {$/;"	f	class:TrainerUI	typeref:typename:void
 v	include/algorithms/Optimizers.hpp	/^            double m = 0, v = 0;$/;"	m	struct:Optimizers::Adams::hiperparameters	typeref:typename:double
 v	include/algorithms/Optimizers.hpp	/^            double v = 0.0;$/;"	m	struct:Optimizers::Momentum::Hiperparameters	typeref:typename:double
 vC	include/algorithms/Optimizers.hpp	/^            double mC{}, vC{};$/;"	m	struct:Optimizers::Adams::hiperparameters	typeref:typename:double
 val	include/algorithms/Optimizers.hpp	/^      double val;$/;"	m	struct:Optimizers::NeuronConectionInfo	typeref:typename:double
-validationOutputs	src/core/NetworkTrainer.cpp	/^NetworkTrainer::validationOutputs(Network &network,$/;"	f	class:NetworkTrainer	typeref:typename:std::vector<PairOutputs>
+validationForwardPropagation	src/core/NetworkTrainer/Iteration.cpp	/^double Iteration::validationForwardPropagation(DataSet &validation_data) {$/;"	f	class:Iteration	typeref:typename:double
+validationLoss	src/core/NetworkTrainer/ModelLoss.cpp	/^double ModelLoss::validationLoss(DataSet &validation_data) {$/;"	f	class:ModelLoss	typeref:typename:double
+validationOutputs	src/core/NetworkTrainer/Validation.cpp	/^Validation::validationOutputs(DataSet &validation_data) {$/;"	f	class:Validation	typeref:typename:std::vector<PairOutputs>
 validation_dataset	include/types/TrainingDataSet.hpp	/^      DataSet validation_dataset;$/;"	m	struct:TrainingDataSet	typeref:typename:DataSet
 volatile	build/CMakeFiles/3.29.5/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
 volatile	build/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:

@@ -235,10 +235,12 @@ CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o: \
  /usr/include/c++/14.1.1/tr1/poly_hermite.tcc \
  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/TrainSpects.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../types/TrainingDataSet.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../types/../data/DataSet.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/../types/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/Train/TrainSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/Train/../../types/TrainingDataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/Train/../../types/../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/Train/../../types/../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/Train/CheckpointSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/Train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../designs/LayerDesign.hpp \
@@ -250,19 +252,43 @@ CMakeFiles/NeuralNetwork.dir/src/core/NeuralNetwork.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../algorithms/Optimizers.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SharedResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkOperator.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../types/PairOutputs.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../types/../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/alerts/messages.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkConstructor.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/data/checkpoints.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../include/data/../../include/core/Network.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/Trainer.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/Checks.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../designs/Train/EarlyStopSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../Network.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/Iteration.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../algorithms/AlphaAlgoritms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../designs/AlgorithmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../designs/Train/TrainSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../NetworkOperator.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../SetterData.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../data/Data.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../Layer.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/ModelLoss.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../algorithms/LossFuctions.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../types/PairOutputs.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/ModelCheckpoint.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../data/checkpoints.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../data/../../include/core/Network.hpp \
  /usr/include/c++/14.1.1/fstream \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/14.1.1/bits/fstream.tcc \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../../libs/ProgressBar.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/SetterData.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/Data.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/../data/DataSet.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../designs/Train/CheckpointSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/ModelLoss.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/TrainerUI.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../../include/core/NetworkTrainer/../../../libs/ProgressBar.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../algorithms/AlphaAlgoritms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../designs/AlgorithmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../../designs/Train/TrainSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../Network.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../NetworkOperator.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/core/NetworkTrainer/../SetterData.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/core/../../include/data/checkpoints.hpp \
  /usr/include/c++/14.1.1/algorithm \
  /usr/include/c++/14.1.1/bits/ranges_algo.h \

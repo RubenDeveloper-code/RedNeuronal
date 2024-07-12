@@ -14,9 +14,4 @@ struct Data {
 
 using OutputNetworkData = std::vector<double>;
 using InputNetworkData = std::vector<double>;
-struct PairOutputs {
-      OutputNetworkData computed;
-      OutputNetworkData desired;
-};
-
 #endif
