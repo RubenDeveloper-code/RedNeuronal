@@ -12,6 +12,7 @@
 #include "../Network.hpp"
 #include "../operator/SetterData.hpp"
 #include "../operator/networkOperator.hpp"
+#include "TrainerAlgorithms.hpp"
 #include <memory>
 #include <vector>
 class Trainer {
@@ -33,11 +34,9 @@ class Trainer {
       ModelCheckpoint model_ckpt;
       Checks checks;
       TrainerUI trainer_ui;
+      TrainerAlgorithms trainer_algorithms;
 
       TrainSpects &trainer_spects;
-      std::unique_ptr<AlphaAlgorithms::AlphaAlgorithm> alpha_algorithm;
       std::shared_ptr<LossFuctions::LossFunction> loss_funcion;
-
-      void initAlgorithms(AlgorithmsSpects &algorithms_spects);
 };
 #endif

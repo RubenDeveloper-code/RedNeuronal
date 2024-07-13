@@ -6,6 +6,8 @@
 #include "designs/LayerDesign.hpp"
 #include "designs/ModelDesign.hpp"
 #include "designs/train/AlgorithmsSpects.hpp"
+#include "designs/train/AlphaAlgoritmsSpects.hpp"
+#include "designs/train/EarlyStopSpects.hpp"
 #include "designs/train/TrainSpects.hpp"
 #include "network/container/NeuralNetwork.hpp"
 #include <vector>
@@ -14,7 +16,8 @@ class Model {
       Model(ModelDesign::LossFuction loss_function);
       void addLayer(LayerDesign layer_design);
       void upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,
-                           AlphaAlgorithms::Arguments args);
+                           AlphaAlgorithmsSpects spects);
+      void upEarlyStop(EarlyStopSpects earlystop_spects);
       void fit(TrainSpects train_spects);
       OutputNetworkData predict(std::vector<double> input);
       void loadCheckpoint(std::string path);

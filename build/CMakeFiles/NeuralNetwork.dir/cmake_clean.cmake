@@ -51,6 +51,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o.d"
   "CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o"
   "CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o.d"
+  "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.o"
+  "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.o.d"
   "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o"
   "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o.d"
   "NeuralNetwork"

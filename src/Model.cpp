@@ -12,10 +12,14 @@ void Model::addLayer(LayerDesign layer_design) {
 }
 
 void Model::upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,
-                            AlphaAlgorithms::Arguments args) {
+                            AlphaAlgorithmsSpects spects) {
       algorithms_spects.alphaModifier = alfaModifier;
       algorithms_spects.args_alpha_modifier =
-          std::make_unique<AlphaAlgorithms::Arguments>(args);
+          std::make_unique<AlphaAlgorithmsSpects>(spects);
+}
+
+void Model::upEarlyStop(EarlyStopSpects earlystop_spects) {
+      algorithms_spects.earlystop_spects = earlystop_spects;
 }
 
 void Model::fit(TrainSpects train_spects) {

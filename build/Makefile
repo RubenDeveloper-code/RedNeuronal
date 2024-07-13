@@ -520,6 +520,21 @@ src/network/trainer/Trainer.s:
 .PHONY : src/network/trainer/Trainer.s
 
 # target to build an object file
+src/network/trainer/TrainerAlgorithms.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.o
+.PHONY : src/network/trainer/TrainerAlgorithms.o
+
+# target to preprocess a source file
+src/network/trainer/TrainerAlgorithms.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.i
+.PHONY : src/network/trainer/TrainerAlgorithms.i
+
+# target to generate assembly for a file
+src/network/trainer/TrainerAlgorithms.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.s
+.PHONY : src/network/trainer/TrainerAlgorithms.s
+
+# target to build an object file
 src/network/trainer/TrainerUI.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NeuralNetwork.dir/build.make CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o
 .PHONY : src/network/trainer/TrainerUI.o
@@ -621,6 +636,9 @@ help:
 	@echo "... src/network/trainer/Trainer.o"
 	@echo "... src/network/trainer/Trainer.i"
 	@echo "... src/network/trainer/Trainer.s"
+	@echo "... src/network/trainer/TrainerAlgorithms.o"
+	@echo "... src/network/trainer/TrainerAlgorithms.i"
+	@echo "... src/network/trainer/TrainerAlgorithms.s"
 	@echo "... src/network/trainer/TrainerUI.o"
 	@echo "... src/network/trainer/TrainerUI.i"
 	@echo "... src/network/trainer/TrainerUI.s"

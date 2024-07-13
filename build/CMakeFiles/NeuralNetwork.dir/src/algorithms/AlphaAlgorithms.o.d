@@ -2,7 +2,8 @@ CMakeFiles/NeuralNetwork.dir/src/algorithms/AlphaAlgorithms.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/AlphaAlgorithms.cpp \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/AlphaAlgoritms.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/../network/resources/SharedResources.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/../designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/../designs/train/../../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/memory /usr/include/c++/14.1.1/bits/memoryfwd.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -202,5 +203,6 @@ CMakeFiles/NeuralNetwork.dir/src/algorithms/AlphaAlgorithms.o: \
  /usr/include/c++/14.1.1/bits/out_ptr.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/algorithms/../../include/algorithms/../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc

@@ -6,12 +6,10 @@
 
 class Checks {
     public:
-      Checks(Network &network, EarlyStopSpects &earlystop_spects);
+      Checks(Network &network);
       bool reachUmbrall(double loss, double umbral, double epoch);
-      bool reachPatience(double validation_loss);
 
     private:
       Network &network;
-      EarlyStopSpects &earlystop_spects;
 };
 #endif

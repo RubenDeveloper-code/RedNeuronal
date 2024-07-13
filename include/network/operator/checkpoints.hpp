@@ -1,6 +1,8 @@
 #ifndef __CHECKPOINTS_HPP__
 #define __CHECKPOINTS_HPP__
 
+#include "../../designs/train/AlgorithmsSpects.hpp"
+#include "../../designs/train/TrainSpects.hpp"
 #include "../Network.hpp"
 #include <fstream>
 #include <string>
@@ -10,7 +12,9 @@ struct Checkpoint {
       Checkpoint(){};
       Checkpoint(std::string dest);
       void createCheckpoint(std::vector<Parameters> &&network_params,
-                            std::string dir, TYPE_CKPT type_ckpt);
+                            std::string dir, TrainSpects &train_spects,
+                            AlgorithmsSpects &algorithms_spects,
+                            TYPE_CKPT type_ckpt);
       std::vector<Parameters> loadCheckpoint(std::string path);
 
     private:

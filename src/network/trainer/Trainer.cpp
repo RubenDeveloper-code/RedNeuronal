@@ -17,13 +17,10 @@ Trainer::Trainer(Network &network, SharedResources &shared_resources,
       iteration(network,
                 std::move(SetterData(train_spects.dataset.training_dataset)),
                 model_loss, train_spects.mini_batch),
-      model_ckpt(network, train_spects.checkpoints_spects),
-      checks(network, train_spects.earlystop_spects),
-      trainer_ui(train_spects.epochs) {
-      if (algorithms_spects.alphaModifier !=
-          AlgorithmsSpects::AlphaModifier::UNDEFINED)
-            initAlgorithms(algorithms_spects);
-}
+      model_ckpt(network, train_spects.checkpoints_spects, train_spects,
+                 algorithms_spects),
+      checks(network), trainer_ui(train_spects.epochs),
+      trainer_algorithms(algorithms_spects, shared_resources) {}
 
 Trainer::Status Trainer::fit() {
       status = Status::FITTING;
@@ -32,8 +29,7 @@ Trainer::Status Trainer::fit() {
       int &epoch_it = *shared_resources.epochs_it;
       while ((epoch_it)++ < trainer_spects.epochs) {
             auto start = std::chrono::high_resolution_clock::now();
-            if (alpha_algorithm != nullptr)
-                  alpha_algorithm->run();
+            trainer_algorithms.runAlphaAlgorithm();
             loss = iteration.iterate();
             validation_loss = iteration.validationForwardPropagation(
                 trainer_spects.dataset.validation_dataset);
@@ -41,7 +37,7 @@ Trainer::Status Trainer::fit() {
             model_ckpt.adminCheckpoint(epoch_it, validation_loss);
             if (checks.reachUmbrall(loss, trainer_spects.umbral, epoch_it))
                   status = Status::DONE;
-            if (checks.reachPatience(validation_loss))
+            if (trainer_algorithms.runEarlyStopAdmin(validation_loss))
                   status = Status::RELOAD;
             auto end = std::chrono::high_resolution_clock::now();
             double elapsed = std::chrono::duration<double>(end - start).count();
@@ -57,15 +53,4 @@ Trainer::Status Trainer::fit() {
       return Status::DONE;
 }
 
-void Trainer::restart() {
-      if (alpha_algorithm != nullptr)
-            alpha_algorithm->recall();
-}
-
-void Trainer::initAlgorithms(AlgorithmsSpects &algorithms_spects) {
-      algorithms_spects.args_alpha_modifier->shared_resources =
-          &shared_resources;
-      alpha_algorithm = AlphaAlgorithms::newInstance(
-          static_cast<AlphaAlgorithms::TYPE>(algorithms_spects.alphaModifier),
-          *algorithms_spects.args_alpha_modifier);
-}
+void Trainer::restart() { trainer_algorithms.restart(); }

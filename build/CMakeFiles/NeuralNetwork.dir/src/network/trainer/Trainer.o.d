@@ -241,15 +241,18 @@ CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/Iteration.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/AlgorithmsSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../algorithms/AlphaAlgoritms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../algorithms/../designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../algorithms/../designs/train/../../network/resources/SharedResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../algorithms/../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/TrainSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../types/data/TrainingDataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../types/data/../../data/DataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/../../types/data/../../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/CheckpointSpects.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../operator/SetterData.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../operator/../../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../operator/../../data/DataSet.hpp \
@@ -265,6 +268,8 @@ CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/ModelCheckpoint.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../../designs/train/CheckpointSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../operator/checkpoints.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../operator/../../designs/train/AlgorithmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/network/trainer/../operator/../../designs/train/TrainSpects.hpp \
  /usr/include/c++/14.1.1/fstream \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
@@ -278,6 +283,8 @@ CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../operator/SetterData.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../operator/networkOperator.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/TrainerAlgorithms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/../../../include/designs/train/AlgorithmsSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/alerts/messages.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/Checks.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/../../../include/network/trainer/Iteration.hpp \

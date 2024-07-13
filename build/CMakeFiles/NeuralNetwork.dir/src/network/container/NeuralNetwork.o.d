@@ -3,7 +3,8 @@ CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/NeuralNetwork.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../algorithms/AlphaAlgoritms.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../algorithms/../network/resources/SharedResources.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../algorithms/../designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../algorithms/../designs/train/../../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/memory /usr/include/c++/14.1.1/bits/memoryfwd.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -203,6 +204,7 @@ CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: \
  /usr/include/c++/14.1.1/bits/out_ptr.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../algorithms/../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/ModelDesign.hpp \
@@ -235,12 +237,13 @@ CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: \
  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/AlgorithmsSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/../../algorithms/AlphaAlgoritms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/TrainSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/../../types/data/TrainingDataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/../../types/data/../../data/DataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/../../types/data/../../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/CheckpointSpects.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../../designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../body/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/container/../body/../../designs/LayerDesign.hpp \
@@ -264,6 +267,8 @@ CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/constructor/../Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/constructor/../resources/SharedResources.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/operator/checkpoints.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/operator/../../designs/train/AlgorithmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/operator/../../designs/train/TrainSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/operator/../Network.hpp \
  /usr/include/c++/14.1.1/fstream \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
@@ -296,6 +301,8 @@ CMakeFiles/NeuralNetwork.dir/src/network/container/NeuralNetwork.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/trainer/../Network.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/trainer/../operator/SetterData.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/trainer/../operator/networkOperator.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/trainer/TrainerAlgorithms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/container/../../../include/network/trainer/../../../include/designs/train/AlgorithmsSpects.hpp \
  /usr/include/c++/14.1.1/algorithm \
  /usr/include/c++/14.1.1/bits/ranges_algo.h \
  /usr/include/c++/14.1.1/pstl/glue_algorithm_defs.h

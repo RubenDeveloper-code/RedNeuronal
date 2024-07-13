@@ -1,8 +1,11 @@
 #include "../../../include/network/trainer/ModelCheckpoint.hpp"
 ModelCheckpoint::ModelCheckpoint(Network &network,
-                                 CheckpointSpects &checkpoints_spects)
+                                 CheckpointSpects &checkpoints_spects,
+                                 TrainSpects &train_spects,
+                                 AlgorithmsSpects &algorithms_spects)
     : network(network), checkpoints_spects(checkpoints_spects),
-      network_operator() {}
+      network_operator(), trainer_spects(train_spects),
+      algorithms_spects(algorithms_spects) {}
 
 void ModelCheckpoint::adminCheckpoint(int a_epoch, double validation_loss) {
       static double best_validation_loss = validation_loss;
@@ -24,5 +27,6 @@ void ModelCheckpoint::saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt) {
 
       Checkpoint ckpt;
       auto network_params = network_operator.getNetworkParameters(network);
-      ckpt.createCheckpoint(std::move(network_params), dest_folder, type_ckpt);
+      ckpt.createCheckpoint(std::move(network_params), dest_folder,
+                            trainer_spects, algorithms_spects, type_ckpt);
 }

@@ -34,6 +34,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelCheckpoint.cpp" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o" "gcc" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelCheckpoint.o.d"
   "/home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/ModelLoss.cpp" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o" "gcc" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/ModelLoss.o.d"
   "/home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/Trainer.cpp" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o" "gcc" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/Trainer.o.d"
+  "/home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/TrainerAlgorithms.cpp" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.o" "gcc" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerAlgorithms.o.d"
   "/home/ruben/Programacion/estudio/c++/NeuralNetwork/src/network/trainer/TrainerUI.cpp" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o" "gcc" "CMakeFiles/NeuralNetwork.dir/src/network/trainer/TrainerUI.o.d"
   )
 

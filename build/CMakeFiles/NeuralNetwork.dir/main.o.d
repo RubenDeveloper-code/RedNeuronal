@@ -3,7 +3,8 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /usr/include/stdc-predef.h \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/Model.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/algorithms/AlphaAlgoritms.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/algorithms/../network/resources/SharedResources.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/algorithms/../designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/algorithms/../designs/train/../../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/memory /usr/include/c++/14.1.1/bits/memoryfwd.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -203,6 +204,7 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /usr/include/c++/14.1.1/bits/out_ptr.h \
  /usr/include/c++/14.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/14.1.1/pstl/execution_defs.h \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/algorithms/../network/resources/SharedResources.hpp \
  /usr/include/c++/14.1.1/iostream /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/data/Data.hpp \
@@ -237,12 +239,15 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/LayerDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/AlgorithmsSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/../../algorithms/AlphaAlgoritms.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/EarlyStopSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/AlphaAlgoritmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/TrainSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/../../types/data/TrainingDataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/../../types/data/../../data/DataSet.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/../../types/data/../../data/Data.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/CheckpointSpects.hpp \
- /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/network/container/NeuralNetwork.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/network/container/../../algorithms/AlphaAlgoritms.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/network/container/../../designs/ModelDesign.hpp \
@@ -291,6 +296,7 @@ CMakeFiles/NeuralNetwork.dir/main.o: \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/LayerDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/ModelDesign.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/AlgorithmsSpects.hpp \
+ /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/EarlyStopSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/designs/train/TrainSpects.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/network/body/Layer.hpp \
  /home/ruben/Programacion/estudio/c++/NeuralNetwork/include/types/data/TrainingDataSet.hpp

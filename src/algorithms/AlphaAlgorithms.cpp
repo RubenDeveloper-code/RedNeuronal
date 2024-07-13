@@ -3,7 +3,7 @@
 
 std::unique_ptr<AlphaAlgorithms::AlphaAlgorithm>
 AlphaAlgorithms::newInstance(AlphaAlgorithms::TYPE type,
-                             AlphaAlgorithms::Arguments args) {
+                             AlphaAlgorithmsSpects args) {
       switch (type) {
       case AlphaAlgorithms::TYPE::WARM_UP:
             return std::make_unique<AlphaAlgorithms::WarmUp>(args);

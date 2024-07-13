@@ -19,7 +19,11 @@ std::string generateName() {
       return filenameStream.str();
 }
 void Checkpoint::createCheckpoint(std::vector<Parameters> &&network_params,
-                                  std::string dir, TYPE_CKPT type_ckpt) {
+                                  std::string dir, TrainSpects &train_spects,
+                                  AlgorithmsSpects &algorithms_spects,
+                                  TYPE_CKPT type_ckpt) {
+      // guardar las especificaciones (cada algoritmo tendra su funcion
+      // read_from_ckpt, for_save), tambien trainSpects
       dest = dir;
       std::string name;
       if (type_ckpt == TYPE_CKPT::SAVE)
@@ -36,6 +40,7 @@ void Checkpoint::createCheckpoint(std::vector<Parameters> &&network_params,
       if (type_ckpt == TYPE_CKPT::SAVE)
             Messages::Message({"\ncheckpoint ", name, " created"});
 }
+
 std::vector<Parameters> Checkpoint::loadCheckpoint(std::string path) {
       auto network_params = readCheckpoint(path);
       return network_params;
