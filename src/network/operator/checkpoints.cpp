@@ -7,7 +7,16 @@
 #include <cstring>
 #include <ctime>
 #include <fstream>
+#include <memory>
+#include <ranges>
 #include <sstream>
+#include <string>
+#include <vector>
+
+#define INPUT 1
+#define OUTPUT 2
+#define EPOCH 0
+
 std::string generateName() {
       std::time_t now = time(nullptr);
       std::tm *localTime = std::localtime(&now);
@@ -20,10 +29,8 @@ std::string generateName() {
 }
 void Checkpoint::createCheckpoint(std::vector<Parameters> &&network_params,
                                   std::string dir, TrainSpects &train_spects,
-                                  AlgorithmsSpects &algorithms_spects,
-                                  TYPE_CKPT type_ckpt) {
-      // guardar las especificaciones (cada algoritmo tendra su funcion
-      // read_from_ckpt, for_save), tambien trainSpects
+                                  int sizeInput, int sizeOutput,
+                                  int actual_epoch, TYPE_CKPT type_ckpt) {
       dest = dir;
       std::string name;
       if (type_ckpt == TYPE_CKPT::SAVE)
@@ -31,6 +38,7 @@ void Checkpoint::createCheckpoint(std::vector<Parameters> &&network_params,
       else
             name = dest + "/temp_best.ckpt";
       std::ofstream checkpoint_file(name);
+      buildCkptHeader(checkpoint_file, actual_epoch, sizeInput, sizeOutput);
       if (checkpoint_file) {
             dumpParameters(checkpoint_file, std::move(network_params));
       } else {
@@ -40,12 +48,6 @@ void Checkpoint::createCheckpoint(std::vector<Parameters> &&network_params,
       if (type_ckpt == TYPE_CKPT::SAVE)
             Messages::Message({"\ncheckpoint ", name, " created"});
 }
-
-std::vector<Parameters> Checkpoint::loadCheckpoint(std::string path) {
-      auto network_params = readCheckpoint(path);
-      return network_params;
-}
-
 void Checkpoint::dumpParameters(std::ofstream &checkpoint_file,
                                 std::vector<Parameters> &&params) {
       for (auto &neuron_params : params) {
@@ -56,9 +58,19 @@ void Checkpoint::dumpParameters(std::ofstream &checkpoint_file,
       }
 }
 
-std::vector<Parameters> Checkpoint::readCheckpoint(std::string path) {
-      std::vector<Parameters> checkpoint_parameters;
+std::vector<Parameters>
+Checkpoint::loadCheckpoint(std::string path, int sizeInput, int sizeOutput,
+                           std::shared_ptr<int> epoch_it) {
       std::ifstream checkpoint_file(path);
+      *epoch_it = loadCkptHeader(checkpoint_file, sizeInput, sizeOutput);
+      auto network_params = readCheckpoint(checkpoint_file);
+      checkpoint_file.close();
+      return network_params;
+}
+
+std::vector<Parameters>
+Checkpoint::readCheckpoint(std::ifstream &checkpoint_file) {
+      std::vector<Parameters> checkpoint_parameters;
       if (checkpoint_file) {
             std::string line;
             while (std::getline(checkpoint_file, line))
@@ -87,4 +99,36 @@ Parameters Checkpoint::readParameters(std::string line) {
       bias = weights.back();
       weights.pop_back();
       return Parameters{weights, bias};
+}
+void Checkpoint::buildCkptHeader(std::ofstream &out, int epoch_it,
+                                 int sizeInput, int sizeOutput) {
+      out << epoch_it << "," << sizeInput << "," << sizeOutput << '\n';
+}
+int Checkpoint::loadCkptHeader(std::ifstream &in, int sizeInput,
+                               int sizeOutput) {
+      std::vector<int> header_tokens;
+      std::string header;
+      std::getline(in, header);
+      std::istringstream stream_header(header);
+      std::string token;
+      while (std::getline(stream_header, token, ',') && token != "\n") {
+            if (std::all_of(token.begin(), token.end(), [](const int c) {
+                      return std::isdigit(c) || c == '.' || c == '-' ||
+                             c == 'e' || c == '+';
+                })) {
+                  header_tokens.push_back(std::stod(token));
+            } else {
+                  Handler::terminalSystemError(
+                      {"checkpoint file corrupted (header)"});
+            }
+      }
+      if (header_tokens.size() != 3)
+            Handler::terminalSystemError(
+                {"checkpoint file corrupted (header args)"});
+
+      if (header_tokens[INPUT] == sizeInput &&
+          header_tokens[OUTPUT] == sizeOutput)
+            return header_tokens[EPOCH];
+      Handler::terminalUserError({"Inputs and Outputs do not match"});
+      return 0;
 }

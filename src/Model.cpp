@@ -22,7 +22,10 @@ void Model::upEarlyStop(EarlyStopSpects earlystop_spects) {
       algorithms_spects.earlystop_spects = earlystop_spects;
 }
 
-void Model::fit(TrainSpects train_spects) {
+void Model::fit(TrainSpects train_spects, std::string ckptFile) {
+      if (ckptFile != "NAN") {
+            loadCheckpoint(ckptFile);
+      }
       neural_network.construct();
       neural_network.fit(train_spects, algorithms_spects);
 }

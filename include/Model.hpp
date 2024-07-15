@@ -11,6 +11,7 @@
 #include "designs/train/TrainSpects.hpp"
 #include "network/container/NeuralNetwork.hpp"
 #include <vector>
+
 class Model {
     public:
       Model(ModelDesign::LossFuction loss_function);
@@ -18,7 +19,7 @@ class Model {
       void upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier alfaModifier,
                            AlphaAlgorithmsSpects spects);
       void upEarlyStop(EarlyStopSpects earlystop_spects);
-      void fit(TrainSpects train_spects);
+      void fit(TrainSpects train_spects, std::string ckptFile = "NAN");
       OutputNetworkData predict(std::vector<double> input);
       void loadCheckpoint(std::string path);
 

@@ -25,7 +25,6 @@ bool TrainerAlgorithms::runEarlyStopAdmin(double validation_loss) {
                   actual_patience = 0;
                   return true;
             }
-            return false;
       }
       return false;
 }
@@ -43,6 +42,8 @@ void TrainerAlgorithms::initAlgorithms(AlgorithmsSpects &algorithms_spects) {
 }
 
 void TrainerAlgorithms::restart() {
-      if (algorithms_spects.args_alpha_modifier->apply_on_reloadckpt)
-            alpha_algorithm->recall();
+      if (algorithms_spects.alphaModifier !=
+          AlgorithmsSpects::AlphaModifier::UNDEFINED)
+            if (algorithms_spects.args_alpha_modifier->apply_on_reloadckpt)
+                  alpha_algorithm->recall();
 }

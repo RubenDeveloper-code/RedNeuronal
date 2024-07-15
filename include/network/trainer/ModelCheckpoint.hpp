@@ -21,7 +21,7 @@ class ModelCheckpoint {
       AlgorithmsSpects &algorithms_spects;
       CheckpointSpects &checkpoints_spects;
       NetworkOperator network_operator;
-      void saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt);
+      void saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt, int actual_epoch);
 };
 
 #endif

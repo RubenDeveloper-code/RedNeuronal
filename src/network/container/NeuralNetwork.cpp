@@ -48,7 +48,9 @@ OutputNetworkData NeuralNetwork::predict(InputNetworkData input) {
 }
 void NeuralNetwork::loadCheckpoint(std::string path) {
       Checkpoint ckpt;
-      auto network_parameters = ckpt.loadCheckpoint(path);
+      auto network_parameters =
+          ckpt.loadCheckpoint(path, network.inputSize(), network.ouputSize(),
+                              shared_resources.epochs_it);
       network_operator.loadCheckpointParameters(network, network_parameters);
       Messages::Message({"checkpoint ", path, " loaded"});
 }

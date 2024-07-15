@@ -18,5 +18,6 @@ struct TrainSpects {
       const int mini_batch;
       const double umbral;
       const double alpha;
+      std::string getString();
 };
 #endif

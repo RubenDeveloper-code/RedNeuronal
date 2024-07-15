@@ -12,13 +12,14 @@ void ModelCheckpoint::adminCheckpoint(int a_epoch, double validation_loss) {
       if (validation_loss < best_validation_loss) {
             best_validation_loss = validation_loss;
             if (a_epoch % checkpoints_spects.checkpoint_frec == 0) {
-                  saveCheckpoint(Checkpoint::TYPE_CKPT::SAVE);
+                  saveCheckpoint(Checkpoint::TYPE_CKPT::SAVE, a_epoch);
             }
-            saveCheckpoint(Checkpoint::TYPE_CKPT::TEMP);
+            saveCheckpoint(Checkpoint::TYPE_CKPT::TEMP, a_epoch);
       }
 }
 
-void ModelCheckpoint::saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt) {
+void ModelCheckpoint::saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt,
+                                     int actual_epoch) {
       std::string dest_folder;
       if (type_ckpt == Checkpoint::TYPE_CKPT::SAVE)
             dest_folder = checkpoints_spects.checkpoints_folder;
@@ -28,5 +29,6 @@ void ModelCheckpoint::saveCheckpoint(Checkpoint::TYPE_CKPT type_ckpt) {
       Checkpoint ckpt;
       auto network_params = network_operator.getNetworkParameters(network);
       ckpt.createCheckpoint(std::move(network_params), dest_folder,
-                            trainer_spects, algorithms_spects, type_ckpt);
+                            trainer_spects, network.inputSize(),
+                            network.ouputSize(), actual_epoch, type_ckpt);
 }

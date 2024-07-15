@@ -13,6 +13,8 @@
 #include <iostream>
 #include <memory>
 
+#define BEST_CKPT "../temp/temp_best.ckpt"
+
 int main() {
       Model model(ModelDesign::LossFuction::MEAN_SQUARED_ERROR);
       model.addLayer(LayerDesign{LayerDesign::LayerClass::INPUT,
@@ -28,9 +30,9 @@ int main() {
                                  LayerDesign::Activations::REGRESSION,
                                  LayerDesign::Optimizers::ADAMS, 1});
       // son la misma mamada nomas cambia los argumentos
-      model.upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier::DECAY,
-                            {1, 0.1, 10, true, 0.001});
-      // model.upEarlyStop({10, true});
+      // model.upAlphaAlgoritm(AlgorithmsSpects::AlphaModifier::DECAY,
+      //   {1, 0.1, 10, true, 0.001});
+      model.upEarlyStop({5, true});
       DataSetProcess dataset("../res/Student_performance_data _.csv");
       dataset.applyNormalization(Normalizations::TYPE::ZCORE);
       std::vector<std::string> tagsInput = {"Age",
@@ -50,16 +52,10 @@ int main() {
           dataset.getTrainingDataSet(tagsInput, tagsOutput, 70, 20, 10);
 
       TrainSpects train_spects{
-          std::move(training_dataset),
-          300,
-          1,
-          10e-3,
-          0.00001,
-          100,
-          "../checkpoints",
+          std::move(training_dataset), 300, 1, 10e-3, 1, 100, "../checkpoints",
       };
-      model.fit(train_spects);
-      // model.loadCheckpoint("../checkpoints/checkpoint_2024-7-9_17_4_59.ckpt");
+      model.fit(train_spects, BEST_CKPT);
+      // model.loadCheckpoint("../temp/temp_best.ckpt");
       auto out =
           model.predict({17, 1, 0, 2, 19.833722807854713, 7, 1, 2, 0, 0, 1, 0});
       std::cout << "->debe ser 2.0 " << out[0] << std::endl;
