@@ -13,6 +13,8 @@ class NetworkOperator {
       std::vector<Parameters> getNetworkParameters(Network &network);
       void loadCheckpointParameters(Network &networ,
                                     std::vector<Parameters> network_params);
+      void applyDropout(Network &network);
+      void clearNetwork(Network &network);
 
     private:
       std::vector<PairOutputs>

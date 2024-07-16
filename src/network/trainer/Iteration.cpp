@@ -8,14 +8,16 @@ Iteration::Iteration(Network &network, SetterData &&setter_data,
 double Iteration::iterate() {
       std::vector<PairOutputs> pair_outputs;
       const int limit = setter_data.getDataSize() + minibatch_size;
+      int minibatch_proccessed{};
       double sum_loss = 0;
       for (int multi = 1; multi * minibatch_size < limit; multi++) {
             pair_outputs = forwardPropagation();
             backpropagation(pair_outputs);
             auto loss = model_loss.computeLoss(pair_outputs);
             sum_loss += loss;
+            minibatch_proccessed++;
       }
-      double loss = sum_loss / minibatch_size;
+      double loss = sum_loss / minibatch_proccessed;
       return loss;
 }
 

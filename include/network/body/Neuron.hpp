@@ -15,7 +15,8 @@ class Neuron {
       using Neurons = std::vector<Neuron>;
       Neuron(std::shared_ptr<Activations::activation> act,
              std::shared_ptr<Optimizers::Optimizer> opt,
-             std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE type);
+             std::shared_ptr<LossFuctions::LossFunction> lossFoo, double p,
+             TYPE type);
       void makeConnections(Neurons &target, int prevLayerSize);
 
       double computeActivation();
@@ -26,6 +27,9 @@ class Neuron {
       void initializeAccordingType(int _y);
       Parameters getParameters();
       void loadParameters(Parameters parameters);
+      double getDelta();
+      double getNeuronActivation();
+      void changeState(bool state);
       TYPE type;
 
     private:
@@ -39,6 +43,8 @@ class Neuron {
       double bias = 1.0;
       double weighted_sum;
       double targetValue;
+      double p;
+      bool active = true;
 };
 struct Connection {
       Connection(Neuron &_targetNeuron, std::shared_ptr<double> _weight)

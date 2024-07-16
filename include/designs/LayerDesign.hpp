@@ -14,9 +14,12 @@ struct LayerDesign {
             MOMENTUM
       } optimizer;
       int n_neurons;
+      double dropout_p;
       enum class LossFuctions { MSE, BCE } loss_function;
-      LayerDesign(LayerClass tp, Activations act, Optimizers opt, int nNeurons)
-          : type(tp), activation(act), optimizer(opt), n_neurons(nNeurons){};
+      LayerDesign(LayerClass tp, Activations act, Optimizers opt, int nNeurons,
+                  double dropout_p = 0)
+          : type(tp), activation(act), optimizer(opt), n_neurons(nNeurons),
+            dropout_p(dropout_p){};
       void checkIntegrity();
 };
 

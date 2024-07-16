@@ -13,6 +13,7 @@ class Layer {
             SharedResources &shared_resources);
       std::vector<Neuron> neurons;
       TYPE type;
+      double p;
       std::vector<Neuron>::iterator begin() { return neurons.begin(); }
       std::vector<Neuron>::iterator end() { return neurons.end(); }
 };

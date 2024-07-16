@@ -27,8 +27,10 @@ Trainer::Status Trainer::fit() {
       double loss, validation_loss;
       Messages::Message({"training model..."});
       int &epoch_it = *shared_resources.epochs_it;
+      network_operator.clearNetwork(network);
       while ((epoch_it)++ < trainer_spects.epochs) {
             auto start = std::chrono::high_resolution_clock::now();
+            network_operator.applyDropout(network);
             trainer_algorithms.runAlphaAlgorithm();
             loss = iteration.iterate();
             validation_loss = iteration.validationForwardPropagation(
@@ -49,6 +51,7 @@ Trainer::Status Trainer::fit() {
             }
       }
       trainer_ui.endBar();
+      network_operator.clearNetwork(network);
       Messages::Message({"trained model"});
       return Status::DONE;
 }

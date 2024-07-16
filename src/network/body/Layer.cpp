@@ -11,9 +11,10 @@ Layer::Layer(LayerDesign layer_design,
           static_cast<Optimizers::TYPE>(layer_design.optimizer),
           shared_resources);
       while (layer_design.n_neurons-- > 0) {
-            neurons.emplace_back(
-                Neuron{activation, optimizator, loss_function,
-                       static_cast<Neuron::TYPE>(layer_design.type)});
+            neurons.emplace_back(Neuron{
+                activation, optimizator, loss_function, layer_design.dropout_p,
+                static_cast<Neuron::TYPE>(layer_design.type)});
       }
+      p = layer_design.dropout_p;
       type = static_cast<TYPE>(layer_design.type);
 }

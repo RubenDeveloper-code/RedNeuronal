@@ -11,10 +11,10 @@ void ModelCheckpoint::adminCheckpoint(int a_epoch, double validation_loss) {
       static double best_validation_loss = validation_loss;
       if (validation_loss < best_validation_loss) {
             best_validation_loss = validation_loss;
-            if (a_epoch % checkpoints_spects.checkpoint_frec == 0) {
-                  saveCheckpoint(Checkpoint::TYPE_CKPT::SAVE, a_epoch);
-            }
             saveCheckpoint(Checkpoint::TYPE_CKPT::TEMP, a_epoch);
+      }
+      if (a_epoch % checkpoints_spects.checkpoint_frec == 0) {
+            saveCheckpoint(Checkpoint::TYPE_CKPT::SAVE, a_epoch);
       }
 }
 

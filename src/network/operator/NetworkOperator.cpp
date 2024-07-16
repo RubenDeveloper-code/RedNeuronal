@@ -1,6 +1,7 @@
 #include "../../../include/network/operator/networkOperator.hpp"
 #include <algorithm>
 #include <pstl/glue_algorithm_defs.h>
+#include <random>
 #include <ranges>
 #include <vector>
 OutputNetworkData NetworkOperator::computeNetworkOutput(Network &network) {
@@ -80,4 +81,50 @@ void NetworkOperator::loadCheckpointParameters(
                   }
             }
       }
+}
+
+void NetworkOperator::applyDropout(Network &network) {
+      std::vector<int> createMask(double, double);
+      std::vector<int> mask;
+      for (auto &layer : network) {
+            if (layer.type != Layer::TYPE::OUTPUT && layer.p > 0.01) {
+                  mask = createMask(layer.p, layer.neurons.size());
+                  for (auto &neuron : layer) {
+                        neuron.changeState(mask.back());
+                        mask.pop_back();
+                  }
+            }
+      }
+}
+
+void NetworkOperator::clearNetwork(Network &network) {
+      for (auto &layer : network) {
+            for (auto &neuron : layer) {
+                  neuron.changeState(true);
+            }
+      }
+}
+
+std::vector<int> createMask(double p, double size) {
+      std::vector<int> mask;
+      std::random_device rd;
+      std::mt19937 gen(rd());
+      std::uniform_real_distribution<> dis(0.0, 1.0);
+      const int targetDown = p * size;
+      const int targetUp = (1.01 - p) * size;
+      double downed{}, upted{};
+      for (auto it = 0; it < size; it++) {
+            double random_number = dis(gen);
+            int imask = 0;
+            if (random_number < p && targetDown != downed) {
+                  downed++;
+                  imask = 0;
+            } else if (targetUp != upted) {
+                  upted++;
+                  imask = 1;
+            }
+            mask.push_back(imask);
+      }
+
+      return mask;
 }

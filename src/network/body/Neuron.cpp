@@ -13,9 +13,10 @@ using namespace std;
 
 Neuron::Neuron(std::shared_ptr<Activations::activation> _activation,
                std::shared_ptr<Optimizers::Optimizer> opt,
-               std::shared_ptr<LossFuctions::LossFunction> lossFoo, TYPE _type)
+               std::shared_ptr<LossFuctions::LossFunction> lossFoo, double p,
+               TYPE _type)
     : activation{_activation}, optimizationAlgorithm{opt},
-      lossFunction(lossFoo), type{_type} {}
+      lossFunction(lossFoo), type{_type}, p(p) {}
 
 void Neuron::makeConnections(Neurons &target, int prevLayerSize) {
       double std_dev = activation->getDevStandart(prevLayerSize);
@@ -37,17 +38,42 @@ void Neuron::makeConnections(Neurons &target, int prevLayerSize) {
 
 double Neuron::computeActivation() {
       weighted_sum = 0;
+      if (!active)
+            return 0;
       for (auto &prevConn : prevConnections) {
-            weighted_sum +=
-                (prevConn->targetNeuron.neuron_activation * *prevConn->weight);
+            if (prevConn->targetNeuron.active) {
+                  weighted_sum +=
+                      (prevConn->targetNeuron.getNeuronActivation() *
+                       *prevConn->weight);
+            }
       }
       weighted_sum += bias;
       neuron_activation = activation->function(weighted_sum);
+      neuron_activation /= (1 - p);
       if (type == TYPE::OUTPUT) {
             return neuron_activation;
       }
       return -1;
 }
+
+void Neuron::recomputeParameters(std::vector<double> activations_in_minibatch,
+                                 std::vector<double> targets_in_minibatch) {
+      if (type == TYPE::INPUT || !active)
+            return;
+      for (auto &prevConn : prevConnections) {
+            if (prevConn->targetNeuron.active) {
+                  *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
+                      {*prevConn->weight,
+                       computeGradient(
+                           prevConn->targetNeuron.getNeuronActivation(), WEIGHT,
+                           activations_in_minibatch, targets_in_minibatch)});
+            }
+      }
+      bias = optimizationAlgorithm->optimizeBias(
+          {bias, computeGradient(1.0, BIAS, activations_in_minibatch,
+                                 targets_in_minibatch)});
+}
+
 long double
 Neuron::computeGradient(double prevActivation, int theta,
                         std::vector<double> activations_in_minibatch,
@@ -64,7 +90,10 @@ Neuron::computeGradient(double prevActivation, int theta,
       } else if (type == TYPE::HIDE) {
             double summ_deltas{};
             for (auto &conn : nextConnections) {
-                  summ_deltas += (*conn->weight * conn->targetNeuron.delta);
+                  if (conn->targetNeuron.active) {
+                        summ_deltas +=
+                            (*conn->weight * conn->targetNeuron.getDelta());
+                  }
             }
             summ_deltas *=
                 activation->derivative(weighted_sum, neuron_activation);
@@ -75,21 +104,6 @@ Neuron::computeGradient(double prevActivation, int theta,
       return 0;
 }
 
-void Neuron::recomputeParameters(std::vector<double> activations_in_minibatch,
-                                 std::vector<double> targets_in_minibatch) {
-      if (type == TYPE::INPUT)
-            return;
-      for (auto &prevConn : prevConnections) {
-            *prevConn->weight = optimizationAlgorithm->optimizeWeigth(
-                {*prevConn->weight,
-                 computeGradient(prevConn->targetNeuron.neuron_activation,
-                                 WEIGHT, activations_in_minibatch,
-                                 targets_in_minibatch)});
-      }
-      bias = optimizationAlgorithm->optimizeBias(
-          {bias, computeGradient(1.0, BIAS, activations_in_minibatch,
-                                 targets_in_minibatch)});
-}
 Parameters Neuron::getParameters() {
       std::vector<double> weights;
       for (auto &prevConn : prevConnections) {
@@ -111,3 +125,14 @@ void Neuron::initializeAccordingType(int init_val) {
       else if (type == TYPE::OUTPUT)
             targetValue = init_val;
 }
+double Neuron::getDelta() {
+      if (active)
+            return delta;
+      return 0;
+}
+double Neuron::getNeuronActivation() {
+      if (active)
+            return neuron_activation;
+      return 0;
+}
+void Neuron::changeState(bool state) { active = state; }
